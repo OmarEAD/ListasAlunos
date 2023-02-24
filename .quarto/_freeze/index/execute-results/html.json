@@ -1,0 +1,16 @@
+{
+  "hash": "ee2a557af10f02cc25ad3fe0efe7059e",
+  "result": {
+    "markdown": "---\ntitle: \"Home\"\nauthor: \"Omar C N Pereira\"\n#date: 2022-01-01\ncategories: [\"Posts\"]\ntags: [\"Associações\", \"R\", \"Estatística\"]\n---\n\n\n\n\n# Imagens reais[^1]\n\n[^1]: Caso encontre erros, queira fazer comentários, ou trocar uma ideia sobre o artigo, por favor, me escreva: omarcnpereiraead@gmail.com\n\nObserve as imagens abaixo e tente tirar o máximo e conclusões possíveis.\n\n## Informações iniciais\n\n- A imagem foi feita pelo autor do _site_.\n- O local é a saida de um supermercado de Maringá.\n- Era um domingo de manhã, aproximadamente 10h30.\n- Foi uma grande emoção fazer esta imagem. Observa que ela esta tremida.\n\n## Sugestões para refletir\n\n- O sujeito tem aproximadamente quantos anos?\n- Há uma criança subentendida no cenário. O sujeito é o pai, ou o avô, ou o tio dela (ou outra coisa)?\n- E a mãe da criança? Por que não é ela que veio ao supermercado?\n- Ele foi comprar cerveja ou fraudas?\n\n\n![](https://github.com/OmarEAD/Documentos/raw/main/fotoML.jpg)\n\n![](https://github.com/OmarEAD/Documentos/raw/main/foto2.JPG)\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

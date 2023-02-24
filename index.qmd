@@ -1,0 +1,55 @@
+---
+title: "Home"
+author: "Omar C N Pereira"
+#date: 2022-01-01
+categories: ["Posts"]
+tags: ["Associações", "R", "Estatística"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(#collapse = TRUE,
+                      echo = TRUE, 
+                      size = "footnotesize",
+                      comment = NA,
+                      warning = FALSE,
+                      message = FALSE,
+                      #out.width = "1\\linewidth",
+                      fig.align = "center",
+                      fig.width = 8, 
+                      fig.height = 4, 
+                      fig.show = "hold",
+                      #fig.path = "Figuras1/",
+                      fig.pos = "!htb",
+                      fig.cap = TRUE,
+                      background = "#E6E6FA",
+                      #background = "black",
+                      dev = c("png",'pdf'),
+                      res=300,
+                      dpi = 300)
+```
+
+# Imagens reais[^1]
+
+[^1]: Caso encontre erros, queira fazer comentários, ou trocar uma ideia sobre o artigo, por favor, me escreva: omarcnpereiraead@gmail.com
+
+Observe as imagens abaixo e tente tirar o máximo e conclusões possíveis.
+
+## Informações iniciais
+
+- A imagem foi feita pelo autor do _site_.
+- O local é a saida de um supermercado de Maringá.
+- Era um domingo de manhã, aproximadamente 10h30.
+- Foi uma grande emoção fazer esta imagem. Observa que ela esta tremida.
+
+## Sugestões para refletir
+
+- O sujeito tem aproximadamente quantos anos?
+- Há uma criança subentendida no cenário. O sujeito é o pai, ou o avô, ou o tio dela (ou outra coisa)?
+- E a mãe da criança? Por que não é ela que veio ao supermercado?
+- Ele foi comprar cerveja ou fraudas?
+
+
+![](https://github.com/OmarEAD/Documentos/raw/main/fotoML.jpg)
+
+![](https://github.com/OmarEAD/Documentos/raw/main/foto2.JPG)
+

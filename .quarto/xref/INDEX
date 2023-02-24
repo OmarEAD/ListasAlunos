@@ -1,0 +1,17 @@
+{
+  "index.qmd": {
+    "index.html": "46f11590"
+  },
+  "about.qmd": {
+    "about.html": "033b45f3"
+  },
+  "lista.qmd": {
+    "lista.html": "b73ab245"
+  },
+  "benford.qmd": {
+    "benford.html": "f7fa4ad6"
+  },
+  "normal.qmd": {
+    "normal.html": "b16c2b24"
+  }
+}

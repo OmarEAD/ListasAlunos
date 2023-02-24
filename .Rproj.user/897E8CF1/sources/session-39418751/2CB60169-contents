@@ -1,0 +1,40 @@
+---
+title: "Associações do dia a dia e a Estatística"
+author: "Omar C N Pereira"
+date: 2022-01-01
+categories: ["Posts"]
+tags: ["Associações", "R", "Estatística"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(#collapse = TRUE,
+                      echo = TRUE, 
+                      size = "footnotesize",
+                      comment = NA,
+                      warning = FALSE,
+                      message = FALSE,
+                      #out.width = "1\\linewidth",
+                      fig.align = "center",
+                      fig.width = 8, 
+                      fig.height = 4, 
+                      fig.show = "hold",
+                      #fig.path = "Figuras1/",
+                      fig.pos = "!htb",
+                      fig.cap = TRUE,
+                      background = "#E6E6FA",
+                      #background = "black",
+                      dev = c("png",'pdf'),
+                      res=300,
+                      dpi = 300)
+```
+
+# Introdução[^1]
+
+[^1]: Este artigo é um resumo sobre __Associações em Estatística aplicadas ao dia a dia__ . Caso encontre erros, queira fazer comentários, ou trocar uma ideia sobre o artigo, por favor, me escreva: omarcnpereiraead@gmail.com
+
+Vamos, inicialmente, observar as imagens abaixo.
+
+![](https://github.com/OmarEAD/Documentos/raw/main/fotoML.jpg)
+
+![](https://github.com/OmarEAD/Documentos/raw/main/foto2.JPG)
+
