@@ -2,7 +2,7 @@
 title: "Home"
 author: "Omar C N Pereira"
 #date: 2022-01-01
-categories: ["Posts"]
+#categories: ["Posts"]
 tags: ["Associações", "R", "Estatística"]
 ---
 
