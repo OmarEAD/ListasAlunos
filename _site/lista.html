@@ -160,8 +160,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
  <span class="menu-text">Benford</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./normal.html">
- <span class="menu-text">Normal</span></a>
+    <a class="nav-link" href="./DistrNormal.html">
+ <span class="menu-text">Distribuição Normal</span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -183,7 +183,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul class="collapse">
   <li><a href="#análise-bivariada" id="toc-análise-bivariada" class="nav-link" data-scroll-target="#análise-bivariada">Análise bivariada</a></li>
   </ul></li>
-  <li><a href="#noções-de-probabilidades" id="toc-noções-de-probabilidades" class="nav-link" data-scroll-target="#noções-de-probabilidades">Noções de Probabilidades</a></li>
+  <li><a href="#noções-de-probabilidades" id="toc-noções-de-probabilidades" class="nav-link" data-scroll-target="#noções-de-probabilidades">Noções de Probabilidades</a>
+  <ul class="collapse">
+  <li><a href="#distribuição-normal" id="toc-distribuição-normal" class="nav-link" data-scroll-target="#distribuição-normal">Distribuição Normal</a></li>
+  </ul></li>
   <li><a href="#intervalo-de-confiança" id="toc-intervalo-de-confiança" class="nav-link" data-scroll-target="#intervalo-de-confiança">Intervalo de confiança</a></li>
   <li><a href="#teste-de-hipóteses" id="toc-teste-de-hipóteses" class="nav-link" data-scroll-target="#teste-de-hipóteses">Teste de hipóteses</a></li>
   </ul>
@@ -236,125 +239,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>Estatística descritiva</h1>
 <ol type="1">
 <li><p>Alguns funcionários de uma empresa decidiram participar de uma pesquisa para avaliar o tempo gasto para irem de casa ao trabalho usando o transporte coletivo e o automóvel próprio. Se você fosse o responsável por essa pesquisa, como a realizaria? De forma concisa descreva detalhes da coleta de dados e possíveis problemas que poderiam ocorrer.</p></li>
-<li><p>Considere o problema anterior. Suponha que você tenha coletado uma amostra do tempo (minutos) de translado de casa ao trabalho de 10 funcionários, ora indo de transporte coletivo, ora de carro próprio (Tabela @ref(tab:transp)). Esse tipo de dados tem estrutura pareada (em breve estudaremos isto com detalhes).</p></li>
+<li><p>Considere o problema anterior. Suponha que você tenha coletado uma amostra do tempo (minutos) de translado de casa ao trabalho de 10 funcionários, ora indo de transporte coletivo, ora de carro próprio (<a href="#tbl-transp">Table&nbsp;1</a>). Esse tipo de dados tem estrutura pareada (em breve estudaremos isto com detalhes).</p></li>
 </ol>
-<div class="cell" data-layout-align="center">
+<div class="cell tbl-cap-location-top" data-layout-align="center">
 <div class="cell-output-display">
+<div id="tbl-transp" class="anchored">
 
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-Tempo gasto, em minutos, para 10 funcionários irem de casa até a empresa em que trabalham de duas maneiras, ou transporte coletivo (TC) ou automóvel próprio (AP).
-</caption>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;1:  Tempo gasto, em minutos, para 10 funcionários irem de casa até a empresa em que trabalham de duas maneiras, ou transporte coletivo (TC) ou automóvel próprio (AP). </caption>
 <tbody>
-<tr>
-<td style="text-align:left;">
-Funcionario
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:right;">
-8
-</td>
-<td style="text-align:right;">
-9
-</td>
-<td style="text-align:right;">
-10
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-TC
-</td>
-<td style="text-align:right;">
-41
-</td>
-<td style="text-align:right;">
-24
-</td>
-<td style="text-align:right;">
-27
-</td>
-<td style="text-align:right;">
-28
-</td>
-<td style="text-align:right;">
-25
-</td>
-<td style="text-align:right;">
-25
-</td>
-<td style="text-align:right;">
-34
-</td>
-<td style="text-align:right;">
-29
-</td>
-<td style="text-align:right;">
-31
-</td>
-<td style="text-align:right;">
-41
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-AP
-</td>
-<td style="text-align:right;">
-22
-</td>
-<td style="text-align:right;">
-34
-</td>
-<td style="text-align:right;">
-31
-</td>
-<td style="text-align:right;">
-22
-</td>
-<td style="text-align:right;">
-29
-</td>
-<td style="text-align:right;">
-22
-</td>
-<td style="text-align:right;">
-16
-</td>
-<td style="text-align:right;">
-18
-</td>
-<td style="text-align:right;">
-20
-</td>
-<td style="text-align:right;">
-25
-</td>
-</tr>
+  <tr>
+   <td style="text-align:left;"> Funcionario </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> TC </td>
+   <td style="text-align:right;"> 41 </td>
+   <td style="text-align:right;"> 24 </td>
+   <td style="text-align:right;"> 27 </td>
+   <td style="text-align:right;"> 28 </td>
+   <td style="text-align:right;"> 25 </td>
+   <td style="text-align:right;"> 25 </td>
+   <td style="text-align:right;"> 34 </td>
+   <td style="text-align:right;"> 29 </td>
+   <td style="text-align:right;"> 31 </td>
+   <td style="text-align:right;"> 41 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AP </td>
+   <td style="text-align:right;"> 22 </td>
+   <td style="text-align:right;"> 34 </td>
+   <td style="text-align:right;"> 31 </td>
+   <td style="text-align:right;"> 22 </td>
+   <td style="text-align:right;"> 29 </td>
+   <td style="text-align:right;"> 22 </td>
+   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:right;"> 18 </td>
+   <td style="text-align:right;"> 20 </td>
+   <td style="text-align:right;"> 25 </td>
+  </tr>
 </tbody>
-
 </table>
-<p>TRUE</p>
+
+</div>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
@@ -429,7 +364,7 @@ AP
 [21] 315.93 366.92 318.44 336.27 342.50 278.80 430.27 389.20 311.71 455.23</code></pre>
 </div>
 </div>
-<p>Vamos fazer um gráfico de barras para representar estes dados. A linha horizontal representa o valor médio, ou seja, <code>377.1733333</code>.</p>
+<p>Vamos fazer um gráfico de barras para representar estes dados. A linha horizontal representa o valor médio, ou seja, 377.1733333.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># carregando a biblioteca</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
@@ -449,10 +384,10 @@ AP
 <span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Dias do mês"</span>,</span>
 <span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">y=</span><span class="st">"Energia Produzida (kWh)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-energia" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="lista_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="2400"></p>
-<p></p><figcaption class="figure-caption">TRUE</figcaption><p></p>
+<p><img src="lista_files/figure-html/fig-energia-1.png" class="img-fluid figure-img" width="2400"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: Gráfico de barras para a energia produzida ao longo de 30 dias.</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -463,9 +398,11 @@ AP
 <li><p>Usando o resultado anterior, ou seja, a média dos 26 primeiros dias do mês, qual dereria ser o valor médio dos últimos quatro dias para que a média do mês seja igual a 400kWh?</p></li>
 <li><p>Separe os valores diários de produção de energia em dois grupos, um com os valores iguais ou menores que a média e outro com os valores maiores que a média. Quais as médias desses grupos? Qual a média destes dois valores médios?</p></li>
 </ol>
+<!-- -->
 <ol start="4" type="1">
 <li>Seja uma população constituída pelos valores 7, 9 e 15 (N=3). Suponha que todas as possíveis amostras de tamanho dois (<span class="math inline">\(n=2\)</span>), com reposição, foram selecionadas dessa população.</li>
 </ol>
+<!-- -->
 <ol type="a">
 <li><p>Encontre a variância <span class="math inline">\(\sigma^2\)</span> da população.</p></li>
 <li><p>Liste as diferentes possíveis amostras de tamanho dois com reposição e encontre a variância amostral <span class="math inline">\(s^2\)</span> para cada uma delas. Encontre a média das variâncias amostrais.</p></li>
@@ -479,16 +416,17 @@ AP
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 11.55556</code></pre>
 </div>
+</div>
+<div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">as.data.frame</span>(<span class="fu">permutations</span>(<span class="at">n=</span><span class="dv">3</span>, <span class="at">r=</span><span class="dv">2</span>, </span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">v=</span>dd, </span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">repeats.allowed=</span>T))</span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(<span class="fu">c</span>(<span class="st">'r1'</span>,<span class="st">'r2'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>NULL</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>y<span class="sc">$</span>s <span class="ot">&lt;-</span> <span class="fu">apply</span>(y[,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],<span class="dv">1</span>, var)</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>y<span class="sc">$</span>v <span class="ot">&lt;-</span> <span class="fu">apply</span>(y[,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],<span class="dv">1</span>, var)<span class="sc">/</span><span class="dv">2</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>y<span class="sc">$</span>s <span class="ot">&lt;-</span> <span class="fu">apply</span>(y[,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],<span class="dv">1</span>, var)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>y<span class="sc">$</span>v <span class="ot">&lt;-</span> <span class="fu">apply</span>(y[,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],<span class="dv">1</span>, var)<span class="sc">/</span><span class="dv">2</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  V1 V2  s  v
 1  7  7  0  0
@@ -501,135 +439,75 @@ AP
 8 15  9 18  9
 9 15 15  0  0</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>ms <span class="ot">&lt;-</span> <span class="fu">mean</span>(y<span class="sc">$</span>s);ms</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>ms <span class="ot">&lt;-</span> <span class="fu">mean</span>(y<span class="sc">$</span>s);ms</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 11.55556</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>mv <span class="ot">&lt;-</span> <span class="fu">mean</span>(y<span class="sc">$</span>v);mv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>mv <span class="ot">&lt;-</span> <span class="fu">mean</span>(y<span class="sc">$</span>v);mv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5.777778</code></pre>
 </div>
 </div>
-<ol start="3" type="1">
-<li>Uma pesquisa mostrou que o brasileiro gasta em média R$234,19 por mês se alimentando fora de casa (dados fictícios). Os gastos mensais para se alimentar fora de casa referentes a uma amostra de 30 adolescentes estão apresentados na Tabela @ref(tab:adoles).</li>
+<ol start="5" type="1">
+<li>Uma pesquisa mostrou que o brasileiro gasta em média R$234,19 por mês se alimentando fora de casa (dados fictícios). Os gastos mensais para se alimentar fora de casa referentes a uma amostra de 30 adolescentes estão apresentados na Tabela <a href="#tbl-adoles">Table&nbsp;2</a>.</li>
 </ol>
-<div class="cell" data-layout-align="center">
+<div class="cell tbl-cap-location-top" data-layout-align="center">
 <div class="cell-output-display">
+<div id="tbl-adoles" class="anchored">
 
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-Gastos mensais de 30 adolescentes para se alimentarem fora de casa.
-</caption>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;2:  Gastos mensais de 30 adolescentes para se alimentarem fora de casa. </caption>
 <tbody>
-<tr>
-<td style="text-align:right;">
-309
-</td>
-<td style="text-align:right;">
-324
-</td>
-<td style="text-align:right;">
-305
-</td>
-<td style="text-align:right;">
-312
-</td>
-<td style="text-align:right;">
-281
-</td>
-<td style="text-align:right;">
-341
-</td>
-<td style="text-align:right;">
-355
-</td>
-<td style="text-align:right;">
-296
-</td>
-<td style="text-align:right;">
-342
-</td>
-<td style="text-align:right;">
-337
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-334
-</td>
-<td style="text-align:right;">
-321
-</td>
-<td style="text-align:right;">
-322
-</td>
-<td style="text-align:right;">
-299
-</td>
-<td style="text-align:right;">
-335
-</td>
-<td style="text-align:right;">
-320
-</td>
-<td style="text-align:right;">
-338
-</td>
-<td style="text-align:right;">
-330
-</td>
-<td style="text-align:right;">
-323
-</td>
-<td style="text-align:right;">
-330
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-332
-</td>
-<td style="text-align:right;">
-342
-</td>
-<td style="text-align:right;">
-346
-</td>
-<td style="text-align:right;">
-317
-</td>
-<td style="text-align:right;">
-326
-</td>
-<td style="text-align:right;">
-319
-</td>
-<td style="text-align:right;">
-333
-</td>
-<td style="text-align:right;">
-339
-</td>
-<td style="text-align:right;">
-311
-</td>
-<td style="text-align:right;">
-344
-</td>
-</tr>
+  <tr>
+   <td style="text-align:right;"> 309 </td>
+   <td style="text-align:right;"> 324 </td>
+   <td style="text-align:right;"> 305 </td>
+   <td style="text-align:right;"> 312 </td>
+   <td style="text-align:right;"> 281 </td>
+   <td style="text-align:right;"> 341 </td>
+   <td style="text-align:right;"> 355 </td>
+   <td style="text-align:right;"> 296 </td>
+   <td style="text-align:right;"> 342 </td>
+   <td style="text-align:right;"> 337 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 334 </td>
+   <td style="text-align:right;"> 321 </td>
+   <td style="text-align:right;"> 322 </td>
+   <td style="text-align:right;"> 299 </td>
+   <td style="text-align:right;"> 335 </td>
+   <td style="text-align:right;"> 320 </td>
+   <td style="text-align:right;"> 338 </td>
+   <td style="text-align:right;"> 330 </td>
+   <td style="text-align:right;"> 323 </td>
+   <td style="text-align:right;"> 330 </td>
+  </tr>
+  <tr>
+   <td style="text-align:right;"> 332 </td>
+   <td style="text-align:right;"> 342 </td>
+   <td style="text-align:right;"> 346 </td>
+   <td style="text-align:right;"> 317 </td>
+   <td style="text-align:right;"> 326 </td>
+   <td style="text-align:right;"> 319 </td>
+   <td style="text-align:right;"> 333 </td>
+   <td style="text-align:right;"> 339 </td>
+   <td style="text-align:right;"> 311 </td>
+   <td style="text-align:right;"> 344 </td>
+  </tr>
 </tbody>
-
 </table>
-<p>TRUE</p>
+
+</div>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dados</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">309</span>,<span class="dv">324</span>,<span class="dv">305</span>,<span class="dv">312</span>,<span class="dv">281</span>,<span class="dv">341</span>,<span class="dv">355</span>,<span class="dv">296</span>,</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>           <span class="dv">342</span>,<span class="dv">337</span>,<span class="dv">334</span>,<span class="dv">321</span>,<span class="dv">322</span>,<span class="dv">299</span>,<span class="dv">335</span>,<span class="dv">320</span>,</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>           <span class="dv">338</span>,<span class="dv">330</span>,<span class="dv">323</span>,<span class="dv">330</span>,<span class="dv">332</span>,<span class="dv">342</span>,<span class="dv">346</span>,<span class="dv">317</span>,</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>           <span class="dv">326</span>,<span class="dv">319</span>,<span class="dv">333</span>,<span class="dv">339</span>,<span class="dv">311</span>,<span class="dv">344</span>)</span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>dados</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dados</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">309</span>,<span class="dv">324</span>,<span class="dv">305</span>,<span class="dv">312</span>,<span class="dv">281</span>,<span class="dv">341</span>,<span class="dv">355</span>,<span class="dv">296</span>,</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>           <span class="dv">342</span>,<span class="dv">337</span>,<span class="dv">334</span>,<span class="dv">321</span>,<span class="dv">322</span>,<span class="dv">299</span>,<span class="dv">335</span>,<span class="dv">320</span>,</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>           <span class="dv">338</span>,<span class="dv">330</span>,<span class="dv">323</span>,<span class="dv">330</span>,<span class="dv">332</span>,<span class="dv">342</span>,<span class="dv">346</span>,<span class="dv">317</span>,</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>           <span class="dv">326</span>,<span class="dv">319</span>,<span class="dv">333</span>,<span class="dv">339</span>,<span class="dv">311</span>,<span class="dv">344</span>)</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>dados</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 309 324 305 312 281 341 355 296 342 337 334 321 322 299 335 320 338 330 323
 [20] 330 332 342 346 317 326 319 333 339 311 344</code></pre>
@@ -639,37 +517,37 @@ Gastos mensais de 30 adolescentes para se alimentarem fora de casa.
 <li>Faça uma tabela de distribuição de frequências (use o bom senso).</li>
 <li>Esboce um histograma.</li>
 </ul>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># histograma de frequência absoluta</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg=</span><span class="st">"white"</span>)</span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(dados, <span class="at">labels =</span> T, <span class="at">main =</span> <span class="st">""</span>,</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Gasto (R$)'</span>, <span class="at">ylab =</span> <span class="st">'Frequência'</span>,</span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylim =</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">9</span>))</span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="co"># histograma com densidade</span></span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(dados, <span class="at">labels =</span> T, <span class="at">main =</span> <span class="st">""</span>,</span>
-<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Gasto (R$)'</span>, <span class="at">ylab =</span> <span class="st">'Densidade'</span>,</span>
-<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">probability =</span> T, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.025</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-layout-align="center" data-label="fig-hist1">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg=</span><span class="st">"white"</span>)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(dados, <span class="at">labels =</span> T, <span class="at">main =</span> <span class="st">""</span>,</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Gasto (R$)'</span>, <span class="at">ylab =</span> <span class="st">'Frequência'</span>,</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylim =</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">9</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="lista_files/figure-html/histograns-1.png" class="img-fluid figure-img" width="2400"></p>
-<p></p><figcaption class="figure-caption">Histogramas (frequência e densidade) dos gastos mensais de 30 adolescentes para se alimentarem.</figcaption><p></p>
+<p><img src="lista_files/figure-html/histograns1-1.png" class="img-fluid figure-img" width="2400"></p>
+<p></p><figcaption class="figure-caption">Histograma (frequência) dos gastos mensais de 30 adolescentes para se alimentarem.</figcaption><p></p>
 </figure>
 </div>
 </div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg=</span><span class="st">"white"</span>)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(dados, <span class="at">labels =</span> T, <span class="at">main =</span> <span class="st">""</span>,</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Gasto (R$)'</span>, <span class="at">ylab =</span> <span class="st">'Densidade'</span>,</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">probability =</span> T, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.025</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="lista_files/figure-html/histograns-2.png" class="img-fluid figure-img" width="2400"></p>
-<p></p><figcaption class="figure-caption">Histogramas (frequência e densidade) dos gastos mensais de 30 adolescentes para se alimentarem.</figcaption><p></p>
+<p><img src="lista_files/figure-html/histograns2-1.png" class="img-fluid figure-img" width="2400"></p>
+<p></p><figcaption class="figure-caption">Histograma (densidade) dos gastos mensais de 30 adolescentes para se alimentarem.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
 <ul>
 <li>Qual a proporção de elementos entre os valores 315 e 345?</li>
-<li>Calcule a média, a mediana e a moda.</li>
+<li>Calcule a média e a mediana.</li>
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dados)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -713,11 +591,12 @@ Gastos mensais de 30 adolescentes para se alimentarem fora de casa.
 <pre><code>[1] 5.107948</code></pre>
 </div>
 </div>
-<ol start="4" type="1">
-<li>As receitas de duas concessionárias estão apresentadas na Tabela @ref(tab:conces). Qual delas apresenta maior dispersão? Discuta os resultados.</li>
+<ol start="6" type="1">
+<li>As receitas de duas concessionárias estão apresentadas na <a href="#tbl-conces">Table&nbsp;3</a>. Qual delas apresenta maior dispersão? Discuta os resultados.</li>
 </ol>
+<div id="tbl-conces" class="anchored">
 <table class="table">
-<caption>(#tab:conces) Receita das concecionárias A e B.</caption>
+<caption>Table&nbsp;3: Receita das concecionárias A e B.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: center;">Concessionária</th>
@@ -738,6 +617,7 @@ Gastos mensais de 30 adolescentes para se alimentarem fora de casa.
 </tr>
 </tbody>
 </table>
+</div>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Coeficiente de variação</span></span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="co"># A:</span></span>
@@ -753,67 +633,37 @@ Gastos mensais de 30 adolescentes para se alimentarem fora de casa.
 </div>
 <section id="análise-bivariada" class="level2">
 <h2 class="anchored" data-anchor-id="análise-bivariada">Análise bivariada</h2>
-<ol start="5" type="1">
-<li>Na Tabela @ref(tab:corr1) é apresentado seis observações das variáveis <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>.</li>
+<ol type="1">
+<li>Na <a href="#tbl-corr1">Table&nbsp;4</a> é apresentado seis observações das variáveis <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>.</li>
 </ol>
-<div class="cell" data-layout-align="center">
+<div class="cell tbl-cap-location-top" data-layout-align="center">
 <div class="cell-output-display">
+<div id="tbl-corr1" class="anchored">
 
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-Seis observações das variáveis X e Y.
-</caption>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;4:  Seis observações das variáveis X e Y. </caption>
 <tbody>
-<tr>
-<td style="text-align:left;">
-X
-</td>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:right;">
-11
-</td>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:right;">
-16
-</td>
-<td style="text-align:right;">
-11
-</td>
-<td style="text-align:right;">
-7
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Y
-</td>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:right;">
-12
-</td>
-<td style="text-align:right;">
-8
-</td>
-<td style="text-align:right;">
-16
-</td>
-<td style="text-align:right;">
-13
-</td>
-<td style="text-align:right;">
-7
-</td>
-</tr>
+  <tr>
+   <td style="text-align:left;"> X </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 11 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:right;"> 11 </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Y </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 12 </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 16 </td>
+   <td style="text-align:right;"> 13 </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
 </tbody>
-
 </table>
-<p>TRUE</p>
+
+</div>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
@@ -869,90 +719,46 @@ Y
 <pre><code>[1] 0.9757751</code></pre>
 </div>
 </div>
-<ol start="6" type="1">
-<li>O diretor de uma escola quer saber se há associação entre a média escolar (<span class="math inline">\(ME\)</span>) e o desempenho em um simulado (<span class="math inline">\(SIM\)</span>). Na Tabela @ref(tab:corr2) é apresentado uma amostra de seis alunos.</li>
+<ol start="2" type="1">
+<li>O diretor de uma escola quer saber se há associação entre a média escolar (<span class="math inline">\(ME\)</span>) e o desempenho em um simulado (<span class="math inline">\(SIM\)</span>). Na <a href="#tbl-corr2">Table&nbsp;5</a> é apresentado uma amostra de seis alunos.</li>
 </ol>
-<div class="cell" data-layout-align="center">
+<div class="cell tbl-cap-location-top" data-layout-align="center">
 <div class="cell-output-display">
+<div id="tbl-corr2" class="anchored">
 
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-Seis observações das variáveis ME e SIM.
-</caption>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;5:  Seis observações das variáveis ME e SIM. </caption>
 <tbody>
-<tr>
-<td style="text-align:left;">
-Aluno
-</td>
-<td style="text-align:right;">
-1.0
-</td>
-<td style="text-align:right;">
-2.0
-</td>
-<td style="text-align:right;">
-3.0
-</td>
-<td style="text-align:right;">
-4.0
-</td>
-<td style="text-align:right;">
-5.0
-</td>
-<td style="text-align:right;">
-6.0
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-ME
-</td>
-<td style="text-align:right;">
-5.3
-</td>
-<td style="text-align:right;">
-6.2
-</td>
-<td style="text-align:right;">
-5.1
-</td>
-<td style="text-align:right;">
-7.8
-</td>
-<td style="text-align:right;">
-6.4
-</td>
-<td style="text-align:right;">
-5.1
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-SIM
-</td>
-<td style="text-align:right;">
-5.5
-</td>
-<td style="text-align:right;">
-6.6
-</td>
-<td style="text-align:right;">
-5.4
-</td>
-<td style="text-align:right;">
-7.6
-</td>
-<td style="text-align:right;">
-7.2
-</td>
-<td style="text-align:right;">
-5.3
-</td>
-</tr>
+  <tr>
+   <td style="text-align:left;"> Aluno </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 2.0 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 4.0 </td>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 6.0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ME </td>
+   <td style="text-align:right;"> 5.3 </td>
+   <td style="text-align:right;"> 6.2 </td>
+   <td style="text-align:right;"> 5.1 </td>
+   <td style="text-align:right;"> 7.8 </td>
+   <td style="text-align:right;"> 6.4 </td>
+   <td style="text-align:right;"> 5.1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> SIM </td>
+   <td style="text-align:right;"> 5.5 </td>
+   <td style="text-align:right;"> 6.6 </td>
+   <td style="text-align:right;"> 5.4 </td>
+   <td style="text-align:right;"> 7.6 </td>
+   <td style="text-align:right;"> 7.2 </td>
+   <td style="text-align:right;"> 5.3 </td>
+  </tr>
 </tbody>
-
 </table>
-<p>TRUE</p>
+
+</div>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
@@ -975,7 +781,7 @@ SIM
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg=</span><span class="st">"white"</span>)</span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(ME<span class="sc">~</span>SIM,<span class="at">data =</span> dados4) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(SIM<span class="sc">~</span>ME,<span class="at">data =</span> dados4) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1008,115 +814,104 @@ SIM
 <pre><code>[1] 0.9511981</code></pre>
 </div>
 </div>
-<ol start="7" type="1">
-<li><strong>Tempo de caminhada <span class="math inline">\(\times\)</span> Gordura corporal.</strong> Dados de tempo semanal de caminhada (horas) e a gordura corporal (%) de oito indivíduos do sexo masculino com idade acima de 60 anos são apresentados na Tabela @ref(tab:corr3).</li>
+<ol start="3" type="1">
+<li><strong>Tempo de caminhada</strong> <span class="math inline">\(\times\)</span> <strong>Gordura corporal</strong>. Dados de tempo semanal de caminhada (horas) e a gordura corporal (%) de oito indivíduos do sexo masculino com idade acima de 60 anos são apresentados na <a href="#tbl-corr3">Table&nbsp;6</a>.</li>
 </ol>
-<div class="cell" data-layout-align="center">
+<div class="cell tbl-cap-location-top" data-layout-align="center">
 <div class="cell-output-display">
+<div id="tbl-corr3" class="anchored">
 
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-Tempo de caminhada (horas) e gordura corporal (%) de oito indivíduos.
-</caption>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;6:  Tempo de caminhada (horas) e gordura corporal (%) de oito indivíduos. </caption>
 <tbody>
-<tr>
-<td style="text-align:left;">
-Indivíduo
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:right;">
-8
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Tempo
-</td>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:right;">
-12
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:right;">
-5
-</td>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:right;">
-14
-</td>
-<td style="text-align:right;">
-10
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Gordura
-</td>
-<td style="text-align:right;">
-22
-</td>
-<td style="text-align:right;">
-11
-</td>
-<td style="text-align:right;">
-23
-</td>
-<td style="text-align:right;">
-25
-</td>
-<td style="text-align:right;">
-21
-</td>
-<td style="text-align:right;">
-19
-</td>
-<td style="text-align:right;">
-9
-</td>
-<td style="text-align:right;">
-12
-</td>
-</tr>
+  <tr>
+   <td style="text-align:left;"> Indivíduo </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 8 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Tempo </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 12 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 14 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Gordura </td>
+   <td style="text-align:right;"> 22 </td>
+   <td style="text-align:right;"> 11 </td>
+   <td style="text-align:right;"> 23 </td>
+   <td style="text-align:right;"> 25 </td>
+   <td style="text-align:right;"> 21 </td>
+   <td style="text-align:right;"> 19 </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 12 </td>
+  </tr>
 </tbody>
-
 </table>
-<p>TRUE</p>
+
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>Tempo   <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">12</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">14</span>,<span class="dv">10</span>)</span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>Gordura <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">22</span>,<span class="dv">11</span>,<span class="dv">23</span>,<span class="dv">25</span>,<span class="dv">21</span>,<span class="dv">19</span>,<span class="dv">9</span>,<span class="dv">12</span>)</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>dados5  <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Ind=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>,Tempo, Gordura)</span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>dados5</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Ind Tempo Gordura
+1   1     6      22
+2   2    12      11
+3   3     4      23
+4   4     2      25
+5   5     5      21
+6   6     7      19
+7   7    14       9
+8   8    10      12</code></pre>
 </div>
 </div>
 <ul>
-<li><p>Faça um diagrama de dispersão (coloque o tempo no eixo horizontal).</p></li>
-<li><p>Calcule a covariância da amostra.</p></li>
-<li><p>Calcule e interprete a correlação da amostra.</p></li>
+<li>Faça um diagrama de dispersão (coloque o tempo no eixo horizontal).</li>
 </ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg=</span><span class="st">"white"</span>)</span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Gordura<span class="sc">~</span>Tempo,<span class="at">data =</span> dados5) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="lista_files/figure-html/disp3-1.png" class="img-fluid figure-img" width="2400"></p>
+<p></p><figcaption class="figure-caption">Diagrama de dispersão</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>Calcule a covariância da amostra.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cov</span>(dados5<span class="sc">$</span>Tempo,dados5<span class="sc">$</span>Gordura)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -25</code></pre>
+</div>
+</div>
+<ul>
+<li>Calcule e interprete a correlação da amostra.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(dados5<span class="sc">$</span>Tempo,dados5<span class="sc">$</span>Gordura)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.9804268</code></pre>
+</div>
+</div>
 </section>
 </section>
 <section id="noções-de-probabilidades" class="level1">
@@ -1144,10 +939,11 @@ Gordura
 <li><p>Qual a probabilidade de um paciente com infecção hospitalar ter realizado cirurgia no centro <span class="math inline">\(A_1\)</span>?</p></li>
 </ul>
 <ol start="5" type="1">
-<li>Suponha que você está criando um teste diagnóstico para uma dada doença. Então, seleciona 500 indivíduos, 250 doentes e 250 não doentes pelo padrão-ouro e aplica o teste. Os resultados podem ser vistos na Tabela @ref(tab:teste1).</li>
+<li>Suponha que você está criando um teste diagnóstico para uma dada doença. Então, seleciona 500 indivíduos, 250 doentes e 250 não doentes pelo padrão-ouro e aplica o teste. Os resultados podem ser vistos na <a href="#tbl-teste1">Table&nbsp;7</a>.</li>
 </ol>
+<div id="tbl-teste1" class="anchored">
 <table class="table">
-<caption>(#tab:teste1) Padrão-ouro para a sensibilidade e especificidade do teste diagnóstico.</caption>
+<caption>Table&nbsp;7: Padrão-ouro para a sensibilidade e especificidade do teste diagnóstico.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: center;">Teste</th>
@@ -1178,6 +974,7 @@ Gordura
 </tr>
 </tbody>
 </table>
+</div>
 <ul>
 <li>Qual a sensibilidade do teste?</li>
 <li>Qual a especificidade do teste?</li>
@@ -1198,6 +995,32 @@ Gordura
 <li>Acertar exatamente cinco vezes o alvo?</li>
 <li>Acertar o alvo pelo menos três vezes (pelo menos três vezes quer dizer três, quatro, cinco, <span class="math inline">\(\cdots\)</span> ou 15 vezes). Sugestão: <span class="math inline">\(P(X \geq 3)\)</span> = <span class="math inline">\(1 - P(X&lt;3)\)</span> = <span class="math inline">\(1 - \{P(X=0)\)</span> + <span class="math inline">\(P(X=1)\)</span> + <span class="math inline">\(P(X=2) \}\)</span></li>
 </ul>
+<section id="distribuição-normal" class="level2">
+<h2 class="anchored" data-anchor-id="distribuição-normal">Distribuição Normal</h2>
+<ol type="1">
+<li>Suponha que, numa dada população, o QI (Quociente de Inteligência) siga uma distribuição Normal com média 105 e variância 49. Calcule:</li>
+</ol>
+<ul>
+<li><p>a probabilidade de encontrarmos nessa população indivíduos com QI acima de 115.</p></li>
+<li><p>a quantidade de indivíduos que tem QI entre 90 e 100, dado que esta população é composta por 10000 sujeitos.</p></li>
+<li><p>o valor mínimo de QI para que um indivíduo seja considerado super inteligente (considere que apenas 1% da população seja super inteligente).</p></li>
+</ul>
+<ol start="2" type="1">
+<li>As notas finais da disciplina de Estatística se distribuiem normalmente com méia 6.75 e variância 9. Se o valor para a aprovação é 6.00, responda:</li>
+</ol>
+<ul>
+<li><p>qual a probabilidade de um aluno ser aprovado na disciplina?</p></li>
+<li><p>se a sala tem 40 alunos, quantos estarão aprovados?</p></li>
+<li><p>qual a probabilidade de um aluno ser aprovado com média final maior que 8.00?</p></li>
+</ul>
+<ol start="3" type="1">
+<li>Se uma dada espécie de peixe vive em média 550 dias (desvio padrão de 80 dias) em um aquário, responda:</li>
+</ol>
+<ul>
+<li><p>qual a probabilidade de um peixe viver mais que 700 dias?</p></li>
+<li><p>sabendo que 25% dos peixes dessa população morrem antes de atingirem a fase reprodutiva, qual o tempo de vida de um peixe para atingir essa fase?</p></li>
+</ul>
+</section>
 </section>
 <section id="intervalo-de-confiança" class="level1">
 <h1>Intervalo de confiança</h1>

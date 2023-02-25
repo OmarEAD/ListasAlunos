@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Omar C N Pereira">
+
+<title>Estatística Básica - Distribuição Normal</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Estatística Básica</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lista.html">
+ <span class="menu-text">Lista de exercícios</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./benford.html">
+ <span class="menu-text">Benford</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./DistrNormal.html" aria-current="page">
+ <span class="menu-text">Distribuição Normal</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introdução1" id="toc-introdução1" class="nav-link active" data-scroll-target="#introdução1">Introdução</a></li>
+  <li><a href="#desenvolvimento" id="toc-desenvolvimento" class="nav-link" data-scroll-target="#desenvolvimento">Desenvolvimento</a></li>
+  <li><a href="#sec-inta" id="toc-sec-inta" class="nav-link" data-scroll-target="#sec-inta">Integral A</a></li>
+  <li><a href="#sec-intb" id="toc-sec-intb" class="nav-link" data-scroll-target="#sec-intb">Integral B</a></li>
+  <li><a href="#sec-intc" id="toc-sec-intc" class="nav-link" data-scroll-target="#sec-intc">Integral C</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Distribuição Normal</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">Distribuição Contínua</div>
+    <div class="quarto-category">Distribuição Normal</div>
+    <div class="quarto-category">Probabilidade</div>
+    <div class="quarto-category">Gaussiana</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Omar C N Pereira </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell" data-layout-align="center">
+
+</div>
+<section id="introdução1" class="level1">
+<h1>Introdução<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h1>
+<p>A distribuição normal é uma das mais importantes distribuições contínuas de probabilidade e pode ser escrita como</p>
+<p><span id="eq-gaussiana"><span class="math display">\[
+f(x)= \frac{1}{\sqrt{2 \pi \sigma}} e^{- \frac{(x - \mu)^{2}}{2 \sigma^{2}}}
+,
+\tag{1}\]</span></span></p>
+<p>em que <span class="math inline">\(\mu\)</span> e <span class="math inline">\(\sigma\)</span> são a média e a variância da distribuição. O objetivo deste artigo é apresentar uma demonstração dessa distribuição em <em>forma de sino</em> a partir da exponenciação de um polinômio de segundo grau, isto é,</p>
+<p><span id="eq-polinomio"><span class="math display">\[
+f(x)= exp \{ ax^{2} + bx + c \}
+,
+\tag{2}\]</span></span></p>
+<p>em que <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> e <span class="math inline">\(c\)</span> são constantes. Por exemplo, podemos representar graficamente a exponenciação desse polinômio para <span class="math inline">\(a=-2\)</span>, <span class="math inline">\(b=0\)</span> e <span class="math inline">\(c=1\)</span>, ou seja,</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-gauss" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="DistrNormal_files/figure-html/fig-gauss-1.png" class="img-fluid figure-img" width="2400"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: Representação de uma curva em forma de sino (a área sob a curva não é um).</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>O gráfico apresentado na Figura <a href="#fig-gauss">Figure&nbsp;1</a> não tem área sob a curva igual a um, mas tem o formado de sino equivalente à curva normal.</p>
+<p>Para que esta função tenha um máximo, faremos <span class="math inline">\(a&lt;0\)</span>. Assim <span class="math inline">\(a=- \alpha\)</span> com <span class="math inline">\(\alpha &gt; 0\)</span>. As constantes <span class="math inline">\(b\)</span>, a qual move o pico central da distribuição ao longo de <span class="math inline">\(x\)</span>, e <span class="math inline">\(c\)</span> são escolhidas a fim de que</p>
+<p><span id="eq-normalizacao"><span class="math display">\[
+\int_{- \infty}^{+ \infty} f(x) \hspace{0.2cm} dx = 1
+.
+\tag{3}\]</span></span></p>
+</section>
+<section id="desenvolvimento" class="level1">
+<h1>Desenvolvimento</h1>
+<p>Começaremos agora um trabalho algébrico. Assim</p>
+<p><span id="eq-p1"><span class="math display">\[
+f(x)= exp \{ -(\alpha x^{2} - bx) \} exp \{ {c} \}
+,
+\tag{4}\]</span></span></p>
+<p>em que, completando quadrados na primeira exponencial da Equação (<a href="#eq-p1">Equation&nbsp;4</a>), temos</p>
+<p><span class="math display">\[\begin{equation*}
+\alpha x^{2} - bx = \left( \sqrt{ \alpha } x - \frac{b}{2 \sqrt{ \alpha }} \right)^{2} - \left(\frac{b}{2 \sqrt{ \alpha}}\right)^{2}
+.
+\end{equation*}\]</span></p>
+<p>Dessa forma</p>
+<p><span class="math display">\[\begin{equation*}
+f(x)= exp \left\{ -\left( \sqrt{\alpha} x - \frac{b}{2 \sqrt{ \alpha }} \right)^{2}  \right\}  exp \left\{ c - \left( \frac{b}{2 \sqrt{ \alpha}} \right)^{2}  \right\}
+,
+\end{equation*}\]</span></p>
+<p>e, como <span class="math inline">\(exp \left\{ c - \left( \frac{b}{2 \sqrt{ \alpha}} \right)^{2} \right\}\)</span> é uma constante, faremos</p>
+<p><span class="math display">\[\begin{equation*}
+\beta = exp \left\{ c - \left( \frac{b}{2 \sqrt{ \alpha}} \right)^{2}  \right\}
+,
+\end{equation*}\]</span></p>
+<p>ficando com</p>
+<p><span class="math display">\[\begin{equation*}
+f(x) \hspace{0.2cm} = \hspace{0.2cm} \beta \hspace{0.2cm} exp \left\{ -\left( \sqrt{\alpha} x - \frac{b}{2 \sqrt{ \alpha }} \right)^{2}  \right\}
+.
+\end{equation*}\]</span></p>
+<p>Agora fazendo <span class="math inline">\(\theta= \left( \sqrt{\alpha}x -\frac{b}{2 \sqrt{ \alpha }} \right)^{2}\)</span>, temos</p>
+<p><span class="math display">\[\begin{eqnarray*}
+\theta &amp; = &amp; \left( \sqrt{\alpha} x - \frac{b}{2 \sqrt{ \alpha }} \right)^{2}\nonumber\\
+       &amp; = &amp; \left( \frac{2 \alpha x - b}{2 \sqrt{ \alpha }} \right)^{2}\nonumber\\
+       &amp; = &amp; \frac{ \left( x - \frac{b}{ 2 \alpha} \right)^{2} }{ 4 \alpha }
+\end{eqnarray*}\]</span></p>
+<p>e com <span class="math inline">\(\mu = \frac{b}{2 \alpha}\)</span> e <span class="math inline">\(\sigma^{2} = \frac{1}{2 \alpha}\)</span> chegamos em</p>
+<p><span class="math display">\[\begin{equation*}
+\theta = \frac{ \left( x - \mu \right)^{2} }{ 2 \sigma^{2} }
+\end{equation*}\]</span></p>
+<p>e assim ficamos com</p>
+<p><span class="math display">\[\begin{equation*}
+f(x)\hspace{0.2cm}=\hspace{0.2cm} \beta \hspace{0.2cm} exp \left\{ -  \frac{ \left( x - \mu \right)^{2} }{ 2 \sigma^{2} } \right\}
+.
+\end{equation*}\]</span></p>
+<p>Agora precisamos que nossa <span class="math inline">\(f(x)\)</span> integrada nos intervalos de menos infinito a mais infinito seja igual a <span class="math inline">\(1\)</span>, conforme Equação (<a href="#eq-normalizacao">Equation&nbsp;3</a>), ou seja,</p>
+<p><span class="math display">\[\begin{equation*}
+\int_{- \infty}^{+ \infty} f(x) \hspace{0.2cm} dx = 1
+,
+\end{equation*}\]</span></p>
+<p>Vamos escrever <span class="math inline">\(I\)</span> como</p>
+<p><span id="eq-norm1"><span class="math display">\[
+I = \int_{- \infty}^{+ \infty}  \beta \hspace{0.2cm} exp \left\{ -  \frac{ \left( x - \mu \right)^{2} }{ 2 \sigma^{2} } \right\} \hspace{0.2cm} dx
+,
+\tag{5}\]</span></span></p>
+<p>que deve ser igual a <span class="math inline">\(1\)</span>. Para resolvermos esta integral, faremos uma mudança de variável, ou seja,</p>
+<p><span id="eq-mv1"><span class="math display">\[
+u \hspace{0.2cm} = \hspace{0.2cm} x \hspace{0.2cm} - \hspace{0.2cm} \mu
+\tag{6}\]</span></span></p>
+<p>assim</p>
+<p><span id="eq-mv2"><span class="math display">\[
+du \hspace{0.2cm} = \hspace{0.2cm} dx \hspace{0.2cm}
+,
+\tag{7}\]</span></span></p>
+<p>ficando com</p>
+<p><span class="math display">\[\begin{equation*}
+I = \beta  \int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{ - \frac{u^{2}}{ 2 \sigma^{2}} } \hspace{0.2cm} du \hspace{0.2cm}
+.
+\end{equation*}\]</span></p>
+<p>Como</p>
+<p><span class="math display">\[\begin{equation*}
+\int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{ - \gamma u^{2} } \hspace{0.2cm} du = \sqrt{ \frac{ \pi }{ \gamma } } \hspace{0.5cm} ,
+\end{equation*}\]</span></p>
+<p>(ver seção <a href="#sec-inta">Section&nbsp;3</a>) temos</p>
+<p><span class="math display">\[\begin{equation*}
+I \hspace{0.2cm} = \hspace{0.2cm} \beta \hspace{0.2cm} \sqrt{ 2 \sigma^{2} \pi }
+,
+\end{equation*}\]</span></p>
+<p>e como <span class="math inline">\(I\)</span> deve ser igual a <span class="math inline">\(1\)</span></p>
+<p><span class="math display">\[\begin{equation*}
+\beta \hspace{0.2cm} \sqrt{ 2 \sigma^{2} \pi } \hspace{0.2cm} = \hspace{0.2cm} 1
+,
+\end{equation*}\]</span></p>
+<p>de onde</p>
+<p><span class="math display">\[\begin{equation*}
+\beta \hspace{0.2cm} = \hspace{0.2cm} \frac{1}{ \sqrt{ 2 \sigma^{2} \pi }} \hspace{0.2cm}
+.
+\end{equation*}\]</span></p>
+<p>Dessa forma, temos abaixo a função densidade de probabilidade (<span class="math inline">\(fdp\)</span>), Equação (<a href="#eq-gaussiana">Equation&nbsp;1</a>), a qual queríamos demonstrar, ou seja,</p>
+<p><span class="math display">\[\begin{equation*}
+f(x)= \frac{1}{\sqrt{2 \pi \sigma}} e^{- \frac{(x - \mu)^{2}}{2 \sigma^{2}}}\hspace{0.2cm}
+.
+\end{equation*}\]</span></p>
+<p>Agora, resta ainda calcular a esperança e a variância desta <span class="math inline">\(fdp\)</span>, a fim de mostrar que</p>
+<p><span id="eq-media1"><span class="math display">\[
+\mu \hspace{0.2cm}  = \hspace{0.2cm}   E(X) \hspace{0.2cm}  = \hspace{0.2cm} \int_{- \infty}^{+ \infty}   \hspace{0.2cm}  x \hspace{0.2cm}  f(x) \hspace{0.2cm}  dx \hspace{0.2cm}
+\tag{8}\]</span></span></p>
+<p>e que</p>
+<p><span id="eq-variancia"><span class="math display">\[
+\sigma^{2} \hspace{0.2cm}  = \hspace{0.2cm}   Var(X) \hspace{0.2cm}  = \hspace{0.2cm} E [ ( X - \mu )^{2} ]      \hspace{0.2cm}  = \hspace{0.2cm}  \int_{- \infty}^{+ \infty}   \hspace{0.2cm}  ( X - \mu )^{2} \hspace{0.2cm}  f(x) \hspace{0.2cm}  dx \hspace{0.2cm}.
+\tag{9}\]</span></span></p>
+<p>Começando, então, pela definição da esperança matemática <span class="math inline">\(E(X)\)</span> para a nossa <span class="math inline">\(fdp\)</span> temos</p>
+<p><span class="math display">\[\begin{eqnarray*}
+E(X) &amp; = &amp; \int_{- \infty}^{+ \infty}   \hspace{0.2cm}  x \hspace{0.2cm}  f(x) \hspace{0.2cm}  dx\nonumber\\
+     &amp; = &amp; \int_{- \infty}^{+ \infty}   \hspace{0.2cm}  \frac{x}{\sqrt{2 \pi \sigma^{2}}} e^{- \frac{(x - \mu)^{2}}{2 \sigma^{2}}}\hspace{0.2cm} du\nonumber\\
+     &amp; = &amp; \frac{1}{\sqrt{2 \pi \sigma^{2}}} \int_{- \infty}^{+ \infty}   \hspace{0.2cm} x   e^{- \frac{(x - \mu)^{2}}{2 \sigma^{2}}} \hspace{0.2cm}  du\hspace{0.2cm}
+.
+\end{eqnarray*}\]</span></p>
+<p>Para resolvermos esta integral, faremos uma mudança de variável para <span class="math inline">\(x\)</span>, conforme Equações (<a href="#eq-mv1">Equation&nbsp;6</a>) e (<a href="#eq-mv2">Equation&nbsp;7</a>)), ficando com</p>
+<p><span class="math display">\[\begin{eqnarray*}
+E(X) &amp; = &amp; \frac{1}{\sqrt{2 \pi \sigma^{2}}} \int_{- \infty}^{+ \infty}   \hspace{0.2cm}(u + \mu) \hspace{0.2cm} e^{- \frac{(u)^{2}}{2 \sigma^{2}}}\hspace{0.2cm}  \hspace{0.2cm}  du \hspace{0.2cm}\nonumber\\
+     &amp; = &amp; \frac{1}{\sqrt{2 \pi \sigma^{2}}} \left[  \int_{- \infty}^{+ \infty}   \hspace{0.1cm} u \hspace{0.1cm} e^{- \frac{(u)^{2}}{2 \sigma^{2}}}\hspace{0.1cm}  \hspace{0.1cm}  du \hspace{0.1cm}  + \hspace{0.1cm} \int_{- \infty}^{+ \infty}   \hspace{0.1cm} \mu \hspace{0.1cm} e^{- \frac{(u)^{2}}{2 \sigma^{2}}}\hspace{0.1cm}  \hspace{0.1cm}  du       \right]\nonumber\\
+\end{eqnarray*}\]</span></p>
+<p>em que a primeira integral do lado direito da igualdade acima é igual a zero (ver seção <a href="#sec-intb">Section&nbsp;4</a>).</p>
+<p>Então,</p>
+<p><span class="math display">\[\begin{equation*}
+E(X) \hspace{0.2cm}  = \hspace{0.2cm}\frac{\mu}{\sqrt{2 \pi \sigma^{2}}} \int_{- \infty}^{+ \infty}   \hspace{0.2cm}  e^{- \frac{(u)^{2}}{2 \sigma^{2}}} \hspace{0.2cm} du\hspace{0.2cm} \hspace{0.2cm}.
+\end{equation*}\]</span></p>
+<p>conforme seção <a href="#sec-inta">Section&nbsp;3</a>. Dessa forma, temos que</p>
+<p><span class="math display">\[\begin{equation*}
+E(X) \hspace{0.2cm}  = \hspace{0.2cm}\frac{\mu}{\sqrt{2 \pi \sigma^{2}}} \hspace{0.2cm} \sqrt{2 \pi \sigma^{2}} \hspace{0.2cm} = \hspace{0.2cm} \mu
+\hspace{0.2cm},
+\end{equation*}\]</span></p>
+<p>que é a média <span class="math inline">\(\mu\)</span>, ou seja, vemos que a esperança da <span class="math inline">\(fdp\)</span> estudada é</p>
+<p><span id="eq-media5"><span class="math display">\[
+E(X) \hspace{0.2cm}  = \hspace{0.2cm} \mu
+\hspace{0.2cm},
+\tag{10}\]</span></span></p>
+<p>conforme queríamos demonstrar.</p>
+<p>Continuemos, agora, com o cálculo da variância <span class="math inline">\(Var (X)\)</span> da nossa <span class="math inline">\(fdp\)</span>. Pela definição temos que <span class="math display">\[\begin{eqnarray*}
+Var(X) &amp;  = &amp; E [ ( X - \mu )^{2} ]\nonumber\\
+       &amp;  = &amp;   \int_{- \infty}^{+ \infty}   \hspace{0.2cm}  ( x - \mu )^{2} \hspace{0.2cm}  f(x) \hspace{0.2cm}  dx \hspace{0.2cm}\nonumber\\
+       &amp;  = &amp;  \frac{1}{\sqrt{2 \pi \sigma^{2}}} \int_{- \infty}^{+ \infty}   \hspace{0.2cm}(x - \mu)^{2} \hspace{0.2cm} e^{- \frac{(x - \mu)^{2}}{2 \sigma^{2}}}\hspace{0.2cm}  \hspace{0.2cm}  dx \hspace{0.2cm}
+,
+\end{eqnarray*}\]</span></p>
+<p>e fazendo a substituição da variável <span class="math inline">\(x\)</span> conforme Equações ((<a href="#eq-mv1">Equation&nbsp;6</a>)) e ((<a href="#eq-mv2">Equation&nbsp;7</a>)), ficamos com</p>
+<p><span class="math display">\[\begin{equation*}
+Var(X) \hspace{0.2cm}  = \hspace{0.2cm} \frac{1}{\sqrt{2 \pi \sigma^{2}}} \int_{- \infty}^{+ \infty}   \hspace{0.2cm}(u)^{2} \hspace{0.2cm} e^{- \frac{(u)^{2}}{2 \sigma^{2}}}\hspace{0.2cm}  \hspace{0.2cm}  du
+\hspace{0.2cm},
+\end{equation*}\]</span></p>
+<p>que pode ser resolvida por partes, conforme seção <a href="#sec-intc">Section&nbsp;5</a>, para tornar-se</p>
+<p><span id="eq-var3"><span class="math display">\[
+Var(X) \hspace{0.2cm}  = \hspace{0.2cm} \sigma^{2}
+\hspace{0.2cm},
+\tag{11}\]</span></span></p>
+<p>que é a variância da <span class="math inline">\(fdp\)</span> estudada, conforme queríamos demonstar.</p>
+</section>
+<section id="sec-inta" class="level1">
+<h1>Integral A</h1>
+<p>Queremos mostrar que a integral</p>
+<p><span id="eq-int1"><span class="math display">\[
+I_{A} =  \int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{- \lambda x^{2}}\hspace{0.2cm}  \hspace{0.2cm}  dx
+\hspace{0.2cm},
+\tag{12}\]</span></span></p>
+<p>que é conhecida como gaussiana, é igual a <span class="math inline">\(\sqrt{\frac{\pi}{\lambda}}\)</span>. Esta integral também pode ser escrita como</p>
+<p><span class="math display">\[\begin{equation*}
+I_{A} =  \int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{- \lambda y^{2}}\hspace{0.2cm}  \hspace{0.2cm}  dy
+\hspace{0.2cm},
+\end{equation*}\]</span></p>
+<p>em que a variável <span class="math inline">\(x\)</span> foi substituida por <span class="math inline">\(y\)</span>. Isto é possível, pois <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> são variáveis mudas, ou seja, o valor de <span class="math inline">\(I_{A}\)</span> não depende destas variáveis. Assim, podemos fazer <span class="math inline">\(I_{A}^{2}\)</span> para termos</p>
+<p><span class="math display">\[\begin{eqnarray*}
+I_{A}^{2} &amp; = &amp; \int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{- \lambda x^{2}}\hspace{0.2cm}  \hspace{0.2cm}  dx  \hspace{0.3cm}    \int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{- \lambda y^{2}}\hspace{0.2cm}  \hspace{0.2cm}  dy
+\hspace{0.2cm}\\
+    &amp;=&amp; \int_{- \infty}^{+ \infty}   \hspace{0.2cm} \int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{- \lambda (x^{2} + y^{2})}\hspace{0.2cm}dx \hspace{0.2cm} dy \hspace{0.2cm}
+.
+\end{eqnarray*}\]</span></p>
+<p>Agora, é preciso fazermos uma transformação de coordenadas, indo do sistema de coordenadas retangulares para o sistema de coordenadas polares. Um ponto <span class="math inline">\(P\)</span> do plano é representado por <span class="math inline">\(P(x, y)\)</span> num sistema de coordenadas retangulares ou por <span class="math inline">\(P(r, \theta)\)</span> num sistema de coordenadas polares. Quando conhecemos <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> podemos escrever <span class="math inline">\(r\)</span> como <span class="math inline">\(r^{2}=x^{2} +y^{2}\)</span> e fazermos o elemento de área <span class="math inline">\(da = dx dy\)</span> ser <span class="math inline">\(da = r dr d\theta\)</span>. Desta forma, quando os limites de integração <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> variarem de <span class="math inline">\(- \infty\)</span> a <span class="math inline">\(+ \infty\)</span> temos que <span class="math inline">\(r\)</span> deve ir de <span class="math inline">\(0\)</span> a <span class="math inline">\(+ \infty\)</span> e <span class="math inline">\(\theta\)</span> de <span class="math inline">\(0\)</span> a <span class="math inline">\(2 \pi\)</span>. Assim, a integral</p>
+<p><span class="math display">\[\begin{equation*}
+I_{A}^{2} =  \int_{- \infty}^{+ \infty}   \hspace{0.2cm} \int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{- \lambda (x^{2} + y^{2})}\hspace{0.2cm}dx \hspace{0.2cm} dy \hspace{0.2cm}
+\end{equation*}\]</span></p>
+<p>aqui, representada no sistema de coordenadas retangulares, é transformada em</p>
+<p><span class="math display">\[\begin{equation*}
+I_{A}^{2} =  \int_{0}^{2 \pi}   \hspace{0.2cm} \int_{0}^{+ \infty}   \hspace{0.2cm} r e^{- \lambda r^{2}}\hspace{0.2cm}dr \hspace{0.2cm} d\theta \hspace{0.2cm}
+\end{equation*}\]</span></p>
+<p>que é sua representação em coordenadas polares. Então</p>
+<p><span class="math display">\[\begin{eqnarray*}
+I_{A}^{2} &amp; = &amp; \int_{0}^{2 \pi}  d\theta \hspace{0.2cm} \int_{0}^{+ \infty}   \hspace{0.2cm} r e^{- \lambda r^{2}}\hspace{0.2cm}dr \hspace{0.2cm}\\
+    &amp; = &amp; 2 \pi \hspace{0.2cm} \int_{0}^{+ \infty}   \hspace{0.2cm} r e^{- \lambda r^{2}}\hspace{0.2cm}dr \hspace{0.2cm}
+.
+\end{eqnarray*}\]</span></p>
+<p>Para resolvermos a integral em <span class="math inline">\(r\)</span> fazemos <span class="math inline">\(u = r^{2}\)</span> e <span class="math inline">\(du = 2 r dr\)</span>. Assim</p>
+<p><span class="math display">\[\begin{eqnarray*}
+I_{A}^{2} &amp; = &amp; 2 \pi \hspace{0.2cm} \int_{0}^{+ \infty}   \hspace{0.2cm} \frac{1}{2}\hspace{0.2cm}  e^{- \lambda u}\hspace{0.2cm}du \hspace{0.2cm}\\
+    &amp; = &amp; \left[ - \frac{\pi}{\lambda} \hspace{0.2cm} e^{- \lambda u}\hspace{0.2cm} \right]_{0}^{+ \infty}\\
+    &amp; = &amp; - \frac{\pi}{\lambda} \left( \frac{1}{e^{+ \infty}} - \frac{1}{e^{\lambda (0)}} \right)\\
+    &amp; = &amp; - \frac{\pi}{\lambda} \left( 0 - 1 \right)\\
+    &amp; = &amp; \frac{\pi}{\lambda}
+\end{eqnarray*}\]</span></p>
+<p>e finalmente, aplicando a raiz quadrada em ambos os lados da igualdade,</p>
+<p><span id="eq-int6"><span class="math display">\[
+I_{A} = \sqrt{\frac{\pi}{\lambda}}
+\tag{13}\]</span></span></p>
+<p>conforme queríamos demonstrar.</p>
+</section>
+<section id="sec-intb" class="level1">
+<h1>Integral B</h1>
+<p>Outro resultado que queremos demonstrar é</p>
+<p><span id="eq-intb1"><span class="math display">\[
+I_{B} =  \int_{- \infty}^{+ \infty}   \hspace{0.2cm} x \hspace{0.2cm} e^{- \beta x^{2}}\hspace{0.2cm}  \hspace{0.2cm}  dx = 0
+\hspace{0.2cm},
+\tag{14}\]</span></span></p>
+<p>Para isto, faremos a substituição <span class="math inline">\(u = \beta x^{2}\)</span> e <span class="math inline">\(du = 2 \beta x dx\)</span>. Assim</p>
+<p><span class="math display">\[\begin{eqnarray*}
+I_{B} &amp; = &amp;  \int_{- \infty}^{+ \infty}   \hspace{0.2cm} \frac{1}{2 \beta} \hspace{0.2cm} e^{-u}\hspace{0.2cm}  \hspace{0.2cm}  du\\
+      &amp; = &amp; \frac{1}{2 \beta} \int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{-u}\hspace{0.2cm} \hspace{0.2cm} du\\
+      &amp; = &amp; \frac{1}{2 \beta} \left[ - e^{-u}  \right]_{- \infty}^{+ \infty}\\
+      &amp; = &amp; \frac{1}{2 \beta} \left( - \frac{1}{e^{+ \infty}} + \frac{1}{e^{- \infty}}  \right)\\
+      &amp; = &amp; \frac{1}{2 \beta} \left( -0 + 0 \right)\\
+      &amp; = &amp; 0
+\end{eqnarray*}\]</span></p>
+<p>conforme queríamos demonstrar.</p>
+</section>
+<section id="sec-intc" class="level1">
+<h1>Integral C</h1>
+<p>Supondo</p>
+<p><span id="eq-intc1"><span class="math display">\[
+I_{C} \hspace{0.2cm}  = \hspace{0.2cm} \frac{1}{\sqrt{2 \pi \sigma^{2}}} \int_{- \infty}^{+ \infty}   \hspace{0.2cm}(z)^{2} \hspace{0.2cm} e^{- \frac{(z)^{2}}{2 \sigma^{2}}}\hspace{0.2cm}  \hspace{0.2cm}  dz
+\hspace{0.2cm},
+\tag{15}\]</span></span></p>
+<p>queremos demonstrar que <span class="math inline">\(I_{C} = \sigma^{2}\)</span>. Resolveremos esta integral por partes, ou seja, usando a definição</p>
+<p><span id="eq-intc2"><span class="math display">\[
+\int u dv = uv - \int v du
+\tag{16}\]</span></span></p>
+<p>e fazendo</p>
+<p><span class="math display">\[\begin{equation*}
+I_{C} \hspace{0.2cm}  = \hspace{0.2cm} \frac{1}{\sqrt{2 \pi \sigma^{2}}} \int_{- \infty}^{+ \infty}   \hspace{0.2cm} \underbrace{z}_{u}         \underbrace{ z \hspace{0.2cm} e^{- \frac{(z)^{2}}{2 \sigma^{2}}}\hspace{0.2cm}  \hspace{0.2cm}  dz}_{dv}
+\hspace{0.2cm},
+\end{equation*}\]</span></p>
+<p>temos, com isso, que <span class="math inline">\(u=z\)</span>, <span class="math inline">\(du=dz\)</span>, <span class="math inline">\(dv= z \hspace{0.2cm} e^{- \frac{(z)^{2}}{2 \sigma^{2}}} dz\)</span> e então <span class="math inline">\(v= \int z e^{-\frac{z^{2}}{2 \sigma^{2}}} dz\)</span>. Esta última integral, para encontrarmos <span class="math inline">\(v\)</span>, pode ser resolvida com <span class="math inline">\(t=\frac{z^{2}}{2 \sigma^{2}}\)</span> e <span class="math inline">\(dt= \frac{z}{\sigma^{2}} dz\)</span>. Assim, fazendo estas substituições,</p>
+<p><span class="math display">\[\begin{eqnarray*}
+v &amp; = &amp; \sigma^{2} \int e^{-t} dt\\
+  &amp; = &amp; - \sigma^{2}  e^{-t}
+,
+\end{eqnarray*}\]</span></p>
+<p>e como fizemos <span class="math inline">\(t=\frac{z^{2}}{2 \sigma^{2}}\)</span>, <span class="math inline">\(v\)</span> finalmente fica <span class="math inline">\(v= - \sigma^{2} e^{-\frac{z^{2}}{2 \sigma^{2}}}\)</span>. Com isto,</p>
+<p><span class="math display">\[\begin{eqnarray*}
+I_{C}  &amp; = &amp; \frac{1}{\sqrt{2 \pi \sigma^{2}}} \left[ - z \sigma^{2} e^{- \frac{z^{2}}{2 \sigma^{2}}}   \right]_{-\infty}^{+\infty} - \int_{- \infty}^{+ \infty} \left( - \sigma^{2} e^{-\frac{z^{2}}{2 \sigma^{2}}}   \right) dz\\
+       &amp; = &amp; \frac{\sigma^{2}}{\sqrt{2 \pi \sigma^{2}}} \int_{- \infty}^{+ \infty} e^{-\frac{z^{2}}{2 \sigma^{2}}} \hspace{0.2cm} dz\\
+        &amp; = &amp; \frac{\sigma^{2}}{\sqrt{2 \pi \sigma^{2}}} \sqrt{2 \pi \sigma^{2}}\\
+        &amp; = &amp; \sigma^{2}
+.
+\end{eqnarray*}\]</span></p>
+<!-- conforme queríamos demonstrar. Observamos que, durante esta última passagem, usamos dois resultados desenvolvidos nos Apêndices \ref{inta} e \ref{intb}. -->
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Caso encontre erros, queira fazer comentários, ou trocar uma ideia sobre o artigo, por favor, me escreva: omarcnpereiraead@gmail.com<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

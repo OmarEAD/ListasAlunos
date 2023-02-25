@@ -76,11 +76,10 @@ O gráfico apresentado na Figura \@ref(fig:gauss) não tem área sob a curva igu
 
 Para que esta função tenha um máximo, faremos $a<0$. Assim $a=- \alpha$ com $\alpha > 0$. As constantes $b$, a qual move o pico central da distribuição ao longo de $x$, e $c$ são escolhidas a fim de que
 
-\begin{equation}
+$$
 \int_{- \infty}^{+ \infty} f(x) \hspace{0.2cm} dx = 1
-(\#eq:normalizacao)
 .
-\end{equation}
+$$ {#eq-normalizacao}
 
 # Desenvolvimento
 
