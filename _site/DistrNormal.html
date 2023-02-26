@@ -127,10 +127,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title">
 <h1 class="title">Distribuição Normal</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">R</div>
     <div class="quarto-category">Distribuição Contínua</div>
     <div class="quarto-category">Distribuição Normal</div>
-    <div class="quarto-category">Probabilidade</div>
     <div class="quarto-category">Gaussiana</div>
   </div>
   </div>
@@ -194,45 +192,45 @@ f(x)= exp \{ -(\alpha x^{2} - bx) \} exp \{ {c} \}
 ,
 \tag{4}\]</span></span></p>
 <p>em que, completando quadrados na primeira exponencial da Equação (<a href="#eq-p1">Equation&nbsp;4</a>), temos</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 \alpha x^{2} - bx = \left( \sqrt{ \alpha } x - \frac{b}{2 \sqrt{ \alpha }} \right)^{2} - \left(\frac{b}{2 \sqrt{ \alpha}}\right)^{2}
 .
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>Dessa forma</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 f(x)= exp \left\{ -\left( \sqrt{\alpha} x - \frac{b}{2 \sqrt{ \alpha }} \right)^{2}  \right\}  exp \left\{ c - \left( \frac{b}{2 \sqrt{ \alpha}} \right)^{2}  \right\}
 ,
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>e, como <span class="math inline">\(exp \left\{ c - \left( \frac{b}{2 \sqrt{ \alpha}} \right)^{2} \right\}\)</span> é uma constante, faremos</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 \beta = exp \left\{ c - \left( \frac{b}{2 \sqrt{ \alpha}} \right)^{2}  \right\}
 ,
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>ficando com</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 f(x) \hspace{0.2cm} = \hspace{0.2cm} \beta \hspace{0.2cm} exp \left\{ -\left( \sqrt{\alpha} x - \frac{b}{2 \sqrt{ \alpha }} \right)^{2}  \right\}
 .
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>Agora fazendo <span class="math inline">\(\theta= \left( \sqrt{\alpha}x -\frac{b}{2 \sqrt{ \alpha }} \right)^{2}\)</span>, temos</p>
-<p><span class="math display">\[\begin{eqnarray*}
+<span class="math display">\[\begin{eqnarray*}
 \theta &amp; = &amp; \left( \sqrt{\alpha} x - \frac{b}{2 \sqrt{ \alpha }} \right)^{2}\nonumber\\
        &amp; = &amp; \left( \frac{2 \alpha x - b}{2 \sqrt{ \alpha }} \right)^{2}\nonumber\\
        &amp; = &amp; \frac{ \left( x - \frac{b}{ 2 \alpha} \right)^{2} }{ 4 \alpha }
-\end{eqnarray*}\]</span></p>
+\end{eqnarray*}\]</span>
 <p>e com <span class="math inline">\(\mu = \frac{b}{2 \alpha}\)</span> e <span class="math inline">\(\sigma^{2} = \frac{1}{2 \alpha}\)</span> chegamos em</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 \theta = \frac{ \left( x - \mu \right)^{2} }{ 2 \sigma^{2} }
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>e assim ficamos com</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 f(x)\hspace{0.2cm}=\hspace{0.2cm} \beta \hspace{0.2cm} exp \left\{ -  \frac{ \left( x - \mu \right)^{2} }{ 2 \sigma^{2} } \right\}
 .
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>Agora precisamos que nossa <span class="math inline">\(f(x)\)</span> integrada nos intervalos de menos infinito a mais infinito seja igual a <span class="math inline">\(1\)</span>, conforme Equação (<a href="#eq-normalizacao">Equation&nbsp;3</a>), ou seja,</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 \int_{- \infty}^{+ \infty} f(x) \hspace{0.2cm} dx = 1
 ,
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>Vamos escrever <span class="math inline">\(I\)</span> como</p>
 <p><span id="eq-norm1"><span class="math display">\[
 I = \int_{- \infty}^{+ \infty}  \beta \hspace{0.2cm} exp \left\{ -  \frac{ \left( x - \mu \right)^{2} }{ 2 \sigma^{2} } \right\} \hspace{0.2cm} dx
@@ -248,34 +246,34 @@ du \hspace{0.2cm} = \hspace{0.2cm} dx \hspace{0.2cm}
 ,
 \tag{7}\]</span></span></p>
 <p>ficando com</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 I = \beta  \int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{ - \frac{u^{2}}{ 2 \sigma^{2}} } \hspace{0.2cm} du \hspace{0.2cm}
 .
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>Como</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 \int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{ - \gamma u^{2} } \hspace{0.2cm} du = \sqrt{ \frac{ \pi }{ \gamma } } \hspace{0.5cm} ,
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>(ver seção <a href="#sec-inta">Section&nbsp;3</a>) temos</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 I \hspace{0.2cm} = \hspace{0.2cm} \beta \hspace{0.2cm} \sqrt{ 2 \sigma^{2} \pi }
 ,
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>e como <span class="math inline">\(I\)</span> deve ser igual a <span class="math inline">\(1\)</span></p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 \beta \hspace{0.2cm} \sqrt{ 2 \sigma^{2} \pi } \hspace{0.2cm} = \hspace{0.2cm} 1
 ,
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>de onde</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 \beta \hspace{0.2cm} = \hspace{0.2cm} \frac{1}{ \sqrt{ 2 \sigma^{2} \pi }} \hspace{0.2cm}
 .
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>Dessa forma, temos abaixo a função densidade de probabilidade (<span class="math inline">\(fdp\)</span>), Equação (<a href="#eq-gaussiana">Equation&nbsp;1</a>), a qual queríamos demonstrar, ou seja,</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 f(x)= \frac{1}{\sqrt{2 \pi \sigma}} e^{- \frac{(x - \mu)^{2}}{2 \sigma^{2}}}\hspace{0.2cm}
 .
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>Agora, resta ainda calcular a esperança e a variância desta <span class="math inline">\(fdp\)</span>, a fim de mostrar que</p>
 <p><span id="eq-media1"><span class="math display">\[
 \mu \hspace{0.2cm}  = \hspace{0.2cm}   E(X) \hspace{0.2cm}  = \hspace{0.2cm} \int_{- \infty}^{+ \infty}   \hspace{0.2cm}  x \hspace{0.2cm}  f(x) \hspace{0.2cm}  dx \hspace{0.2cm}
@@ -285,27 +283,27 @@ f(x)= \frac{1}{\sqrt{2 \pi \sigma}} e^{- \frac{(x - \mu)^{2}}{2 \sigma^{2}}}\hsp
 \sigma^{2} \hspace{0.2cm}  = \hspace{0.2cm}   Var(X) \hspace{0.2cm}  = \hspace{0.2cm} E [ ( X - \mu )^{2} ]      \hspace{0.2cm}  = \hspace{0.2cm}  \int_{- \infty}^{+ \infty}   \hspace{0.2cm}  ( X - \mu )^{2} \hspace{0.2cm}  f(x) \hspace{0.2cm}  dx \hspace{0.2cm}.
 \tag{9}\]</span></span></p>
 <p>Começando, então, pela definição da esperança matemática <span class="math inline">\(E(X)\)</span> para a nossa <span class="math inline">\(fdp\)</span> temos</p>
-<p><span class="math display">\[\begin{eqnarray*}
+<span class="math display">\[\begin{eqnarray*}
 E(X) &amp; = &amp; \int_{- \infty}^{+ \infty}   \hspace{0.2cm}  x \hspace{0.2cm}  f(x) \hspace{0.2cm}  dx\nonumber\\
      &amp; = &amp; \int_{- \infty}^{+ \infty}   \hspace{0.2cm}  \frac{x}{\sqrt{2 \pi \sigma^{2}}} e^{- \frac{(x - \mu)^{2}}{2 \sigma^{2}}}\hspace{0.2cm} du\nonumber\\
      &amp; = &amp; \frac{1}{\sqrt{2 \pi \sigma^{2}}} \int_{- \infty}^{+ \infty}   \hspace{0.2cm} x   e^{- \frac{(x - \mu)^{2}}{2 \sigma^{2}}} \hspace{0.2cm}  du\hspace{0.2cm}
 .
-\end{eqnarray*}\]</span></p>
+\end{eqnarray*}\]</span>
 <p>Para resolvermos esta integral, faremos uma mudança de variável para <span class="math inline">\(x\)</span>, conforme Equações (<a href="#eq-mv1">Equation&nbsp;6</a>) e (<a href="#eq-mv2">Equation&nbsp;7</a>)), ficando com</p>
-<p><span class="math display">\[\begin{eqnarray*}
+<span class="math display">\[\begin{eqnarray*}
 E(X) &amp; = &amp; \frac{1}{\sqrt{2 \pi \sigma^{2}}} \int_{- \infty}^{+ \infty}   \hspace{0.2cm}(u + \mu) \hspace{0.2cm} e^{- \frac{(u)^{2}}{2 \sigma^{2}}}\hspace{0.2cm}  \hspace{0.2cm}  du \hspace{0.2cm}\nonumber\\
      &amp; = &amp; \frac{1}{\sqrt{2 \pi \sigma^{2}}} \left[  \int_{- \infty}^{+ \infty}   \hspace{0.1cm} u \hspace{0.1cm} e^{- \frac{(u)^{2}}{2 \sigma^{2}}}\hspace{0.1cm}  \hspace{0.1cm}  du \hspace{0.1cm}  + \hspace{0.1cm} \int_{- \infty}^{+ \infty}   \hspace{0.1cm} \mu \hspace{0.1cm} e^{- \frac{(u)^{2}}{2 \sigma^{2}}}\hspace{0.1cm}  \hspace{0.1cm}  du       \right]\nonumber\\
-\end{eqnarray*}\]</span></p>
+\end{eqnarray*}\]</span>
 <p>em que a primeira integral do lado direito da igualdade acima é igual a zero (ver seção <a href="#sec-intb">Section&nbsp;4</a>).</p>
 <p>Então,</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 E(X) \hspace{0.2cm}  = \hspace{0.2cm}\frac{\mu}{\sqrt{2 \pi \sigma^{2}}} \int_{- \infty}^{+ \infty}   \hspace{0.2cm}  e^{- \frac{(u)^{2}}{2 \sigma^{2}}} \hspace{0.2cm} du\hspace{0.2cm} \hspace{0.2cm}.
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>conforme seção <a href="#sec-inta">Section&nbsp;3</a>. Dessa forma, temos que</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 E(X) \hspace{0.2cm}  = \hspace{0.2cm}\frac{\mu}{\sqrt{2 \pi \sigma^{2}}} \hspace{0.2cm} \sqrt{2 \pi \sigma^{2}} \hspace{0.2cm} = \hspace{0.2cm} \mu
 \hspace{0.2cm},
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>que é a média <span class="math inline">\(\mu\)</span>, ou seja, vemos que a esperança da <span class="math inline">\(fdp\)</span> estudada é</p>
 <p><span id="eq-media5"><span class="math display">\[
 E(X) \hspace{0.2cm}  = \hspace{0.2cm} \mu
@@ -319,10 +317,10 @@ Var(X) &amp;  = &amp; E [ ( X - \mu )^{2} ]\nonumber\\
 ,
 \end{eqnarray*}\]</span></p>
 <p>e fazendo a substituição da variável <span class="math inline">\(x\)</span> conforme Equações ((<a href="#eq-mv1">Equation&nbsp;6</a>)) e ((<a href="#eq-mv2">Equation&nbsp;7</a>)), ficamos com</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 Var(X) \hspace{0.2cm}  = \hspace{0.2cm} \frac{1}{\sqrt{2 \pi \sigma^{2}}} \int_{- \infty}^{+ \infty}   \hspace{0.2cm}(u)^{2} \hspace{0.2cm} e^{- \frac{(u)^{2}}{2 \sigma^{2}}}\hspace{0.2cm}  \hspace{0.2cm}  du
 \hspace{0.2cm},
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>que pode ser resolvida por partes, conforme seção <a href="#sec-intc">Section&nbsp;5</a>, para tornar-se</p>
 <p><span id="eq-var3"><span class="math display">\[
 Var(X) \hspace{0.2cm}  = \hspace{0.2cm} \sigma^{2}
@@ -338,39 +336,39 @@ I_{A} =  \int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{- \lambda x^{2}}\hspace{
 \hspace{0.2cm},
 \tag{12}\]</span></span></p>
 <p>que é conhecida como gaussiana, é igual a <span class="math inline">\(\sqrt{\frac{\pi}{\lambda}}\)</span>. Esta integral também pode ser escrita como</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 I_{A} =  \int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{- \lambda y^{2}}\hspace{0.2cm}  \hspace{0.2cm}  dy
 \hspace{0.2cm},
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>em que a variável <span class="math inline">\(x\)</span> foi substituida por <span class="math inline">\(y\)</span>. Isto é possível, pois <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> são variáveis mudas, ou seja, o valor de <span class="math inline">\(I_{A}\)</span> não depende destas variáveis. Assim, podemos fazer <span class="math inline">\(I_{A}^{2}\)</span> para termos</p>
-<p><span class="math display">\[\begin{eqnarray*}
+<span class="math display">\[\begin{eqnarray*}
 I_{A}^{2} &amp; = &amp; \int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{- \lambda x^{2}}\hspace{0.2cm}  \hspace{0.2cm}  dx  \hspace{0.3cm}    \int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{- \lambda y^{2}}\hspace{0.2cm}  \hspace{0.2cm}  dy
 \hspace{0.2cm}\\
     &amp;=&amp; \int_{- \infty}^{+ \infty}   \hspace{0.2cm} \int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{- \lambda (x^{2} + y^{2})}\hspace{0.2cm}dx \hspace{0.2cm} dy \hspace{0.2cm}
 .
-\end{eqnarray*}\]</span></p>
+\end{eqnarray*}\]</span>
 <p>Agora, é preciso fazermos uma transformação de coordenadas, indo do sistema de coordenadas retangulares para o sistema de coordenadas polares. Um ponto <span class="math inline">\(P\)</span> do plano é representado por <span class="math inline">\(P(x, y)\)</span> num sistema de coordenadas retangulares ou por <span class="math inline">\(P(r, \theta)\)</span> num sistema de coordenadas polares. Quando conhecemos <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> podemos escrever <span class="math inline">\(r\)</span> como <span class="math inline">\(r^{2}=x^{2} +y^{2}\)</span> e fazermos o elemento de área <span class="math inline">\(da = dx dy\)</span> ser <span class="math inline">\(da = r dr d\theta\)</span>. Desta forma, quando os limites de integração <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> variarem de <span class="math inline">\(- \infty\)</span> a <span class="math inline">\(+ \infty\)</span> temos que <span class="math inline">\(r\)</span> deve ir de <span class="math inline">\(0\)</span> a <span class="math inline">\(+ \infty\)</span> e <span class="math inline">\(\theta\)</span> de <span class="math inline">\(0\)</span> a <span class="math inline">\(2 \pi\)</span>. Assim, a integral</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 I_{A}^{2} =  \int_{- \infty}^{+ \infty}   \hspace{0.2cm} \int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{- \lambda (x^{2} + y^{2})}\hspace{0.2cm}dx \hspace{0.2cm} dy \hspace{0.2cm}
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>aqui, representada no sistema de coordenadas retangulares, é transformada em</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 I_{A}^{2} =  \int_{0}^{2 \pi}   \hspace{0.2cm} \int_{0}^{+ \infty}   \hspace{0.2cm} r e^{- \lambda r^{2}}\hspace{0.2cm}dr \hspace{0.2cm} d\theta \hspace{0.2cm}
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>que é sua representação em coordenadas polares. Então</p>
-<p><span class="math display">\[\begin{eqnarray*}
+<span class="math display">\[\begin{eqnarray*}
 I_{A}^{2} &amp; = &amp; \int_{0}^{2 \pi}  d\theta \hspace{0.2cm} \int_{0}^{+ \infty}   \hspace{0.2cm} r e^{- \lambda r^{2}}\hspace{0.2cm}dr \hspace{0.2cm}\\
     &amp; = &amp; 2 \pi \hspace{0.2cm} \int_{0}^{+ \infty}   \hspace{0.2cm} r e^{- \lambda r^{2}}\hspace{0.2cm}dr \hspace{0.2cm}
 .
-\end{eqnarray*}\]</span></p>
+\end{eqnarray*}\]</span>
 <p>Para resolvermos a integral em <span class="math inline">\(r\)</span> fazemos <span class="math inline">\(u = r^{2}\)</span> e <span class="math inline">\(du = 2 r dr\)</span>. Assim</p>
-<p><span class="math display">\[\begin{eqnarray*}
+<span class="math display">\[\begin{eqnarray*}
 I_{A}^{2} &amp; = &amp; 2 \pi \hspace{0.2cm} \int_{0}^{+ \infty}   \hspace{0.2cm} \frac{1}{2}\hspace{0.2cm}  e^{- \lambda u}\hspace{0.2cm}du \hspace{0.2cm}\\
     &amp; = &amp; \left[ - \frac{\pi}{\lambda} \hspace{0.2cm} e^{- \lambda u}\hspace{0.2cm} \right]_{0}^{+ \infty}\\
     &amp; = &amp; - \frac{\pi}{\lambda} \left( \frac{1}{e^{+ \infty}} - \frac{1}{e^{\lambda (0)}} \right)\\
     &amp; = &amp; - \frac{\pi}{\lambda} \left( 0 - 1 \right)\\
     &amp; = &amp; \frac{\pi}{\lambda}
-\end{eqnarray*}\]</span></p>
+\end{eqnarray*}\]</span>
 <p>e finalmente, aplicando a raiz quadrada em ambos os lados da igualdade,</p>
 <p><span id="eq-int6"><span class="math display">\[
 I_{A} = \sqrt{\frac{\pi}{\lambda}}
@@ -385,14 +383,14 @@ I_{B} =  \int_{- \infty}^{+ \infty}   \hspace{0.2cm} x \hspace{0.2cm} e^{- \beta
 \hspace{0.2cm},
 \tag{14}\]</span></span></p>
 <p>Para isto, faremos a substituição <span class="math inline">\(u = \beta x^{2}\)</span> e <span class="math inline">\(du = 2 \beta x dx\)</span>. Assim</p>
-<p><span class="math display">\[\begin{eqnarray*}
+<span class="math display">\[\begin{eqnarray*}
 I_{B} &amp; = &amp;  \int_{- \infty}^{+ \infty}   \hspace{0.2cm} \frac{1}{2 \beta} \hspace{0.2cm} e^{-u}\hspace{0.2cm}  \hspace{0.2cm}  du\\
       &amp; = &amp; \frac{1}{2 \beta} \int_{- \infty}^{+ \infty}   \hspace{0.2cm} e^{-u}\hspace{0.2cm} \hspace{0.2cm} du\\
       &amp; = &amp; \frac{1}{2 \beta} \left[ - e^{-u}  \right]_{- \infty}^{+ \infty}\\
       &amp; = &amp; \frac{1}{2 \beta} \left( - \frac{1}{e^{+ \infty}} + \frac{1}{e^{- \infty}}  \right)\\
       &amp; = &amp; \frac{1}{2 \beta} \left( -0 + 0 \right)\\
       &amp; = &amp; 0
-\end{eqnarray*}\]</span></p>
+\end{eqnarray*}\]</span>
 <p>conforme queríamos demonstrar.</p>
 </section>
 <section id="sec-intc" class="level1">
@@ -407,24 +405,24 @@ I_{C} \hspace{0.2cm}  = \hspace{0.2cm} \frac{1}{\sqrt{2 \pi \sigma^{2}}} \int_{-
 \int u dv = uv - \int v du
 \tag{16}\]</span></span></p>
 <p>e fazendo</p>
-<p><span class="math display">\[\begin{equation*}
+<span class="math display">\[\begin{equation*}
 I_{C} \hspace{0.2cm}  = \hspace{0.2cm} \frac{1}{\sqrt{2 \pi \sigma^{2}}} \int_{- \infty}^{+ \infty}   \hspace{0.2cm} \underbrace{z}_{u}         \underbrace{ z \hspace{0.2cm} e^{- \frac{(z)^{2}}{2 \sigma^{2}}}\hspace{0.2cm}  \hspace{0.2cm}  dz}_{dv}
 \hspace{0.2cm},
-\end{equation*}\]</span></p>
+\end{equation*}\]</span>
 <p>temos, com isso, que <span class="math inline">\(u=z\)</span>, <span class="math inline">\(du=dz\)</span>, <span class="math inline">\(dv= z \hspace{0.2cm} e^{- \frac{(z)^{2}}{2 \sigma^{2}}} dz\)</span> e então <span class="math inline">\(v= \int z e^{-\frac{z^{2}}{2 \sigma^{2}}} dz\)</span>. Esta última integral, para encontrarmos <span class="math inline">\(v\)</span>, pode ser resolvida com <span class="math inline">\(t=\frac{z^{2}}{2 \sigma^{2}}\)</span> e <span class="math inline">\(dt= \frac{z}{\sigma^{2}} dz\)</span>. Assim, fazendo estas substituições,</p>
-<p><span class="math display">\[\begin{eqnarray*}
+<span class="math display">\[\begin{eqnarray*}
 v &amp; = &amp; \sigma^{2} \int e^{-t} dt\\
   &amp; = &amp; - \sigma^{2}  e^{-t}
 ,
-\end{eqnarray*}\]</span></p>
+\end{eqnarray*}\]</span>
 <p>e como fizemos <span class="math inline">\(t=\frac{z^{2}}{2 \sigma^{2}}\)</span>, <span class="math inline">\(v\)</span> finalmente fica <span class="math inline">\(v= - \sigma^{2} e^{-\frac{z^{2}}{2 \sigma^{2}}}\)</span>. Com isto,</p>
-<p><span class="math display">\[\begin{eqnarray*}
+<span class="math display">\[\begin{eqnarray*}
 I_{C}  &amp; = &amp; \frac{1}{\sqrt{2 \pi \sigma^{2}}} \left[ - z \sigma^{2} e^{- \frac{z^{2}}{2 \sigma^{2}}}   \right]_{-\infty}^{+\infty} - \int_{- \infty}^{+ \infty} \left( - \sigma^{2} e^{-\frac{z^{2}}{2 \sigma^{2}}}   \right) dz\\
        &amp; = &amp; \frac{\sigma^{2}}{\sqrt{2 \pi \sigma^{2}}} \int_{- \infty}^{+ \infty} e^{-\frac{z^{2}}{2 \sigma^{2}}} \hspace{0.2cm} dz\\
         &amp; = &amp; \frac{\sigma^{2}}{\sqrt{2 \pi \sigma^{2}}} \sqrt{2 \pi \sigma^{2}}\\
         &amp; = &amp; \sigma^{2}
 .
-\end{eqnarray*}\]</span></p>
+\end{eqnarray*}\]</span>
 <!-- conforme queríamos demonstrar. Observamos que, durante esta última passagem, usamos dois resultados desenvolvidos nos Apêndices \ref{inta} e \ref{intb}. -->
 
 
