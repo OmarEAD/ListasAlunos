@@ -34,9 +34,7 @@ knitr::opts_chunk$set(#collapse = TRUE,
 
 Este é um site com alguns exercícios e problemas de Estatística Básica. Para motivá-lo aos estudos, gostaria que olhasse a imagem abaixo. Na realidade vemos duas figura mostrando a mesma imagem, uma mais aproximada que a outra.
 
-Na imagem vemos um sujeito do sexo masculino saindo de um supermercado com um pacote de fraudas e um barril de cerveja. 
-
-Gostaria de anunciar uma hipótese: *este tipo de compra "casada", fraudas e cerveja, não ocorreu de forma aleatória, mas ela foi planejada pelo supermercado*. Evidentemente, precisamos de argumentos consistentes para acreditarmos[^2] nesta hipótese. Para isto, gostaria que analisasse os tópicos abaixo.
+Na imagem vemos um sujeito do sexo masculino saindo de um supermercado com um pacote de fraudas e um barril de cerveja. Gostaria de anunciar uma hipótese: *este tipo de compra "casada", fraudas e cerveja, não ocorreu de forma aleatória, mas ela foi planejada pelo supermercado*. Evidentemente, precisamos de argumentos consistentes para acreditarmos[^2] nesta hipótese. Para isto, gostaria que analisasse os tópicos abaixo.
 
 [^2]: Acreditar é sinônimo de ignorância. Não sabemos com certeza o que ocorreu de fato. Mas os argumentos que apresentamos devem ser suficientemente consistentes para **acreditar** em nossa suposição. 
 
