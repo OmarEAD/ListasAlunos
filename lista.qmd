@@ -293,7 +293,7 @@ dados3
 
 -   Faça um diagrama de dispersão ($X$ no eixo horizontal).
 
-```{r disp, fig.cap="Diagrama de dispersão."}
+```{r fig-disp, fig.cap="Diagrama de dispersão."}
 par(bg="white")
 par(mar=c(2.5,2.5,0.5,0.5), mgp=c(1.5,0.5,0))
 plot(Y~X, dados3) 
@@ -338,7 +338,7 @@ dados4
 
 -   Faça um diagrama de dispersão ($ME$ no eixo horizontal).
 
-```{r disp2, fig.cap="Diagrama de dispersão"}
+```{r fig-disp2, fig.cap="Diagrama de dispersão"}
 par(bg="white")
 par(mar=c(2.5,2.5,0.5,0.5), mgp=c(1.5,0.5,0))
 plot(SIM~ME,data = dados4) 
@@ -383,7 +383,7 @@ dados5
 
 -   Faça um diagrama de dispersão (coloque o tempo no eixo horizontal).
 
-```{r disp3, fig.cap="Diagrama de dispersão"}
+```{r fig-disp3, fig.cap="Diagrama de dispersão"}
 par(bg="white")
 par(mar=c(2.5,2.5,0.5,0.5), mgp=c(1.5,0.5,0))
 plot(Gordura~Tempo,data = dados5) 
