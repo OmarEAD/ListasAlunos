@@ -204,6 +204,8 @@ dados
 -   Faça uma tabela de distribuição de frequências (use o bom senso).
 -   Esboce um histograma.
 
+Histograma da frequência absoluta.
+
 ```{r fig-hist1, fig.cap=""}
 #| Label: fig-hist1
 #| fig-cap: "Histograma (frequência) dos gastos mensais de 30 adolescentes para se alimentarem."
