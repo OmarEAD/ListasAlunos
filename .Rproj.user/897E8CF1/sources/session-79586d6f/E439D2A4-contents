@@ -204,7 +204,7 @@ dados
 -   Faça uma tabela de distribuição de frequências (use o bom senso).
 -   Esboce um histograma.
 
-```{r histograns1, fig.cap=""}
+```{r fig-hist1, fig.cap=""}
 #| Label: fig-hist1
 #| fig-cap: "Histograma (frequência) dos gastos mensais de 30 adolescentes para se alimentarem."
 par(bg="white")
@@ -214,7 +214,7 @@ hist(dados, labels = T, main = "",
 ```
 
 
-```{r histograns2, fig.cap="Histograma (densidade) dos gastos mensais de 30 adolescentes para se alimentarem."}
+```{r fig-hist2, fig.cap="Histograma (densidade) dos gastos mensais de 30 adolescentes para se alimentarem."}
 par(bg="white")
 hist(dados, labels = T, main = "",
      xlab = 'Gasto (R$)', ylab = 'Densidade',
