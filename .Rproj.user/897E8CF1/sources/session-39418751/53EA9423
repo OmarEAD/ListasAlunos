@@ -3,7 +3,7 @@
     "path": "D:/SitesOmar/ListasAlunos/_quarto.yml",
     "project_path": "_quarto.yml",
     "type": "yaml",
-    "hash": "2660114509",
+    "hash": "1457911003",
     "contents": "",
     "dirty": false,
     "created": 1677327977998.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "11,23",
+        "cursorPosition": "10,16",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1677328599,
+    "lastKnownWriteTime": 1677446379,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1677328599416,
+    "last_content_update": 1677446379969,
     "read_only": false,
     "read_only_alternatives": []
 }

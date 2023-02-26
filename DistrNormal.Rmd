@@ -1,5 +1,5 @@
 ---
-title: "Distribuição Normal"
+title: "Normal"
 author: "Omar C N Pereira"
 #date: 2020-12-01T21:13:14-05:00
 categories: ["Distribuição Contínua", 

@@ -8,6 +8,7 @@ website:
       - href: index.qmd
         text: Home
       - lista.qmd
+      - tabs.Rmd
       - benford.qmd
       - DistrNormal.Rmd
 

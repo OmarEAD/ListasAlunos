@@ -1,5 +1,5 @@
 ---
-title: "Lista de exercícios"
+title: "Lista"
 author: "Omar C N Pereira"
 #date: 2022-01-01
 categories: ["Alunos", "Lista de exercícios"]
