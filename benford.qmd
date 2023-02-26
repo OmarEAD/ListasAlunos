@@ -237,6 +237,7 @@ Na @fig-freqben4, observamos os dados gerados aleatoriamente (sem fraude), ou se
 ```{r fig-freqben4, echo=F, fig.cap=""}
 #| Label: fig-freqben4
 #| fig-cap: "As frequências da lei de Benford e dados gerados aleatóriamente (sem fraude)."
+par(mar=c(2.5,2.5,0.5,0.5), mgp=c(1.5,0.5,0))
 plot(teo2~x2,type='l',ylim = c(0,0.33),
      xlab="Dígitos",
      ylab = "Frequência")
