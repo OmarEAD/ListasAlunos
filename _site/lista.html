@@ -523,9 +523,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div class="cell" data-layout-align="center" data-label="fig-hist1">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg=</span><span class="st">"white"</span>)</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(dados, <span class="at">labels =</span> T, <span class="at">main =</span> <span class="st">""</span>,</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Gasto (R$)'</span>, <span class="at">ylab =</span> <span class="st">'Frequência'</span>,</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylim =</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">9</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">2.5</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">mgp=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">0.5</span>,<span class="dv">0</span>))</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(dados, <span class="at">labels =</span> T, <span class="at">main =</span> <span class="st">""</span>,</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Gasto (R$)'</span>, <span class="at">ylab =</span> <span class="st">'Frequência'</span>,</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylim =</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">9</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-hist1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -537,9 +538,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg=</span><span class="st">"white"</span>)</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(dados, <span class="at">labels =</span> T, <span class="at">main =</span> <span class="st">""</span>,</span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Gasto (R$)'</span>, <span class="at">ylab =</span> <span class="st">'Densidade'</span>,</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">probability =</span> T, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.025</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">2.5</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">mgp=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">0.5</span>,<span class="dv">0</span>))</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(dados, <span class="at">labels =</span> T, <span class="at">main =</span> <span class="st">""</span>,</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Gasto (R$)'</span>, <span class="at">ylab =</span> <span class="st">'Densidade'</span>,</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">probability =</span> T, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.025</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-hist2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -568,12 +570,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg=</span><span class="st">"white"</span>)</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(dados, <span class="at">ylab =</span> <span class="st">"Gastos (R$)"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">2.5</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">mgp=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">0.5</span>,<span class="dv">0</span>))</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(dados, <span class="at">ylab =</span> <span class="st">"Gastos (R$)"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-box1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="lista_files/figure-html/box1-1.png" class="img-fluid figure-img" width="2400"></p>
-<p></p><figcaption class="figure-caption">Boxplot dos gastos mensais de 30 adolescentes para se alimentarem.</figcaption><p></p>
+<p><img src="lista_files/figure-html/fig-box1-1.png" class="img-fluid figure-img" width="2400"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4: Boxplot dos gastos mensais de 30 adolescentes para se alimentarem.</figcaption><p></p>
 </figure>
 </div>
 </div>
