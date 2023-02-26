@@ -204,16 +204,14 @@ dados
 -   Faça uma tabela de distribuição de frequências (use o bom senso).
 -   Esboce um histograma.
 
-Histograma da frequência absoluta.
-
 ```{r fig-hist1, fig.cap=""}
 #| Label: fig-hist1
-#| fig-cap: "Histograma (frequência) dos gastos mensais de 30 adolescentes para se alimentarem."
+#| fig-cap: "Histograma da frequência absoluta dos gastos mensais de 30 adolescentes para se alimentarem."
 par(bg="white")
 par(mar=c(2.5,2.5,0.5,0.5), mgp=c(1.5,0.5,0))
 hist(dados, labels = T, main = "",
      xlab = 'Gasto (R$)', ylab = 'Frequência',
-     ylim =c(0,9))
+     ylim =c(0,8))
 ```
 
 
