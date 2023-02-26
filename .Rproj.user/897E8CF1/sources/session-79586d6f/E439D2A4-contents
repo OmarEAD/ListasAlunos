@@ -295,6 +295,7 @@ dados3
 
 ```{r disp, fig.cap="Diagrama de dispersão."}
 par(bg="white")
+par(mar=c(2.5,2.5,0.5,0.5), mgp=c(1.5,0.5,0))
 plot(Y~X, dados3) 
 ```
 
@@ -339,6 +340,7 @@ dados4
 
 ```{r disp2, fig.cap="Diagrama de dispersão"}
 par(bg="white")
+par(mar=c(2.5,2.5,0.5,0.5), mgp=c(1.5,0.5,0))
 plot(SIM~ME,data = dados4) 
 ```
 
@@ -383,6 +385,7 @@ dados5
 
 ```{r disp3, fig.cap="Diagrama de dispersão"}
 par(bg="white")
+par(mar=c(2.5,2.5,0.5,0.5), mgp=c(1.5,0.5,0))
 plot(Gordura~Tempo,data = dados5) 
 ```
 
