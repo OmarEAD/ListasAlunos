@@ -250,102 +250,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Ou seja, os valores 4 e 8 apareceram uma única vez, o 6 duas vezes, e os 3 e 5 ocorreram três vezes.</p>
 <p>Será que existe algum padrão na distribuição das frequências dos primeiros dígitos de um conjunto de dados que ocorre naturalmente? Podemos pensar que todos os dígitos, de 1 a 9 deveriam ter a mesma frequência. Mas essa homogeneidade esperada não ocorre e, além disso, parece existir um padrão. Muitos conjuntos de dados, inclusive dados contábeis e econômicos, mostram que o dígito 1 é aquele que mais aparece. em torno de 30%.</p>
-<p>A Lei de Benford diz que a frequência relativa dos primeiros dígitos significativos deve ser conforme mostrado na Tabela @ref(tab:ben1)</p>
+<p>A Lei de Benford diz que a frequência relativa dos primeiros dígitos significativos deve ser conforme mostrado na <a href="#tbl-ben1">Table&nbsp;1</a>.</p>
 <div class="cell" data-layout-align="center">
 
 </div>
-<div class="cell" data-layout-align="center">
+<div class="cell tbl-cap-location-top" data-layout-align="center">
 <div class="cell-output-display">
+<div id="tbl-ben1" class="anchored">
 
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-Frequência da Lei de Benford.
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-Valores
-</th>
-<th style="text-align:left;">
-1
-</th>
-<th style="text-align:left;">
-2
-</th>
-<th style="text-align:left;">
-3
-</th>
-<th style="text-align:left;">
-4
-</th>
-<th style="text-align:left;">
-5
-</th>
-<th style="text-align:left;">
-6
-</th>
-<th style="text-align:left;">
-7
-</th>
-<th style="text-align:left;">
-8
-</th>
-<th style="text-align:left;">
-9
-</th>
-</tr>
-</thead>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;1:  Frequência da Lei de Benford. </caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Valores </th>
+   <th style="text-align:left;"> 1 </th>
+   <th style="text-align:left;"> 2 </th>
+   <th style="text-align:left;"> 3 </th>
+   <th style="text-align:left;"> 4 </th>
+   <th style="text-align:left;"> 5 </th>
+   <th style="text-align:left;"> 6 </th>
+   <th style="text-align:left;"> 7 </th>
+   <th style="text-align:left;"> 8 </th>
+   <th style="text-align:left;"> 9 </th>
+  </tr>
+ </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-Frequência
-</td>
-<td style="text-align:left;">
-0.301
-</td>
-<td style="text-align:left;">
-0.1761
-</td>
-<td style="text-align:left;">
-0.1249
-</td>
-<td style="text-align:left;">
-0.0969
-</td>
-<td style="text-align:left;">
-0.0792
-</td>
-<td style="text-align:left;">
-0.0669
-</td>
-<td style="text-align:left;">
-0.058
-</td>
-<td style="text-align:left;">
-0.0512
-</td>
-<td style="text-align:left;">
-0.0458
-</td>
-</tr>
+  <tr>
+   <td style="text-align:left;"> Frequência </td>
+   <td style="text-align:left;"> 0.301 </td>
+   <td style="text-align:left;"> 0.1761 </td>
+   <td style="text-align:left;"> 0.1249 </td>
+   <td style="text-align:left;"> 0.0969 </td>
+   <td style="text-align:left;"> 0.0792 </td>
+   <td style="text-align:left;"> 0.0669 </td>
+   <td style="text-align:left;"> 0.058 </td>
+   <td style="text-align:left;"> 0.0512 </td>
+   <td style="text-align:left;"> 0.0458 </td>
+  </tr>
 </tbody>
-
 </table>
-<p>TRUE</p>
+
 </div>
 </div>
-<p>Podemos representar a Tabela @ref(tab:ben1) como um gráfico de barras (Figura @ref(fig:freqben1)).</p>
-<div class="cell" data-layout-align="center">
+</div>
+<p>Podemos representar a <a href="#tbl-ben1">Table&nbsp;1</a> como um gráfico de barras (<a href="#fig-freqben1">Figure&nbsp;1</a>).</p>
+<div class="cell" data-layout-align="center" data-label="fig-freqben1">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-freqben1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="benford_files/figure-html/freqben1-1.png" class="img-fluid figure-img" width="2400"></p>
-<p></p><figcaption class="figure-caption">As frequências da lei de Benford.</figcaption><p></p>
+<p><img src="benford_files/figure-html/fig-freqben1-1.png" class="img-fluid figure-img" width="2400"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: As frequências da lei de Benford.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>As probabilidades da Tabela @ref(tab:ben1) e da Figura @ref(fig:freqben1) para o primeiro dígito <span class="math inline">\(d\)</span> (<span class="math inline">\(d \in \{1, \cdots, 9 \}\)</span>), as quais satisfazem a lei de Benford são dadas por</p>
+<p>As probabilidades da <a href="#tbl-ben1">Table&nbsp;1</a> e da <a href="#fig-freqben1">Figure&nbsp;1</a> para o primeiro dígito <span class="math inline">\(d\)</span> (<span class="math inline">\(d \in \{1, \cdots, 9 \}\)</span>), as quais satisfazem a lei de Benford são dadas por</p>
 <p><span class="math display">\[ P(d) = log_{10} \left( 1 + \frac{1}{d} \right) \]</span></p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">9</span></span>
@@ -358,14 +316,13 @@ Frequência
 <section id="uma-breve-explicação" class="level1">
 <h1>Uma breve explicação</h1>
 <p>A primeira ideia é que os dados que se adequam à lei de Benford tem <strong>crescimento exponencial</strong>, ou seja, algo do tipo</p>
-<span class="math display">\[\begin{equation}
+<p><span id="eq-cresc"><span class="math display">\[
 f(t) = t_0 (1 + r)^t
-(\#eq:cresc)
-\end{equation}\]</span>
+\tag{1}\]</span></span></p>
 <p>em que, por exemplo, <span class="math inline">\(t\)</span> é o tempo, <span class="math inline">\(t_0\)</span> é o valor de <span class="math inline">\(f(t)\)</span> no tempo 0, e <span class="math inline">\(r\)</span> é a taxa de crescimento.</p>
 <section id="juros-compostos" class="level2">
 <h2 class="anchored" data-anchor-id="juros-compostos">Juros compostos</h2>
-<p>Como um exemplo, vamos trabalhar a ideia de juros compostos, em que o juro incide sobre o capital inicial e sobre os juros acumulados. A expressão para o cálculo de juros compostos tem a mesma estrutura da Equação @ref(eq:cresc), ou seja,</p>
+<p>Como um exemplo, vamos trabalhar a ideia de juros compostos, em que o juro incide sobre o capital inicial e sobre os juros acumulados. A expressão para o cálculo de juros compostos tem a mesma estrutura da <a href="#eq-cresc">Equation&nbsp;1</a>, ou seja,</p>
 <p><span class="math display">\[ M = C (1 + i)^t \]</span> em que <span class="math inline">\(M\)</span> é o montante no instante <span class="math inline">\(t\)</span>, <span class="math inline">\(C\)</span> é o capital inicial quando <span class="math inline">\(t=0\)</span>, e <span class="math inline">\(i\)</span> é a taxa de juros fixa. Observe os dados abaixo. Eles foram obtidos usando um capital inicial de R$100,00 com uma taxa de crescimento de 2.5% por período. Observa que, inicialmente, o primeiro dígito significativo igual a 1 aparece nos 28 primeiros valores. Depois, o crescimento é mais rápido e o sistema apresenta 16 valores com o primeiro dígito significativo igual a 2. O crescimento se acentua e o dígito 3 aparece nos próximos 12 valores. Como o capital cresce cada vez mais rápido, os próximos dígitos aparecem cada vez menos. Veja o dígito 9, ele aparece apenas 5 vezes. Logo após, o dígito 1 aparece novamente por mais 28 períodos.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Juros compostos</span></span>
@@ -436,117 +393,55 @@ f(t) = t_0 (1 + r)^t
 0.3158 0.1684 0.1263 0.0947 0.0737 0.0684 0.0579 0.0474 0.0474 </code></pre>
 </div>
 </div>
-<p>Podemos comparar os dados teóricos apresentados na Tabela @ref(tab:ben1) e na Figura @ref(fig:freqben1) com os dos juros compostos. Isto pode ser visto na Tabela @ref(tab:ben2).</p>
-<div class="cell" data-layout-align="center">
+<p>Podemos comparar os dados teóricos apresentados na <a href="#tbl-ben1">Table&nbsp;1</a> e na <a href="#fig-freqben1">Figure&nbsp;1</a> com os dos juros compostos. Isto pode ser visto na <a href="#tbl-ben2">Table&nbsp;2</a>.</p>
+<div class="cell tbl-cap-location-top" data-layout-align="center">
 <div class="cell-output-display">
+<div id="tbl-ben2" class="anchored">
 
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-Comparação das frequências teórica da lei de Benford e dos dados de juros compostos.
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-Valores
-</th>
-<th style="text-align:left;">
-1
-</th>
-<th style="text-align:left;">
-2
-</th>
-<th style="text-align:left;">
-3
-</th>
-<th style="text-align:left;">
-4
-</th>
-<th style="text-align:left;">
-5
-</th>
-<th style="text-align:left;">
-6
-</th>
-<th style="text-align:left;">
-7
-</th>
-<th style="text-align:left;">
-8
-</th>
-<th style="text-align:left;">
-9
-</th>
-</tr>
-</thead>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;2:  Comparação das frequências teórica da lei de Benford e dos dados de juros compostos. </caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Valores </th>
+   <th style="text-align:left;"> 1 </th>
+   <th style="text-align:left;"> 2 </th>
+   <th style="text-align:left;"> 3 </th>
+   <th style="text-align:left;"> 4 </th>
+   <th style="text-align:left;"> 5 </th>
+   <th style="text-align:left;"> 6 </th>
+   <th style="text-align:left;"> 7 </th>
+   <th style="text-align:left;"> 8 </th>
+   <th style="text-align:left;"> 9 </th>
+  </tr>
+ </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-Teórico
-</td>
-<td style="text-align:left;">
-0.301
-</td>
-<td style="text-align:left;">
-0.1761
-</td>
-<td style="text-align:left;">
-0.1249
-</td>
-<td style="text-align:left;">
-0.0969
-</td>
-<td style="text-align:left;">
-0.0792
-</td>
-<td style="text-align:left;">
-0.0669
-</td>
-<td style="text-align:left;">
-0.058
-</td>
-<td style="text-align:left;">
-0.0512
-</td>
-<td style="text-align:left;">
-0.0458
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Exemplo
-</td>
-<td style="text-align:left;">
-0.3158
-</td>
-<td style="text-align:left;">
-0.1684
-</td>
-<td style="text-align:left;">
-0.1263
-</td>
-<td style="text-align:left;">
-0.0947
-</td>
-<td style="text-align:left;">
-0.0737
-</td>
-<td style="text-align:left;">
-0.0684
-</td>
-<td style="text-align:left;">
-0.0579
-</td>
-<td style="text-align:left;">
-0.0474
-</td>
-<td style="text-align:left;">
-0.0474
-</td>
-</tr>
+  <tr>
+   <td style="text-align:left;"> Teórico </td>
+   <td style="text-align:left;"> 0.301 </td>
+   <td style="text-align:left;"> 0.1761 </td>
+   <td style="text-align:left;"> 0.1249 </td>
+   <td style="text-align:left;"> 0.0969 </td>
+   <td style="text-align:left;"> 0.0792 </td>
+   <td style="text-align:left;"> 0.0669 </td>
+   <td style="text-align:left;"> 0.058 </td>
+   <td style="text-align:left;"> 0.0512 </td>
+   <td style="text-align:left;"> 0.0458 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Exemplo </td>
+   <td style="text-align:left;"> 0.3158 </td>
+   <td style="text-align:left;"> 0.1684 </td>
+   <td style="text-align:left;"> 0.1263 </td>
+   <td style="text-align:left;"> 0.0947 </td>
+   <td style="text-align:left;"> 0.0737 </td>
+   <td style="text-align:left;"> 0.0684 </td>
+   <td style="text-align:left;"> 0.0579 </td>
+   <td style="text-align:left;"> 0.0474 </td>
+   <td style="text-align:left;"> 0.0474 </td>
+  </tr>
 </tbody>
-
 </table>
-<p>TRUE</p>
+
+</div>
 </div>
 </div>
 </section>
@@ -609,13 +504,13 @@ Exemplo
 <span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>x2  <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">9</span>,<span class="fl">0.1</span>)</span>
 <span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>teo2 <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">log10</span>(<span class="dv">1</span><span class="sc">+</span><span class="dv">1</span><span class="sc">/</span>x2),<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Na Figura @ref(fig:freqben4), observamos os dados gerados aleatoriamente (sem fraude), ou seja, a frequência dos primeiros dígitos da coluna que representa o produto da multiplicação dos valores gerados pelas distribuições propostas anteriormente. Estes valores são representados pelos pontos, enquanto que, a distribuição teórica é representada pela curva. É possível notar uma grande concordância entre os pontos e a curva.</p>
-<div class="cell" data-layout-align="center">
+<p>Na <a href="#fig-freqben4">Figure&nbsp;2</a>, observamos os dados gerados aleatoriamente (sem fraude), ou seja, a frequência dos primeiros dígitos da coluna que representa o produto da multiplicação dos valores gerados pelas distribuições propostas anteriormente. Estes valores são representados pelos pontos, enquanto que, a distribuição teórica é representada pela curva. É possível notar uma grande concordância entre os pontos e a curva.</p>
+<div class="cell" data-layout-align="center" data-label="fig-freqben4">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-freqben4" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="benford_files/figure-html/freqben4-1.png" class="img-fluid figure-img" width="2400"></p>
-<p></p><figcaption class="figure-caption">As frequências da lei de Benford e dados gerados aleatóriamente (sem fraude).</figcaption><p></p>
+<p><img src="benford_files/figure-html/fig-freqben4-1.png" class="img-fluid figure-img" width="2400"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2: As frequências da lei de Benford e dados gerados aleatóriamente (sem fraude).</figcaption><p></p>
 </figure>
 </div>
 </div>
