@@ -36,15 +36,17 @@ Este é um site com alguns exercícios e problemas de Estatística Básica. Para
 
 Na imagem vemos um sujeito do sexo masculino saindo de um supermercado com um pacote de fraudas e um barril de cerveja. 
 
-Gostaria de dizer que este tipo de compra "casada", fraudas e cerveja, não ocorreu de forma aleatória, mas planejada pelo supermercado. Precisamos de argumentos consistentes que nos leve a acreditar[^2] nisso. Mas para chegasse a esta conclusão
+Gostaria de anunciar uma hipótese: *este tipo de compra "casada", fraudas e cerveja, não ocorreu de forma aleatória, mas ela foi planejada pelo supermercado*. Evidentemente, precisamos de argumentos consistentes para acreditarmos[^2] nesta hipótese. Para isto, gostaria que analisasse os tópicos abaixo.
 
 [^2]: Acreditar é sinônimo de ignorância. Não sabemos com certeza o que ocorreu de fato. Mas os argumentos que apresentamos devem ser suficientemente consistentes para **acreditar** em nossa suposição. 
 
-Observe as imagens abaixo e tente tirar o máximo e conclusões possíveis.
+Porém, antes de tudo, digo que estamos vivendo um momento no desenvolvimento humano em que, mesmo sem saber e graças a tecnologia, estamos produzindo uma grande quantidade de dados. Estes dados, quando analisados com destreza, pode gerar informações importantes para a tomada de decisão, tanto do ponto de vista daqueles que empreendem, quanto daqueles que consomem produtos ou serviços. Portanto, seja qual for sua participação em nossa sociedade, torna-se imprescindivel saber o básico sobre análise de dados e estatística. Por exemplo, nos últimos anos ouvimos muito a respeito de "achatar a curva", "média movel", quando o assunto era o coronavírus, e também "margem de erro", "nível de confiança" quando o assunto era eleições, além de outros.
+
+Os dados são produzidos, por exemplo, quando digitamos o nosso **CPF** ao pagarmos a conta do supermerdado, farmácia, açougue. Além das redes sociais e outros locais informatizados. Hoje, qualquer pequena empresa gera enormes quantidades de dados. 
 
 ## Informações iniciais
 
-- A imagem foi feita pelo autor do _site_.
+- A imagem foi feita pelo autor do _site_. É proíbida a sua divulgação sem autorização.
 - O local é a saida de um supermercado de Maringá.
 - Era um domingo de manhã, aproximadamente 10h30.
 - Foi uma grande emoção fazer esta imagem. Observa que ela esta tremida.
