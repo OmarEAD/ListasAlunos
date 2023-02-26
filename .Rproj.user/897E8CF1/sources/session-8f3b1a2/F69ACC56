@@ -1,14 +1,14 @@
 {
-    "id": "4119C7AD",
-    "path": "D:/SitesOmar/ListasAlunos/index.qmd",
-    "project_path": "index.qmd",
+    "id": "F69ACC56",
+    "path": "D:/SitesOmar/ListasAlunos/benford.qmd",
+    "project_path": "benford.qmd",
     "type": "quarto_markdown",
-    "hash": "1199226737",
+    "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1677263002291.0,
-    "source_on_save": true,
-    "relative_order": 1,
+    "created": 1677449595053.0,
+    "source_on_save": false,
+    "relative_order": 5,
     "properties": {
         "rmdVisualMode": "false",
         "rmdVisualWrapConfigured": "true",
@@ -16,16 +16,16 @@
         "Source": "Source",
         "docOutlineVisible": "0",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "32:0",
-        "cursorPosition": "30,29",
-        "scrollLine": "25"
+        "rmdVisualModeLocation": "2:0",
+        "cursorPosition": "89,18",
+        "scrollLine": "67"
     },
     "folds": "",
-    "lastKnownWriteTime": 1677449545,
+    "lastKnownWriteTime": 1677265846,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1677449545131,
+    "last_content_update": 1677265846,
     "read_only": false,
     "read_only_alternatives": []
 }

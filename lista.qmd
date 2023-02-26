@@ -107,7 +107,7 @@ energia <- round(c(rnorm(30,380,60)),2)
 energia
 ```
 
-Vamos fazer um gráfico de barras para representar estes dados. A linha horizontal representa o valor médio, ou seja, `r mean(energia)`.
+Vamos fazer um gráfico de barras para representar estes dados. A linha horizontal representa o valor médio, ou seja, `r round(mean(energia),2)`kwh.
 
 ```{r fig-energia, fig.cap="Gráfico de barras para a energia produzida ao longo de 30 dias."}
 # carregando a biblioteca
