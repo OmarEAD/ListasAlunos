@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Prof.&nbsp;Omar">
+
+<title>Estatística Básica - Distribuição Normal Padrão</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Estatística Básica</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../lista.html">
+ <span class="menu-text">Lista</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../tabs.html">
+ <span class="menu-text">Tabelas</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../DistrNormal.html">
+ <span class="menu-text">Normal</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../benford.html">
+ <span class="menu-text">Benford</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Distribuição Normal Padrão</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Prof.&nbsp;Omar </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell" data-layout-align="center" data-hash="TNormPad_cache/html/library_a24b82470409776ac70b80cfdddba8be">
+
+</div>
+<div class="cell" data-layout-align="center" data-hash="TNormPad_cache/html/unnamed-chunk-1_484c836bda46dde062aa36c3b19b2e8e">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="FigurasN/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center" data-hash="TNormPad_cache/html/unnamed-chunk-2_3221551cb54c45f8bdc79d830c56f1e9">
+
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>z</th>
+<th style="text-align: center;">0.00</th>
+<th style="text-align: center;">0.01</th>
+<th style="text-align: center;">0.02</th>
+<th style="text-align: center;">0.03</th>
+<th style="text-align: center;">0.04</th>
+<th style="text-align: center;">0.05</th>
+<th style="text-align: center;">0.06</th>
+<th style="text-align: center;">0.07</th>
+<th style="text-align: center;">0.08</th>
+<th style="text-align: center;">0.09</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.0</td>
+<td style="text-align: center;">0.5</td>
+<td style="text-align: center;">0.504</td>
+<td style="text-align: center;">0.508</td>
+<td style="text-align: center;">0.512</td>
+<td style="text-align: center;">0.516</td>
+<td style="text-align: center;">0.5199</td>
+<td style="text-align: center;">0.5239</td>
+<td style="text-align: center;">0.5279</td>
+<td style="text-align: center;">0.5319</td>
+<td style="text-align: center;">0.5359</td>
+</tr>
+<tr class="even">
+<td>0.1</td>
+<td style="text-align: center;">0.5398</td>
+<td style="text-align: center;">0.5438</td>
+<td style="text-align: center;">0.5478</td>
+<td style="text-align: center;">0.5517</td>
+<td style="text-align: center;">0.5557</td>
+<td style="text-align: center;">0.5596</td>
+<td style="text-align: center;">0.5636</td>
+<td style="text-align: center;">0.5675</td>
+<td style="text-align: center;">0.5714</td>
+<td style="text-align: center;">0.5753</td>
+</tr>
+<tr class="odd">
+<td>0.2</td>
+<td style="text-align: center;">0.5793</td>
+<td style="text-align: center;">0.5832</td>
+<td style="text-align: center;">0.5871</td>
+<td style="text-align: center;">0.591</td>
+<td style="text-align: center;">0.5948</td>
+<td style="text-align: center;">0.5987</td>
+<td style="text-align: center;">0.6026</td>
+<td style="text-align: center;">0.6064</td>
+<td style="text-align: center;">0.6103</td>
+<td style="text-align: center;">0.6141</td>
+</tr>
+<tr class="even">
+<td>0.3</td>
+<td style="text-align: center;">0.6179</td>
+<td style="text-align: center;">0.6217</td>
+<td style="text-align: center;">0.6255</td>
+<td style="text-align: center;">0.6293</td>
+<td style="text-align: center;">0.6331</td>
+<td style="text-align: center;">0.6368</td>
+<td style="text-align: center;">0.6406</td>
+<td style="text-align: center;">0.6443</td>
+<td style="text-align: center;">0.648</td>
+<td style="text-align: center;">0.6517</td>
+</tr>
+<tr class="odd">
+<td>0.4</td>
+<td style="text-align: center;">0.6554</td>
+<td style="text-align: center;">0.6591</td>
+<td style="text-align: center;">0.6628</td>
+<td style="text-align: center;">0.6664</td>
+<td style="text-align: center;">0.67</td>
+<td style="text-align: center;">0.6736</td>
+<td style="text-align: center;">0.6772</td>
+<td style="text-align: center;">0.6808</td>
+<td style="text-align: center;">0.6844</td>
+<td style="text-align: center;">0.6879</td>
+</tr>
+<tr class="even">
+<td>0.5</td>
+<td style="text-align: center;">0.6915</td>
+<td style="text-align: center;">0.695</td>
+<td style="text-align: center;">0.6985</td>
+<td style="text-align: center;">0.7019</td>
+<td style="text-align: center;">0.7054</td>
+<td style="text-align: center;">0.7088</td>
+<td style="text-align: center;">0.7123</td>
+<td style="text-align: center;">0.7157</td>
+<td style="text-align: center;">0.719</td>
+<td style="text-align: center;">0.7224</td>
+</tr>
+<tr class="odd">
+<td>0.6</td>
+<td style="text-align: center;">0.7257</td>
+<td style="text-align: center;">0.7291</td>
+<td style="text-align: center;">0.7324</td>
+<td style="text-align: center;">0.7357</td>
+<td style="text-align: center;">0.7389</td>
+<td style="text-align: center;">0.7422</td>
+<td style="text-align: center;">0.7454</td>
+<td style="text-align: center;">0.7486</td>
+<td style="text-align: center;">0.7517</td>
+<td style="text-align: center;">0.7549</td>
+</tr>
+<tr class="even">
+<td>0.7</td>
+<td style="text-align: center;">0.758</td>
+<td style="text-align: center;">0.7611</td>
+<td style="text-align: center;">0.7642</td>
+<td style="text-align: center;">0.7673</td>
+<td style="text-align: center;">0.7704</td>
+<td style="text-align: center;">0.7734</td>
+<td style="text-align: center;">0.7764</td>
+<td style="text-align: center;">0.7794</td>
+<td style="text-align: center;">0.7823</td>
+<td style="text-align: center;">0.7852</td>
+</tr>
+<tr class="odd">
+<td>0.8</td>
+<td style="text-align: center;">0.7881</td>
+<td style="text-align: center;">0.791</td>
+<td style="text-align: center;">0.7939</td>
+<td style="text-align: center;">0.7967</td>
+<td style="text-align: center;">0.7995</td>
+<td style="text-align: center;">0.8023</td>
+<td style="text-align: center;">0.8051</td>
+<td style="text-align: center;">0.8078</td>
+<td style="text-align: center;">0.8106</td>
+<td style="text-align: center;">0.8133</td>
+</tr>
+<tr class="even">
+<td>0.9</td>
+<td style="text-align: center;">0.8159</td>
+<td style="text-align: center;">0.8186</td>
+<td style="text-align: center;">0.8212</td>
+<td style="text-align: center;">0.8238</td>
+<td style="text-align: center;">0.8264</td>
+<td style="text-align: center;">0.8289</td>
+<td style="text-align: center;">0.8315</td>
+<td style="text-align: center;">0.834</td>
+<td style="text-align: center;">0.8365</td>
+<td style="text-align: center;">0.8389</td>
+</tr>
+<tr class="odd">
+<td>1.0</td>
+<td style="text-align: center;">0.8413</td>
+<td style="text-align: center;">0.8438</td>
+<td style="text-align: center;">0.8461</td>
+<td style="text-align: center;">0.8485</td>
+<td style="text-align: center;">0.8508</td>
+<td style="text-align: center;">0.8531</td>
+<td style="text-align: center;">0.8554</td>
+<td style="text-align: center;">0.8577</td>
+<td style="text-align: center;">0.8599</td>
+<td style="text-align: center;">0.8621</td>
+</tr>
+<tr class="even">
+<td>1.1</td>
+<td style="text-align: center;">0.8643</td>
+<td style="text-align: center;">0.8665</td>
+<td style="text-align: center;">0.8686</td>
+<td style="text-align: center;">0.8708</td>
+<td style="text-align: center;">0.8729</td>
+<td style="text-align: center;">0.8749</td>
+<td style="text-align: center;">0.877</td>
+<td style="text-align: center;">0.879</td>
+<td style="text-align: center;">0.881</td>
+<td style="text-align: center;">0.883</td>
+</tr>
+<tr class="odd">
+<td>1.2</td>
+<td style="text-align: center;">0.8849</td>
+<td style="text-align: center;">0.8869</td>
+<td style="text-align: center;">0.8888</td>
+<td style="text-align: center;">0.8907</td>
+<td style="text-align: center;">0.8925</td>
+<td style="text-align: center;">0.8944</td>
+<td style="text-align: center;">0.8962</td>
+<td style="text-align: center;">0.898</td>
+<td style="text-align: center;">0.8997</td>
+<td style="text-align: center;">0.9015</td>
+</tr>
+<tr class="even">
+<td>1.3</td>
+<td style="text-align: center;">0.9032</td>
+<td style="text-align: center;">0.9049</td>
+<td style="text-align: center;">0.9066</td>
+<td style="text-align: center;">0.9082</td>
+<td style="text-align: center;">0.9099</td>
+<td style="text-align: center;">0.9115</td>
+<td style="text-align: center;">0.9131</td>
+<td style="text-align: center;">0.9147</td>
+<td style="text-align: center;">0.9162</td>
+<td style="text-align: center;">0.9177</td>
+</tr>
+<tr class="odd">
+<td>1.4</td>
+<td style="text-align: center;">0.9192</td>
+<td style="text-align: center;">0.9207</td>
+<td style="text-align: center;">0.9222</td>
+<td style="text-align: center;">0.9236</td>
+<td style="text-align: center;">0.9251</td>
+<td style="text-align: center;">0.9265</td>
+<td style="text-align: center;">0.9279</td>
+<td style="text-align: center;">0.9292</td>
+<td style="text-align: center;">0.9306</td>
+<td style="text-align: center;">0.9319</td>
+</tr>
+<tr class="even">
+<td>1.5</td>
+<td style="text-align: center;">0.9332</td>
+<td style="text-align: center;">0.9345</td>
+<td style="text-align: center;">0.9357</td>
+<td style="text-align: center;">0.937</td>
+<td style="text-align: center;">0.9382</td>
+<td style="text-align: center;">0.9394</td>
+<td style="text-align: center;">0.9406</td>
+<td style="text-align: center;">0.9418</td>
+<td style="text-align: center;">0.9429</td>
+<td style="text-align: center;">0.9441</td>
+</tr>
+<tr class="odd">
+<td>1.6</td>
+<td style="text-align: center;">0.9452</td>
+<td style="text-align: center;">0.9463</td>
+<td style="text-align: center;">0.9474</td>
+<td style="text-align: center;">0.9484</td>
+<td style="text-align: center;">0.9495</td>
+<td style="text-align: center;">0.9505</td>
+<td style="text-align: center;">0.9515</td>
+<td style="text-align: center;">0.9525</td>
+<td style="text-align: center;">0.9535</td>
+<td style="text-align: center;">0.9545</td>
+</tr>
+<tr class="even">
+<td>1.7</td>
+<td style="text-align: center;">0.9554</td>
+<td style="text-align: center;">0.9564</td>
+<td style="text-align: center;">0.9573</td>
+<td style="text-align: center;">0.9582</td>
+<td style="text-align: center;">0.9591</td>
+<td style="text-align: center;">0.9599</td>
+<td style="text-align: center;">0.9608</td>
+<td style="text-align: center;">0.9616</td>
+<td style="text-align: center;">0.9625</td>
+<td style="text-align: center;">0.9633</td>
+</tr>
+<tr class="odd">
+<td>1.8</td>
+<td style="text-align: center;">0.9641</td>
+<td style="text-align: center;">0.9649</td>
+<td style="text-align: center;">0.9656</td>
+<td style="text-align: center;">0.9664</td>
+<td style="text-align: center;">0.9671</td>
+<td style="text-align: center;">0.9678</td>
+<td style="text-align: center;">0.9686</td>
+<td style="text-align: center;">0.9693</td>
+<td style="text-align: center;">0.9699</td>
+<td style="text-align: center;">0.9706</td>
+</tr>
+<tr class="even">
+<td>1.9</td>
+<td style="text-align: center;">0.9713</td>
+<td style="text-align: center;">0.9719</td>
+<td style="text-align: center;">0.9726</td>
+<td style="text-align: center;">0.9732</td>
+<td style="text-align: center;">0.9738</td>
+<td style="text-align: center;">0.9744</td>
+<td style="text-align: center;">0.975</td>
+<td style="text-align: center;">0.9756</td>
+<td style="text-align: center;">0.9761</td>
+<td style="text-align: center;">0.9767</td>
+</tr>
+<tr class="odd">
+<td>2.0</td>
+<td style="text-align: center;">0.9772</td>
+<td style="text-align: center;">0.9778</td>
+<td style="text-align: center;">0.9783</td>
+<td style="text-align: center;">0.9788</td>
+<td style="text-align: center;">0.9793</td>
+<td style="text-align: center;">0.9798</td>
+<td style="text-align: center;">0.9803</td>
+<td style="text-align: center;">0.9808</td>
+<td style="text-align: center;">0.9812</td>
+<td style="text-align: center;">0.9817</td>
+</tr>
+<tr class="even">
+<td>2.1</td>
+<td style="text-align: center;">0.9821</td>
+<td style="text-align: center;">0.9826</td>
+<td style="text-align: center;">0.983</td>
+<td style="text-align: center;">0.9834</td>
+<td style="text-align: center;">0.9838</td>
+<td style="text-align: center;">0.9842</td>
+<td style="text-align: center;">0.9846</td>
+<td style="text-align: center;">0.985</td>
+<td style="text-align: center;">0.9854</td>
+<td style="text-align: center;">0.9857</td>
+</tr>
+<tr class="odd">
+<td>2.2</td>
+<td style="text-align: center;">0.9861</td>
+<td style="text-align: center;">0.9864</td>
+<td style="text-align: center;">0.9868</td>
+<td style="text-align: center;">0.9871</td>
+<td style="text-align: center;">0.9875</td>
+<td style="text-align: center;">0.9878</td>
+<td style="text-align: center;">0.9881</td>
+<td style="text-align: center;">0.9884</td>
+<td style="text-align: center;">0.9887</td>
+<td style="text-align: center;">0.989</td>
+</tr>
+<tr class="even">
+<td>2.3</td>
+<td style="text-align: center;">0.9893</td>
+<td style="text-align: center;">0.9896</td>
+<td style="text-align: center;">0.9898</td>
+<td style="text-align: center;">0.9901</td>
+<td style="text-align: center;">0.9904</td>
+<td style="text-align: center;">0.9906</td>
+<td style="text-align: center;">0.9909</td>
+<td style="text-align: center;">0.9911</td>
+<td style="text-align: center;">0.9913</td>
+<td style="text-align: center;">0.9916</td>
+</tr>
+<tr class="odd">
+<td>2.4</td>
+<td style="text-align: center;">0.9918</td>
+<td style="text-align: center;">0.992</td>
+<td style="text-align: center;">0.9922</td>
+<td style="text-align: center;">0.9925</td>
+<td style="text-align: center;">0.9927</td>
+<td style="text-align: center;">0.9929</td>
+<td style="text-align: center;">0.9931</td>
+<td style="text-align: center;">0.9932</td>
+<td style="text-align: center;">0.9934</td>
+<td style="text-align: center;">0.9936</td>
+</tr>
+<tr class="even">
+<td>2.5</td>
+<td style="text-align: center;">0.9938</td>
+<td style="text-align: center;">0.994</td>
+<td style="text-align: center;">0.9941</td>
+<td style="text-align: center;">0.9943</td>
+<td style="text-align: center;">0.9945</td>
+<td style="text-align: center;">0.9946</td>
+<td style="text-align: center;">0.9948</td>
+<td style="text-align: center;">0.9949</td>
+<td style="text-align: center;">0.9951</td>
+<td style="text-align: center;">0.9952</td>
+</tr>
+<tr class="odd">
+<td>2.6</td>
+<td style="text-align: center;">0.9953</td>
+<td style="text-align: center;">0.9955</td>
+<td style="text-align: center;">0.9956</td>
+<td style="text-align: center;">0.9957</td>
+<td style="text-align: center;">0.9959</td>
+<td style="text-align: center;">0.996</td>
+<td style="text-align: center;">0.9961</td>
+<td style="text-align: center;">0.9962</td>
+<td style="text-align: center;">0.9963</td>
+<td style="text-align: center;">0.9964</td>
+</tr>
+<tr class="even">
+<td>2.7</td>
+<td style="text-align: center;">0.9965</td>
+<td style="text-align: center;">0.9966</td>
+<td style="text-align: center;">0.9967</td>
+<td style="text-align: center;">0.9968</td>
+<td style="text-align: center;">0.9969</td>
+<td style="text-align: center;">0.997</td>
+<td style="text-align: center;">0.9971</td>
+<td style="text-align: center;">0.9972</td>
+<td style="text-align: center;">0.9973</td>
+<td style="text-align: center;">0.9974</td>
+</tr>
+<tr class="odd">
+<td>2.8</td>
+<td style="text-align: center;">0.9974</td>
+<td style="text-align: center;">0.9975</td>
+<td style="text-align: center;">0.9976</td>
+<td style="text-align: center;">0.9977</td>
+<td style="text-align: center;">0.9977</td>
+<td style="text-align: center;">0.9978</td>
+<td style="text-align: center;">0.9979</td>
+<td style="text-align: center;">0.9979</td>
+<td style="text-align: center;">0.998</td>
+<td style="text-align: center;">0.9981</td>
+</tr>
+<tr class="even">
+<td>2.9</td>
+<td style="text-align: center;">0.9981</td>
+<td style="text-align: center;">0.9982</td>
+<td style="text-align: center;">0.9982</td>
+<td style="text-align: center;">0.9983</td>
+<td style="text-align: center;">0.9984</td>
+<td style="text-align: center;">0.9984</td>
+<td style="text-align: center;">0.9985</td>
+<td style="text-align: center;">0.9985</td>
+<td style="text-align: center;">0.9986</td>
+<td style="text-align: center;">0.9986</td>
+</tr>
+<tr class="odd">
+<td>3.0</td>
+<td style="text-align: center;">0.9987</td>
+<td style="text-align: center;">0.9987</td>
+<td style="text-align: center;">0.9987</td>
+<td style="text-align: center;">0.9988</td>
+<td style="text-align: center;">0.9988</td>
+<td style="text-align: center;">0.9989</td>
+<td style="text-align: center;">0.9989</td>
+<td style="text-align: center;">0.9989</td>
+<td style="text-align: center;">0.999</td>
+<td style="text-align: center;">0.999</td>
+</tr>
+<tr class="even">
+<td>3.1</td>
+<td style="text-align: center;">0.999</td>
+<td style="text-align: center;">0.9991</td>
+<td style="text-align: center;">0.9991</td>
+<td style="text-align: center;">0.9991</td>
+<td style="text-align: center;">0.9992</td>
+<td style="text-align: center;">0.9992</td>
+<td style="text-align: center;">0.9992</td>
+<td style="text-align: center;">0.9992</td>
+<td style="text-align: center;">0.9993</td>
+<td style="text-align: center;">0.999</td>
+</tr>
+<tr class="odd">
+<td>3.2</td>
+<td style="text-align: center;">0.9993</td>
+<td style="text-align: center;">0.9993</td>
+<td style="text-align: center;">0.9994</td>
+<td style="text-align: center;">0.9994</td>
+<td style="text-align: center;">0.9994</td>
+<td style="text-align: center;">0.9994</td>
+<td style="text-align: center;">0.9994</td>
+<td style="text-align: center;">0.9995</td>
+<td style="text-align: center;">0.9995</td>
+<td style="text-align: center;">0.9995</td>
+</tr>
+<tr class="even">
+<td>3.3</td>
+<td style="text-align: center;">0.9995</td>
+<td style="text-align: center;">0.9995</td>
+<td style="text-align: center;">0.9995</td>
+<td style="text-align: center;">0.9996</td>
+<td style="text-align: center;">0.9996</td>
+<td style="text-align: center;">0.9996</td>
+<td style="text-align: center;">0.9996</td>
+<td style="text-align: center;">0.9996</td>
+<td style="text-align: center;">0.9996</td>
+<td style="text-align: center;">0.9997</td>
+</tr>
+<tr class="odd">
+<td>3.4</td>
+<td style="text-align: center;">0.9997</td>
+<td style="text-align: center;">0.9997</td>
+<td style="text-align: center;">0.9997</td>
+<td style="text-align: center;">0.9997</td>
+<td style="text-align: center;">0.9997</td>
+<td style="text-align: center;">0.9997</td>
+<td style="text-align: center;">0.9997</td>
+<td style="text-align: center;">0.9997</td>
+<td style="text-align: center;">0.9997</td>
+<td style="text-align: center;">0.9998</td>
+</tr>
+<tr class="even">
+<td>3.5</td>
+<td style="text-align: center;">0.9998</td>
+<td style="text-align: center;">0.9998</td>
+<td style="text-align: center;">0.9998</td>
+<td style="text-align: center;">0.9998</td>
+<td style="text-align: center;">0.9998</td>
+<td style="text-align: center;">0.9998</td>
+<td style="text-align: center;">0.9998</td>
+<td style="text-align: center;">0.9998</td>
+<td style="text-align: center;">0.9998</td>
+<td style="text-align: center;">0.9998</td>
+</tr>
+</tbody>
+</table>
+<!-- 3.6 |  0.9998  |  0.9998  |  0.9999  |  0.9999  |  0.9999  |  0.9999  |  0.9999  |  0.9999  |  0.9999  |  0.9999   -->
+<!-- 3.7 |  0.9999  |  0.9999  |  0.9999  |  0.9999  |  0.9999  |  0.9999  |  0.9999  |  0.9999  |  0.9999  |  0.9999   -->
+<!-- 3.8 |  0.9999  |  0.9999  |  0.9999  |  0.9999  |  0.9999  |  0.9999  |  0.9999  |  0.9999  |  0.9999  |  0.9999   -->
+<!-- 3.9 |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1 -->
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -19,5 +19,14 @@
   },
   "tabs.Rmd": {
     "tabs.html": "bf1c6c84"
+  },
+  "TabelasPDF/tStudent.Rmd": {
+    "tStudent.html": "a41c7ffd"
+  },
+  "TabelasPDF/QuiQuadrado.Rmd": {
+    "QuiQuadrado.html": "b2184a32"
+  },
+  "TabelasPDF/TNormPad.Rmd": {
+    "TNormPad.html": "74bff520"
   }
 }
