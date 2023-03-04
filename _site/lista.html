@@ -191,6 +191,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul class="collapse">
   <li><a href="#distribuição-normal" id="toc-distribuição-normal" class="nav-link" data-scroll-target="#distribuição-normal">Distribuição Normal</a></li>
   </ul></li>
+  <li><a href="#distribuição-amostral-da-média" id="toc-distribuição-amostral-da-média" class="nav-link" data-scroll-target="#distribuição-amostral-da-média">Distribuição amostral da média</a></li>
   <li><a href="#intervalo-de-confiança" id="toc-intervalo-de-confiança" class="nav-link" data-scroll-target="#intervalo-de-confiança">Intervalo de confiança</a></li>
   <li><a href="#teste-de-hipóteses" id="toc-teste-de-hipóteses" class="nav-link" data-scroll-target="#teste-de-hipóteses">Teste de hipóteses</a></li>
   </ul>
@@ -1038,6 +1039,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>sabe-se que 3% das empresas da região são consideradas grandes. Qual o valor mínimo faturado para que uma empresa seja considerada de grande porte?</p></li>
 </ul>
 </section>
+</section>
+<section id="distribuição-amostral-da-média" class="level1">
+<h1>Distribuição amostral da média</h1>
+<ol type="1">
+<li>Seja X uma variável aleatória que segue um distribuição normal com média 110 e variância 100:</li>
+</ol>
+<ul>
+<li><p>qual <span class="math inline">\(P(100&lt;X&gt;120)\)</span>?</p></li>
+<li><p>se <span class="math inline">\(\overline{X}\)</span> for a média amostral de tamanho 9 dessa população, calcule <span class="math inline">\(P(100&lt;\overline{X}&gt;120)\)</span>.</p></li>
+<li><p>faça um gráfico com as distribuições de <span class="math inline">\(X\)</span> e <span class="math inline">\(\overline{X}\)</span>.</p></li>
+</ul>
+<div class="cell" data-layout-align="center" data-label="fig-den1">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">70</span>,<span class="dv">150</span>,<span class="fl">0.01</span>)</span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>y1 <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(x,<span class="dv">110</span>,<span class="dv">10</span>)</span>
+<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a>y2 <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(x,<span class="dv">110</span>,<span class="fl">2.5</span>)</span>
+<span id="cb69-4"><a href="#cb69-4" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">2.5</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">mgp=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">0.5</span>,<span class="dv">0</span>))</span>
+<span id="cb69-5"><a href="#cb69-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(y1<span class="sc">~</span>x, <span class="at">type=</span><span class="st">"l"</span>,<span class="at">col=</span><span class="st">"blue"</span>,<span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.18</span>),</span>
+<span id="cb69-6"><a href="#cb69-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Densidade"</span>)</span>
+<span id="cb69-7"><a href="#cb69-7" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(y2<span class="sc">~</span>x,<span class="at">type=</span><span class="st">"l"</span>,<span class="at">col=</span><span class="st">"black"</span>)</span>
+<span id="cb69-8"><a href="#cb69-8" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"y1"</span>, <span class="st">"y2"</span>), <span class="at">col=</span><span class="fu">c</span>(<span class="st">"blue"</span>, <span class="st">"black"</span>), <span class="at">lty=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-den1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="lista_files/figure-html/fig-den1-1.png" class="img-fluid figure-img" width="2400"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;8: Distribuições da v.a. e das médias amostrais de X (comando básicos do R).</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>qual o tamanho da amostra para que <span class="math inline">\(P(100&lt;\overline{X}&gt;120)=0.95\)</span>?</li>
+</ul>
+<ol start="2" type="1">
+<li>Para empacotar camaroes congelados você usa uma máquina em que a massa dos pacotes tem distribuição normal com média <span class="math inline">\(\mu\)</span> e desvio padrão 10g.</li>
+</ol>
+<ul>
+<li><p>qual o valor da média (<span class="math inline">\(\mu\)</span>) que você deve regular a máquina para que somente 8% dos pacotes tenham massa menor que 500g?</p></li>
+<li><p>depois de regulada, você retira uma amostra de 5 pacotes. Qual a probabilidade da médias da amostra ser menor que 500g?</p></li>
+</ul>
 </section>
 <section id="intervalo-de-confiança" class="level1">
 <h1>Intervalo de confiança</h1>

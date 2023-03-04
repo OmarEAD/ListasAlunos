@@ -481,6 +481,41 @@ cor(dados5$Tempo,dados5$Gordura)
 
 - sabe-se que 3\% das empresas da região são consideradas grandes. Qual o valor mínimo faturado para que uma empresa seja considerada de grande porte?
 
+# Distribuição amostral da média
+
+1. Seja X uma variável aleatória que segue um distribuição normal com média 110 e variância 100:
+
+- qual $P(100<X>120)$?
+
+- se $\overline{X}$ for a média amostral de tamanho 9 dessa população, calcule $P(100<\overline{X}>120)$.
+
+- faça um gráfico com as distribuições de $X$ e $\overline{X}$.
+
+```{r fig-den1, fig.cap=""}
+#| Label: fig-den1
+#| fig-cap: "Distribuições da v.a. e das médias amostrais de X (comando básicos do R)."
+x <- seq(70,150,0.01)
+y1 <- dnorm(x,110,10)
+y2 <- dnorm(x,110,2.5)
+par(mar=c(2.5,2.5,0.5,0.5), mgp=c(1.5,0.5,0))
+plot(y1~x, type="l",col="blue",ylim=c(0,0.18),
+     ylab = "Densidade")
+points(y2~x,type="l",col="black")
+legend("topright", legend=c("y1", "y2"), col=c("blue", "black"), lty=1)
+
+```
+
+
+- qual o tamanho da amostra para que $P(100<\overline{X}>120)=0.95$?
+
+2. Para empacotar camaroes congelados você usa uma máquina em que a massa dos pacotes tem distribuição normal com média $\mu$ e desvio padrão 10g.
+
+- qual o valor da média ($\mu$) que você deve regular a máquina para que somente 8\% dos pacotes tenham massa menor que 500g?
+
+- depois de regulada, você retira uma amostra de 5 pacotes. Qual a probabilidade da médias da amostra ser menor que 500g?
+
+
+
 # Intervalo de confiança
 
 1.  Para estimar a média da massa dos universitários do sexo masculino da universidade em que estuda, você coletou uma amostra de 200 indivíduos e obteve $\bar{x}=78.9kg$. A população tem distribuição normal com $\sigma = 15kg$. Construa um intervalo de confiança para a média populacional com nível de confiança igual a 95%.
