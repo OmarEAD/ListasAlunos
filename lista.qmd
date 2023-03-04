@@ -508,11 +508,24 @@ legend("topright", legend=c("y1", "y2"), col=c("blue", "black"), lty=1)
 
 - qual o tamanho da amostra para que $P(100<\overline{X}>120)=0.95$?
 
-2. Para empacotar camaroes congelados você usa uma máquina em que a massa dos pacotes tem distribuição normal com média $\mu$ e desvio padrão 10g.
+2. Para empacotar camaroes congelados você usa uma máquina em que a massa dos pacotes tem distribuição normal com média $\mu$ e desvio padrão 25g.
 
-- qual o valor da média ($\mu$) que você deve regular a máquina para que somente 8\% dos pacotes tenham massa menor que 500g?
+- qual o valor da média ($\mu$) que você deve regular a máquina para que somente 5\% dos pacotes tenham massa menor que 1000g?
 
-- depois de regulada, você retira uma amostra de 5 pacotes. Qual a probabilidade da médias da amostra ser menor que 500g?
+- depois de regulada, você retira uma amostra de 5 pacotes. Qual a probabilidade da médias da amostra ser menor que 1000g?
+
+3. Como vendedor, interessa colocar valores mínimo e máximo para a massa dos pacotes oriundos da sua máquina, vista no exercício anterior. Você propõe que amostras de tamanho 5 não possam ter média menor que 990g, pois fere o código do consumidor, e nem maior que 1040g pois o seu negócio teria prejuizo. Caso o proposto não ocorra, você para a produção para regular novamente a máquina.
+
+- qual a probabilidade da produção ser parada?
+
+- se a máquina desregulou e a massa média dos pacotes agora é 1000g, qual a probabilidade da produção não ser interrompida?
+
+4. A massa dos usuários de um elevador com capacidade máxima de 600kg, segue uma distribuição normal com média de 72kg e variância 100.
+
+- qual a probabilidade desse elevador ter 8 pessoas e ultrapassar o seu limite?
+
+-
+
 
 
 
