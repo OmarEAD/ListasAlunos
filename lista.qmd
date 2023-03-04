@@ -522,10 +522,6 @@ legend("topright", legend=c("y1", "y2"), col=c("blue", "black"), lty=1)
 
 4. A massa dos usuários de um elevador com capacidade máxima de 600kg, segue uma distribuição normal com média de 72kg e variância 100. Qual a probabilidade desse elevador ter 8 pessoas e ultrapassar o seu limite?
 
-
-
-
-
 # Intervalo de confiança
 
 1.  Para estimar a média da massa dos universitários do sexo masculino da universidade em que estuda, você coletou uma amostra de 200 indivíduos e obteve $\bar{x}=78.9kg$. A população tem distribuição normal com $\sigma = 15kg$. Construa um intervalo de confiança para a média populacional com nível de confiança igual a 95%.
