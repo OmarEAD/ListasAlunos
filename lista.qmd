@@ -520,11 +520,8 @@ legend("topright", legend=c("y1", "y2"), col=c("blue", "black"), lty=1)
 
 - se a máquina desregulou e a massa média dos pacotes agora é 1000g, qual a probabilidade da produção não ser interrompida?
 
-4. A massa dos usuários de um elevador com capacidade máxima de 600kg, segue uma distribuição normal com média de 72kg e variância 100.
+4. A massa dos usuários de um elevador com capacidade máxima de 600kg, segue uma distribuição normal com média de 72kg e variância 100. Qual a probabilidade desse elevador ter 8 pessoas e ultrapassar o seu limite?
 
-- qual a probabilidade desse elevador ter 8 pessoas e ultrapassar o seu limite?
-
--
 
 
 
