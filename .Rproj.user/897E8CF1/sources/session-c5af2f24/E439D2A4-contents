@@ -475,6 +475,12 @@ cor(dados5$Tempo,dados5$Gordura)
 
 - sabendo que 25\% dos peixes dessa população morrem antes de atingirem a fase reprodutiva, qual o tempo de vida de um peixe para atingir essa fase?
 
+4. Numa certa região há 6 mil empresas ligadas ao varejo. Suponha que o faturamento anual deste setor siga uma distribuição normal com média igual a 1.8 milhão de reais e desvio padrão de 0.7 milhão.
+
+- qual a quantidade de empresas, nesta região, que faturam mais de 0.5 milhão de reais ao ano?
+
+- sabe-se que 3\% das empresas da região são consideradas grandes. Qual o valor mínimo faturado para que uma empresa seja considerada de grande porte?
+
 # Intervalo de confiança
 
 1.  Para estimar a média da massa dos universitários do sexo masculino da universidade em que estuda, você coletou uma amostra de 200 indivíduos e obteve $\bar{x}=78.9kg$. A população tem distribuição normal com $\sigma = 15kg$. Construa um intervalo de confiança para a média populacional com nível de confiança igual a 95%.

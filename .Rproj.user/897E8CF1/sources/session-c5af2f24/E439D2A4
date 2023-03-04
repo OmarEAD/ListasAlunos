@@ -3,7 +3,7 @@
     "path": "D:/SitesOmar/ListasAlunos/lista.qmd",
     "project_path": "lista.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "3691856344",
     "contents": "",
     "dirty": false,
     "created": 1677330928282.0,
@@ -17,15 +17,15 @@
         "docOutlineVisible": "0",
         "rmdVisualCollapsedChunks": "",
         "rmdVisualModeLocation": "261:0",
-        "cursorPosition": "217,36",
-        "scrollLine": "0"
+        "cursorPosition": "479,93",
+        "scrollLine": "473"
     },
     "folds": "",
-    "lastKnownWriteTime": 1677454546,
+    "lastKnownWriteTime": 1677938593,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1677454546696,
+    "last_content_update": 1677938593072,
     "read_only": false,
     "read_only_alternatives": []
 }
