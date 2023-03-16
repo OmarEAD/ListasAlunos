@@ -1,14 +1,14 @@
 {
-    "id": "E439D2A4",
-    "path": "D:/SitesOmar/ListasAlunos/lista.qmd",
-    "project_path": "lista.qmd",
+    "id": "4119C7AD",
+    "path": "D:/SitesOmar/ListasAlunos/index.qmd",
+    "project_path": "index.qmd",
     "type": "quarto_markdown",
-    "hash": "2790584191",
+    "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1677330928282.0,
+    "created": 1677263002291.0,
     "source_on_save": true,
-    "relative_order": 3,
+    "relative_order": 1,
     "properties": {
         "rmdVisualMode": "false",
         "rmdVisualWrapConfigured": "true",
@@ -16,16 +16,16 @@
         "Source": "Source",
         "docOutlineVisible": "0",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "261:0",
-        "cursorPosition": "475,116",
-        "scrollLine": "471"
+        "rmdVisualModeLocation": "32:0",
+        "cursorPosition": "42,241",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1677942537,
+    "lastKnownWriteTime": 1677455835,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1677942537215,
+    "last_content_update": 1677455835957,
     "read_only": false,
     "read_only_alternatives": []
 }

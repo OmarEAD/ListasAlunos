@@ -576,3 +576,9 @@ legend("topright", legend=c("y1", "y2"), col=c("blue", "black"), lty=1)
 11. Um programa de televisão pode ser modificado por seus produtores se menos de um terço das pessoas que assistem televisão, no mesmo horário desse programa, não o assistem regularmente. Para decidir sobre isso, uma pesquisa com 450 famílias foi realizada. Observou-se que 80 delas assistem regularmente ao programa. Qual decisão os produtores devem tomar ($\alpha=0.05$)?
 
 12. Para a realização de uma certa tarefa, um funcionário gasta em média 80 minutos. Na tentativa de diminuir esse tempo, um novo procedimento foi introduzido na empresa. Em seguida, mediu-se o tempo gasto para a realização dessa tarefa de 25 funcionários. O tempo médio da amostra foi de 72 minutos com desvio padrão de 10 minutos. Estes resultados apontam para uma diminuição no tempo de execução da tarefa ($\alpha=0.05$)?
+
+13. Um agricultor produz soja em seis lotes. Neste ano produziu 1110, 812, 482, 2191, 2005 e 2338 sacas respectivamente em áreas de 30, 22, 12, 55, 50 e 62 ha. Considerando que a produtividade de soja segue uma distribuição normal, veja se a produtividade deste ano para este agricultor foi maior ou não que a média da região que foi de 36.8 sacas/ha.
+
+14. Você trabalha numa empresa que produz tinta para calçadas, entre outras coisas. 
+
+
