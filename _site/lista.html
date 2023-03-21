@@ -193,7 +193,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </ul></li>
   <li><a href="#distribuição-amostral-da-média" id="toc-distribuição-amostral-da-média" class="nav-link" data-scroll-target="#distribuição-amostral-da-média">Distribuição amostral da média</a></li>
   <li><a href="#intervalo-de-confiança" id="toc-intervalo-de-confiança" class="nav-link" data-scroll-target="#intervalo-de-confiança">Intervalo de confiança</a></li>
-  <li><a href="#teste-de-hipóteses" id="toc-teste-de-hipóteses" class="nav-link" data-scroll-target="#teste-de-hipóteses">Teste de hipóteses</a></li>
+  <li><a href="#teste-de-hipóteses" id="toc-teste-de-hipóteses" class="nav-link" data-scroll-target="#teste-de-hipóteses">Teste de hipóteses</a>
+  <ul class="collapse">
+  <li><a href="#para-uma-amostra" id="toc-para-uma-amostra" class="nav-link" data-scroll-target="#para-uma-amostra">Para uma amostra</a></li>
+  <li><a href="#para-duas-amostras" id="toc-para-duas-amostras" class="nav-link" data-scroll-target="#para-duas-amostras">Para duas amostras</a>
+  <ul class="collapse">
+  <li><a href="#pareado" id="toc-pareado" class="nav-link" data-scroll-target="#pareado">Pareado</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -1114,6 +1121,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="teste-de-hipóteses" class="level1">
 <h1>Teste de hipóteses</h1>
+<section id="para-uma-amostra" class="level2">
+<h2 class="anchored" data-anchor-id="para-uma-amostra">Para uma amostra</h2>
 <ol type="1">
 <li><p>Uma plantação de uma dada espécie de árvore é destinada a fabricação de móveis. O seu ponto de corte ocorre quando o perímetro à <span class="math inline">\(1m\)</span> de altura atinge <span class="math inline">\(120cm\)</span>. Para saber se uma certa área, onde as plantas tem a mesma idade, pode ser destinada ao corte, você coleta uma amostra do perímetro de 20 árvores e obtém uma média igual a <span class="math inline">\(117cm\)</span>. Sabendo-se que o perímetro se distribui normalmente e que <span class="math inline">\(\sigma = 20cm\)</span>, qual decisão você tomaria (<span class="math inline">\(\alpha=0.05\)</span>)?</p></li>
 <li><p>Um produtor de camarão comercializa seu produto em pacotes de 500g. Um orgão fiscalizador coleta uma amostra com seis pacotes e pesagem revela que suas massas são 498, 487, 495, 491, 493 e 488 g. Ao nível de 5%, verificar se o consumidor pode estar sendo lesado pelo produtor.</p></li>
@@ -1130,8 +1139,219 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Um agricultor produz soja em seis lotes. Neste ano produziu 1110, 812, 482, 2191, 2005 e 2338 sacas respectivamente em áreas de 30, 22, 12, 55, 50 e 62 ha. Considerando que a produtividade de soja segue uma distribuição normal, veja se a produtividade deste ano para este agricultor foi maior ou não que a média da região que foi de 36.8 sacas/ha (<span class="math inline">\(\alpha=0.05\)</span>).</p></li>
 <li><p>Você trabalha numa empresa que produz tinta para calçadas, entre outras coisas. Como engenheiro, você está desenvolvendo uma nova formulação com o objetivo de reduzir o tempo de secagem que hoje é de 20 minutos. Essa nova formulação foi aplicada em 40 áreas e observou-se que o tempo médio para secagem foi de 17 minutos com desvio padrão igual a 3 minutos. Neste caso, você diria que a nova formulação foi mais eficaz ou não para o processo de secagem (<span class="math inline">\(\alpha=0.05\)</span>)?</p></li>
 </ol>
+</section>
+<section id="para-duas-amostras" class="level2">
+<h2 class="anchored" data-anchor-id="para-duas-amostras">Para duas amostras</h2>
+<section id="pareado" class="level3">
+<h3 class="anchored" data-anchor-id="pareado">Pareado</h3>
+<ol type="1">
+<li>Como nutricionista, você submete uma dieta ao longo de 15 dias para um grupo de 12 pessoas. Os dados amostrais antes e depois da dieta estão apresentados na <a href="#tbl-dieta1">Table&nbsp;8</a>. Supondo normalidade (distribuição amostral da diferença entre médias), ao nivel de 5%, podemos dizer que essa dieta diminuiu a massa média da população?</li>
+</ol>
+<div class="cell tbl-cap-location-top" data-layout-align="center">
+<div class="cell-output-display">
+<div id="tbl-dieta1" class="anchored">
+
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;8:  Massa, em kg, para 12 pacientes, antes e depois de uma dieta proposta. </caption>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Paciente </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:right;"> 11 </td>
+   <td style="text-align:right;"> 12 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Antes </td>
+   <td style="text-align:right;"> 106 </td>
+   <td style="text-align:right;"> 89 </td>
+   <td style="text-align:right;"> 92 </td>
+   <td style="text-align:right;"> 93 </td>
+   <td style="text-align:right;"> 90 </td>
+   <td style="text-align:right;"> 90 </td>
+   <td style="text-align:right;"> 99 </td>
+   <td style="text-align:right;"> 94 </td>
+   <td style="text-align:right;"> 96 </td>
+   <td style="text-align:right;"> 106 </td>
+   <td style="text-align:right;"> 97 </td>
+   <td style="text-align:right;"> 109 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Depois </td>
+   <td style="text-align:right;"> 101 </td>
+   <td style="text-align:right;"> 92 </td>
+   <td style="text-align:right;"> 99 </td>
+   <td style="text-align:right;"> 92 </td>
+   <td style="text-align:right;"> 86 </td>
+   <td style="text-align:right;"> 88 </td>
+   <td style="text-align:right;"> 90 </td>
+   <td style="text-align:right;"> 95 </td>
+   <td style="text-align:right;"> 94 </td>
+   <td style="text-align:right;"> 94 </td>
+   <td style="text-align:right;"> 97 </td>
+   <td style="text-align:right;"> 83 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">7</span>)</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Amostra da população Antes</span></span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>xa <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">12</span>,<span class="at">mean=</span><span class="dv">95</span>,<span class="at">sd=</span><span class="dv">5</span>),<span class="dv">0</span>)</span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Amostra da população Depois</span></span>
+<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a>xb <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">12</span>,<span class="at">mean=</span><span class="dv">90</span>,<span class="at">sd=</span><span class="dv">5</span>),<span class="dv">0</span>)</span>
+<span id="cb70-6"><a href="#cb70-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Diferença </span></span>
+<span id="cb70-7"><a href="#cb70-7" aria-hidden="true" tabindex="-1"></a>d  <span class="ot">&lt;-</span>xa <span class="sc">-</span> xb</span>
+<span id="cb70-8"><a href="#cb70-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Média da diferença</span></span>
+<span id="cb70-9"><a href="#cb70-9" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4.166667</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Desvio padrão da diferença</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8.536907</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Teste t pareado unilateral a direita</span></span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(xa,xb,<span class="at">paired =</span> T, <span class="at">alternative =</span> <span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Paired t-test
+
+data:  xa and xb
+t = 1.6907, df = 11, p-value = 0.05949
+alternative hypothesis: true mean difference is greater than 0
+95 percent confidence interval:
+ -0.2590991        Inf
+sample estimates:
+mean difference 
+       4.166667 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="co"># t calculado</span></span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(xa,xb,<span class="at">paired =</span> T, <span class="at">alternative =</span> <span class="st">"greater"</span>)<span class="sc">$</span>statistic</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       t 
+1.690748 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Quantil</span></span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.95</span>,<span class="dv">9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.833113</code></pre>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Você, como engenheiro, quer verificar se um programa de segurança no trabalho será responsável pela diminuição das perdas semanais (horas/funcionário) devido à acidentes de trabalho em dez indústrias da sua região. Os dados das perda semanais (horas/funcionário), antes e depois do programa de segurança para as dez industrias estão apresentados na <a href="#tbl-industria1">Table&nbsp;9</a>. Supondo normalidade, teste se o programa de segurança foi eficaz ou não (<span class="math inline">\(\alpha=0.05\)</span>).</li>
+</ol>
+<div class="cell tbl-cap-location-top" data-layout-align="center">
+<div class="cell-output-display">
+<div id="tbl-industria1" class="anchored">
+
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;9:  Perdas semanais (horas/funcionário) em 10 indústrias, antes e depois de um programa de segurança do trabalho. </caption>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Indústria </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Antes </td>
+   <td style="text-align:right;"> 65 </td>
+   <td style="text-align:right;"> 66 </td>
+   <td style="text-align:right;"> 66 </td>
+   <td style="text-align:right;"> 67 </td>
+   <td style="text-align:right;"> 68 </td>
+   <td style="text-align:right;"> 70 </td>
+   <td style="text-align:right;"> 71 </td>
+   <td style="text-align:right;"> 73 </td>
+   <td style="text-align:right;"> 79 </td>
+   <td style="text-align:right;"> 79 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Depois </td>
+   <td style="text-align:right;"> 61 </td>
+   <td style="text-align:right;"> 64 </td>
+   <td style="text-align:right;"> 65 </td>
+   <td style="text-align:right;"> 66 </td>
+   <td style="text-align:right;"> 66 </td>
+   <td style="text-align:right;"> 67 </td>
+   <td style="text-align:right;"> 69 </td>
+   <td style="text-align:right;"> 73 </td>
+   <td style="text-align:right;"> 74 </td>
+   <td style="text-align:right;"> 76 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">7</span>)</span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Amostra da população Antes</span></span>
+<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a>xa <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">10</span>,<span class="at">mean=</span><span class="dv">70</span>,<span class="at">sd=</span><span class="dv">4</span>),<span class="dv">0</span>))</span>
+<span id="cb80-4"><a href="#cb80-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Amostra da população Depois</span></span>
+<span id="cb80-5"><a href="#cb80-5" aria-hidden="true" tabindex="-1"></a>xb <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">10</span>,<span class="at">mean=</span><span class="dv">65</span>,<span class="at">sd=</span><span class="dv">4</span>),<span class="dv">0</span>))</span>
+<span id="cb80-6"><a href="#cb80-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Diferença </span></span>
+<span id="cb80-7"><a href="#cb80-7" aria-hidden="true" tabindex="-1"></a>d  <span class="ot">&lt;-</span>xa <span class="sc">-</span> xb</span>
+<span id="cb80-8"><a href="#cb80-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Média da diferença</span></span>
+<span id="cb80-9"><a href="#cb80-9" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Desvio padrão da diferença</span></span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.494434</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Teste t pareado unilateral a direita</span></span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(xa,xb,<span class="at">paired =</span> T, <span class="at">alternative =</span> <span class="st">"greater"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Paired t-test
+
+data:  xa and xb
+t = 4.8669, df = 9, p-value = 0.0004437
+alternative hypothesis: true mean difference is greater than 0
+95 percent confidence interval:
+ 1.433705      Inf
+sample estimates:
+mean difference 
+            2.3 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="co"># t calculado</span></span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(xa,xb,<span class="at">paired =</span> T, <span class="at">alternative =</span> <span class="st">"greater"</span>)<span class="sc">$</span>statistic</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       t 
+4.866885 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Quantil</span></span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.95</span>,<span class="dv">9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.833113</code></pre>
+</div>
+</div>
 
 
+</section>
+</section>
 </section>
 
 
