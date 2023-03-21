@@ -626,10 +626,6 @@ qt(0.95,9)
 ```
 
 
-
-
-
-
 2. Você, como engenheiro, quer verificar se um programa de segurança no trabalho será responsável pela diminuição das perdas semanais (horas/funcionário) devido à acidentes de trabalho em dez indústrias da sua região. Os dados das perda semanais (horas/funcionário), antes e depois do programa de segurança para as dez industrias estão apresentados na @tbl-industria1. Supondo normalidade, teste se o programa de segurança foi eficaz ou não ($\alpha=0.05$).
 
 ```{r tbl-industria1, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
@@ -667,6 +663,60 @@ t.test(xa,xb,paired = T, alternative = "greater")$statistic
 qt(0.95,9)
 
 ```
+
+
+3. Duas marcas A e B de máquinas industriais são testadas por seis funcionários. O tempo para realizar a mesma operação estão apresentados na @tbl-industria2. Ao nível de significância de 5\%, podemos dizer que a máquina B é mais rápida ou não?
+
+```{r tbl-industria2, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
+#| label: tbl-industria2
+#| tbl-cap: "Tempo registrado, em minutos, para a realização de uma mesma tarefa para seis funcionários."
+#| tbl-cap-location: top
+set.seed(7)
+pp <- sort(round(rnorm(6,mean=80,sd=3),0))
+qq <- sort(round(rnorm(6,mean=75,sd=3),0))
+dd <- t(data.frame(Funcionário=1:6,
+                 A=pp, B=qq))
+#dt <- as.data.frame(t(dd))
+dd %>% 
+  kable() %>% 
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+```{r}
+set.seed(7)
+# Amostra da população Antes
+xa <- sort(round(rnorm(6,mean=80,sd=3),0))
+# Amostra da população Depois
+xb <- sort(round(rnorm(6,mean=75,sd=3),0))
+# Diferença 
+d  <-xa - xb
+# Média da diferença
+mean(d)
+# Desvio padrão da diferença
+sd(d)
+# Teste t pareado unilateral a direita
+t.test(xa,xb,paired = T, alternative = "greater")
+# t calculado
+t.test(xa,xb,paired = T, alternative = "greater")$statistic
+# Quantil
+qt(0.95,9)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
