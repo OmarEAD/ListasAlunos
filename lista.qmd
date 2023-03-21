@@ -9,6 +9,7 @@ tags: ["Distribuição Contínua",
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(#collapse = TRUE,
+                      cache = TRUE,
                       echo = TRUE, 
                       size = "footnotesize",
                       comment = NA,

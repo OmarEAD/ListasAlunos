@@ -235,7 +235,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/library_6529e3553554d7f76c10dc5c564d281e">
 
 </div>
 <section id="introdução1" class="level1">
@@ -254,7 +254,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Alguns funcionários de uma empresa decidiram participar de uma pesquisa para avaliar o tempo gasto para irem de casa ao trabalho usando o transporte coletivo e o automóvel próprio. Se você fosse o responsável por essa pesquisa, como a realizaria? De forma concisa descreva detalhes da coleta de dados e possíveis problemas que poderiam ocorrer.</p></li>
 <li><p>Considere o problema anterior. Suponha que você tenha coletado uma amostra do tempo (minutos) de translado de casa ao trabalho de 10 funcionários, ora indo de transporte coletivo, ora de carro próprio (<a href="#tbl-transp">Table&nbsp;1</a>). Esse tipo de dados tem estrutura pareada (em breve estudaremos isto com detalhes).</p></li>
 </ol>
-<div class="cell tbl-cap-location-top" data-layout-align="center">
+<div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-transp_834c776f581805ea775a84dca6097e91">
 <div class="cell-output-display">
 <div id="tbl-transp" class="anchored">
 
@@ -305,7 +305,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-1_7548bb704ffab75b4b0ad38bb23cf6ef">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>TC <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">41</span>,<span class="dv">24</span>,<span class="dv">27</span>,<span class="dv">28</span>,<span class="dv">25</span>,<span class="dv">25</span>,<span class="dv">34</span>,<span class="dv">29</span>,<span class="dv">31</span>,<span class="dv">41</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>AP <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">22</span>,<span class="dv">34</span>,<span class="dv">31</span>,<span class="dv">22</span>,<span class="dv">29</span>,<span class="dv">22</span>,<span class="dv">16</span>,<span class="dv">18</span>,<span class="dv">20</span>,<span class="dv">25</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Funcionario=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,TC,AP)</span>
@@ -327,7 +327,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Calcule o tempo médio e o desvio padrão de cada tipo de locomoção.</li>
 </ul>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-2_a5baf3139a03cce4c48ee4ccc4ad7f04">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Média e desvio padrão de TC</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(dados[,<span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -351,7 +351,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Em função dos resultados acima, qual meio de transporte deve ser preferido? Discuta.</li>
 <li>Compare a dispersão dos dois meios de transporte. Qual tem maior dispersão?</li>
 </ul>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-3_4fe8643c2cd03785bb847633177a2a9a">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Coeficiente de Variação (%):</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">#TC</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>((<span class="fu">sd</span>(dados[,<span class="dv">2</span>])<span class="sc">/</span><span class="fu">mean</span>(dados[,<span class="dv">2</span>]))<span class="sc">*</span><span class="dv">100</span>,<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -367,7 +367,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol start="3" type="1">
 <li>Suponha que, num dado mês, uma usina de energia solar tenha produzido os seguintes valores diários (kWh):</li>
 </ol>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-4_d6c3544323ed69c6d038574f95cf0f02">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>energia <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">30</span>,<span class="dv">380</span>,<span class="dv">60</span>)),<span class="dv">2</span>)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>energia</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -378,7 +378,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <p>Vamos fazer um gráfico de barras para representar estes dados. A linha horizontal representa o valor médio, ou seja, 377.17kwh.</p>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/fig-energia_2c8758fa24389268a26f3ea3c30e0595">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># carregando a biblioteca</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -422,7 +422,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Trate cada possível amostra de tamanho dois como se fosse uma população e calcule <span class="math inline">\(\sigma^2\)</span>. Calcule a média dessas variâncias.</p></li>
 <li><p>Em que item, b. ou c., resultou em uma melhor estimativa de <span class="math inline">\(\sigma^2\)</span>?</p></li>
 </ol>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-5_572bf6bc1518870282d69b1cb46b5824">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtools)</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>dd <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">9</span>,<span class="dv">15</span>)</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>vv <span class="ot">&lt;-</span> <span class="fu">var</span>(dd)<span class="sc">*</span><span class="dv">2</span><span class="sc">/</span><span class="dv">3</span>;vv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -430,13 +430,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>[1] 11.55556</code></pre>
 </div>
 </div>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/dados22_d58f41c6379b27cc822f047fb8937ce3">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">as.data.frame</span>(<span class="fu">permutations</span>(<span class="at">n=</span><span class="dv">3</span>, <span class="at">r=</span><span class="dv">2</span>, </span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">v=</span>dd, </span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">repeats.allowed=</span>T))</span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(<span class="fu">c</span>(<span class="st">'r1'</span>,<span class="st">'r2'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-6_968903c185fd9fe1614a84379507dbc4">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>y<span class="sc">$</span>s <span class="ot">&lt;-</span> <span class="fu">apply</span>(y[,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],<span class="dv">1</span>, var)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>y<span class="sc">$</span>v <span class="ot">&lt;-</span> <span class="fu">apply</span>(y[,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>],<span class="dv">1</span>, var)<span class="sc">/</span><span class="dv">2</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -453,7 +453,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 9 15 15  0  0</code></pre>
 </div>
 </div>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-7_af20941eb0b995cf4dacb08fa2c3dcce">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>ms <span class="ot">&lt;-</span> <span class="fu">mean</span>(y<span class="sc">$</span>s);ms</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 11.55556</code></pre>
@@ -466,7 +466,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol start="5" type="1">
 <li>Uma pesquisa mostrou que o brasileiro gasta em média R$234,19 por mês se alimentando fora de casa (dados fictícios). Os gastos mensais para se alimentar fora de casa referentes a uma amostra de 30 adolescentes estão apresentados na Tabela <a href="#tbl-adoles">Table&nbsp;2</a>.</li>
 </ol>
-<div class="cell tbl-cap-location-top" data-layout-align="center">
+<div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-adoles_ea07a695de19237b1b9f5cf26cf21b2b">
 <div class="cell-output-display">
 <div id="tbl-adoles" class="anchored">
 
@@ -514,7 +514,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-8_1334eef637ff04ab93f5ee348f8d69b9">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dados</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">309</span>,<span class="dv">324</span>,<span class="dv">305</span>,<span class="dv">312</span>,<span class="dv">281</span>,<span class="dv">341</span>,<span class="dv">355</span>,<span class="dv">296</span>,</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>           <span class="dv">342</span>,<span class="dv">337</span>,<span class="dv">334</span>,<span class="dv">321</span>,<span class="dv">322</span>,<span class="dv">299</span>,<span class="dv">335</span>,<span class="dv">320</span>,</span>
@@ -530,7 +530,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Faça uma tabela de distribuição de frequências (use o bom senso).</li>
 <li>Esboce um histograma.</li>
 </ul>
-<div class="cell" data-layout-align="center" data-label="fig-hist1">
+<div class="cell" data-layout-align="center" data-label="fig-hist1" data-hash="lista_cache/html/fig-hist1_ec10f398484b9480e00116bc760c2e53">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg=</span><span class="st">"white"</span>)</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">2.5</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">mgp=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">0.5</span>,<span class="dv">0</span>))</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(dados, <span class="at">labels =</span> T, <span class="at">main =</span> <span class="st">""</span>,</span>
@@ -545,7 +545,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/fig-hist2_1bac930389d86bf577bf0cbd06ac08e4">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg=</span><span class="st">"white"</span>)</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">2.5</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">mgp=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">0.5</span>,<span class="dv">0</span>))</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(dados, <span class="at">labels =</span> T, <span class="at">main =</span> <span class="st">""</span>,</span>
@@ -564,7 +564,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Qual a proporção de elementos entre os valores 315 e 345?</li>
 <li>Calcule a média e a mediana.</li>
 </ul>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-9_2ecc12717fb2c32228ff70bbd6b21d0f">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dados)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
@@ -577,7 +577,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Calcule a amplitude e a amplitude interquartil.</li>
 <li>Construa um boxplot.</li>
 </ul>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/fig-box1_77d26ed64df1b480c0697128890f0472">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg=</span><span class="st">"white"</span>)</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">2.5</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">mgp=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">0.5</span>,<span class="dv">0</span>))</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(dados, <span class="at">ylab =</span> <span class="st">"Gastos (R$)"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -593,7 +593,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Calcule a variância, o desvio-padrão e o coeficiente de variação.</li>
 </ul>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-10_83d6d7a3954f939b3422422bd8f3fcf8">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(dados)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 276.323</code></pre>
@@ -634,7 +634,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 </div>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-11_a8d2a6e925369fadb37a485a07b82d6f">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Coeficiente de variação</span></span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="co"># A:</span></span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1500000</span><span class="sc">/</span><span class="dv">3280000</span>)<span class="sc">*</span><span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -652,7 +652,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol type="1">
 <li>Na <a href="#tbl-corr1">Table&nbsp;4</a> é apresentado seis observações das variáveis <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>.</li>
 </ol>
-<div class="cell tbl-cap-location-top" data-layout-align="center">
+<div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-corr1_b8a48c033daddde3c37bb04685992783">
 <div class="cell-output-display">
 <div id="tbl-corr1" class="anchored">
 
@@ -682,7 +682,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-12_95f8a5cd2509f0a797a8c62b533f44a9">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">7</span>,<span class="dv">16</span>,<span class="dv">11</span>,<span class="dv">7</span>)</span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">12</span>,<span class="dv">8</span>,<span class="dv">16</span>,<span class="dv">13</span>,<span class="dv">7</span>)</span>
 <span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>dados3 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">X=</span>x, <span class="at">Y=</span>y)</span>
@@ -700,7 +700,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Faça um diagrama de dispersão (<span class="math inline">\(X\)</span> no eixo horizontal).</li>
 </ul>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/fig-disp_373190a265cc90bd8ddb1438935e9d00">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg=</span><span class="st">"white"</span>)</span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">2.5</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">mgp=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">0.5</span>,<span class="dv">0</span>))</span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Y<span class="sc">~</span>X, dados3) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -716,7 +716,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Calcule a covariância da amostra.</li>
 </ul>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-13_a7822bad564f3c8d07c739365480e9c9">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cov</span>(x,y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 13.1</code></pre>
@@ -725,7 +725,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Calcule e interprete a correlação da amostra.</li>
 </ul>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-14_9f9123787aa2d6a30e9f1f2270c15a27">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(x,y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.9757751</code></pre>
@@ -739,7 +739,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol start="2" type="1">
 <li>O diretor de uma escola quer saber se há associação entre a média escolar (<span class="math inline">\(ME\)</span>) e o desempenho em um simulado (<span class="math inline">\(SIM\)</span>). Na <a href="#tbl-corr2">Table&nbsp;5</a> é apresentado uma amostra de seis alunos.</li>
 </ol>
-<div class="cell tbl-cap-location-top" data-layout-align="center">
+<div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-corr2_6a86def1f322c08a4c24e497cd12727a">
 <div class="cell-output-display">
 <div id="tbl-corr2" class="anchored">
 
@@ -778,7 +778,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-15_8e8fb12f19bf0a61e84bb1c6ee53f856">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>ME     <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">5.3</span>,<span class="fl">6.2</span>,<span class="fl">5.1</span>,<span class="fl">7.8</span>,<span class="fl">6.4</span>,<span class="fl">5.1</span>)</span>
 <span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>SIM    <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">5.5</span>,<span class="fl">6.6</span>,<span class="fl">5.4</span>,<span class="fl">7.6</span>,<span class="fl">7.2</span>,<span class="fl">5.3</span>)</span>
 <span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>dados4 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Aluno=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>,ME, SIM)</span>
@@ -796,7 +796,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Faça um diagrama de dispersão (<span class="math inline">\(ME\)</span> no eixo horizontal).</li>
 </ul>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/fig-disp2_0bd15eebf68122a8044b86e68a2f4bbb">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg=</span><span class="st">"white"</span>)</span>
 <span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">2.5</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">mgp=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">0.5</span>,<span class="dv">0</span>))</span>
 <span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(SIM<span class="sc">~</span>ME,<span class="at">data =</span> dados4) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -812,7 +812,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Calcule a covariância da amostra.</li>
 </ul>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-16_91b3cdc857d38a13ea10823ed8268ddb">
 <div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cov</span>(dados4<span class="sc">$</span>ME,dados4<span class="sc">$</span>SIM)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.005333</code></pre>
@@ -821,7 +821,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Calcule e interprete a correlação da amostra.</li>
 </ul>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-17_f7ea7833dc924efca510362d2294e9f0">
 <div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(dados4<span class="sc">$</span>ME,dados4<span class="sc">$</span>SIM)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.9511981</code></pre>
@@ -835,7 +835,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol start="3" type="1">
 <li><strong>Tempo de caminhada</strong> <span class="math inline">\(\times\)</span> <strong>Gordura corporal</strong>. Dados de tempo semanal de caminhada (horas) e a gordura corporal (%) de oito indivíduos do sexo masculino com idade acima de 60 anos são apresentados na <a href="#tbl-corr3">Table&nbsp;6</a>.</li>
 </ol>
-<div class="cell tbl-cap-location-top" data-layout-align="center">
+<div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-corr3_f6dfeb2a8cd2604f33cf1fd727153ae4">
 <div class="cell-output-display">
 <div id="tbl-corr3" class="anchored">
 
@@ -880,7 +880,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-18_ff5f4598d37b24a541909b13d06495bf">
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>Tempo   <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">12</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">14</span>,<span class="dv">10</span>)</span>
 <span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>Gordura <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">22</span>,<span class="dv">11</span>,<span class="dv">23</span>,<span class="dv">25</span>,<span class="dv">21</span>,<span class="dv">19</span>,<span class="dv">9</span>,<span class="dv">12</span>)</span>
 <span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>dados5  <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Ind=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>,Tempo, Gordura)</span>
@@ -900,7 +900,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Faça um diagrama de dispersão (coloque o tempo no eixo horizontal).</li>
 </ul>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/fig-disp3_b0f89cc7289a5815494bba5cce84be8b">
 <div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg=</span><span class="st">"white"</span>)</span>
 <span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">2.5</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">mgp=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">0.5</span>,<span class="dv">0</span>))</span>
 <span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Gordura<span class="sc">~</span>Tempo,<span class="at">data =</span> dados5) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -916,7 +916,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Calcule a covariância da amostra.</li>
 </ul>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-19_5e565863c89c9cdb59e9b5646885df3a">
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cov</span>(dados5<span class="sc">$</span>Tempo,dados5<span class="sc">$</span>Gordura)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -25</code></pre>
@@ -925,7 +925,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Calcule e interprete a correlação da amostra.</li>
 </ul>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-20_c99dccdcda1ddc09543500ac632baf80">
 <div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(dados5<span class="sc">$</span>Tempo,dados5<span class="sc">$</span>Gordura)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -0.9804268</code></pre>
@@ -1058,7 +1058,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>se <span class="math inline">\(\overline{X}\)</span> for a média amostral de tamanho 9 dessa população, calcule <span class="math inline">\(P(100&lt;\overline{X}&gt;120)\)</span>.</p></li>
 <li><p>faça um gráfico com as distribuições de <span class="math inline">\(X\)</span> e <span class="math inline">\(\overline{X}\)</span>.</p></li>
 </ul>
-<div class="cell" data-layout-align="center" data-label="fig-den1">
+<div class="cell" data-layout-align="center" data-label="fig-den1" data-hash="lista_cache/html/fig-den1_f95acf090a89250e37c59c3b4af807c7">
 <div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">70</span>,<span class="dv">150</span>,<span class="fl">0.01</span>)</span>
 <span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>y1 <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(x,<span class="dv">110</span>,<span class="dv">10</span>)</span>
 <span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a>y2 <span class="ot">&lt;-</span> <span class="fu">dnorm</span>(x,<span class="dv">110</span>,<span class="fl">2.5</span>)</span>
@@ -1148,7 +1148,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol type="1">
 <li>Como nutricionista, você submete uma dieta ao longo de 15 dias para um grupo de 12 pessoas. Os dados amostrais antes e depois da dieta estão apresentados na <a href="#tbl-dieta1">Table&nbsp;8</a>. Supondo normalidade (distribuição amostral da diferença entre médias), ao nivel de 5%, podemos dizer que essa dieta diminuiu a massa média da população?</li>
 </ol>
-<div class="cell tbl-cap-location-top" data-layout-align="center">
+<div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-dieta1_9fea33066ac260686d9b6e25a4723c5e">
 <div class="cell-output-display">
 <div id="tbl-dieta1" class="anchored">
 
@@ -1205,7 +1205,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-21_d12abce910d501764d1ffb1bae724a8a">
 <div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">7</span>)</span>
 <span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Amostra da população Antes</span></span>
 <span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>xa <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">12</span>,<span class="at">mean=</span><span class="dv">95</span>,<span class="at">sd=</span><span class="dv">5</span>),<span class="dv">0</span>)</span>
@@ -1253,7 +1253,7 @@ mean difference
 <ol start="2" type="1">
 <li>Você, como engenheiro, quer verificar se um programa de segurança no trabalho será responsável pela diminuição das perdas semanais (horas/funcionário) devido à acidentes de trabalho em dez indústrias da sua região. Os dados das perda semanais (horas/funcionário), antes e depois do programa de segurança para as dez industrias estão apresentados na <a href="#tbl-industria1">Table&nbsp;9</a>. Supondo normalidade, teste se o programa de segurança foi eficaz ou não (<span class="math inline">\(\alpha=0.05\)</span>).</li>
 </ol>
-<div class="cell tbl-cap-location-top" data-layout-align="center">
+<div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-industria1_ecfc00566ee5675f1bbf8cbfe2ab58fe">
 <div class="cell-output-display">
 <div id="tbl-industria1" class="anchored">
 
@@ -1304,7 +1304,7 @@ mean difference
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-22_f3e1030dd984b37f3644ee34e276428d">
 <div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">7</span>)</span>
 <span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Amostra da população Antes</span></span>
 <span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a>xa <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">10</span>,<span class="at">mean=</span><span class="dv">70</span>,<span class="at">sd=</span><span class="dv">4</span>),<span class="dv">0</span>))</span>
@@ -1352,7 +1352,7 @@ mean difference
 <ol start="3" type="1">
 <li>Duas marcas A e B de máquinas industriais são testadas por seis funcionários. O tempo para realizar a mesma operação estão apresentados na <a href="#tbl-industria2">Table&nbsp;10</a>. Ao nível de significância de 5%, podemos dizer que a máquina B é mais rápida ou não?</li>
 </ol>
-<div class="cell tbl-cap-location-top" data-layout-align="center">
+<div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-industria2_bd25bacbf422777a53696861d4dc2b13">
 <div class="cell-output-display">
 <div id="tbl-industria2" class="anchored">
 
@@ -1391,7 +1391,7 @@ mean difference
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-23_c5e1025839ad3e755d09f545e86051c0">
 <div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">7</span>)</span>
 <span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Amostra da população A</span></span>
 <span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a>xa <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">6</span>,<span class="at">mean=</span><span class="dv">80</span>,<span class="at">sd=</span><span class="dv">3</span>),<span class="dv">0</span>))</span>
@@ -1442,7 +1442,7 @@ mean difference
 <ol type="1">
 <li>Duas minas de carvão, A e B, são amostradas para se conhecer a capacidade de gerar calor do material proveniente delas. Essa capacidade em milhões de calorias por tonelada estão apresentadas na <a href="#tbl-minas1">Table&nbsp;11</a>. Ao nível de significância de 5% e supondo que os dados amostrais foram extraídos de populações normais, teste se há diferença entre as minas?</li>
 </ol>
-<div class="cell tbl-cap-location-top" data-layout-align="center">
+<div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-minas1_706fd2d4d337c842195a2d8cd69407d8">
 <div class="cell-output-display">
 <div id="tbl-minas1" class="anchored">
 
@@ -1481,7 +1481,7 @@ mean difference
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center">
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-24_2180478402e7747be7bd20d87cac3f15">
 <div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">5</span>)</span>
 <span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Amostra da população Antes</span></span>
 <span id="cb100-3"><a href="#cb100-3" aria-hidden="true" tabindex="-1"></a>xa <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">6</span>,<span class="at">mean=</span><span class="dv">8180</span>,<span class="at">sd=</span><span class="dv">270</span>),<span class="dv">0</span>))</span>
