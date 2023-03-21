@@ -1,6 +1,6 @@
-xa <- c(80,72,65,78,85)
+xa <- c(8380,8180,8500,7840,7990)
 # Amostra da população Depois
-xb <- c(75,70,60,72,78)
+xb <- c(7660,7510,7910,8070,7790)
 # Diferença 
 d  <-xa - xb
 # Média da diferença
@@ -8,12 +8,11 @@ mean(d)
 # Desvio padrão da diferença
 sd(d)
 # Teste t pareado unilateral a direita
-t.test(xa,xb,paired = T, alternative = "greater")
+t.test(xa,xb,paired = F, alternative = "two.side")
 # t calculado
 t.test(xa,xb,paired = T, alternative = "greater")$statistic
 # Quantil
 qt(0.95,9)
-
 
 
 

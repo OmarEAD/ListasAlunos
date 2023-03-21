@@ -621,7 +621,7 @@ t.test(xa,xb,paired = T, alternative = "greater")
 # t calculado
 t.test(xa,xb,paired = T, alternative = "greater")$statistic
 # Quantil
-qt(0.95,9)
+qt(0.95,11)
 
 ```
 
@@ -684,9 +684,9 @@ dd %>%
 
 ```{r}
 set.seed(7)
-# Amostra da população Antes
+# Amostra da população A
 xa <- sort(round(rnorm(6,mean=80,sd=3),0))
-# Amostra da população Depois
+# Amostra da população B
 xb <- sort(round(rnorm(6,mean=75,sd=3),0))
 # Diferença 
 d  <-xa - xb
@@ -699,29 +699,44 @@ t.test(xa,xb,paired = T, alternative = "greater")
 # t calculado
 t.test(xa,xb,paired = T, alternative = "greater")$statistic
 # Quantil
-qt(0.95,9)
+qt(0.95,5)
 
 ```
 
 
+### Não pareado
 
+1. Duas minas de carvão, A e B, são amostradas para se conhecer a capacidade de gerar calor do material proveniente delas. Essa capacidade em milhões de calorias por tonelada estão apresentadas na @tbl-minas1. Ao nível de significância de 5\% e supondo que os dados amostrais foram extraídos de populações normais, teste se há diferença entre as minas?
 
+```{r tbl-minas1, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
+#| label: tbl-minas1
+#| tbl-cap: "Tempo registrado, em minutos, para a realização de uma mesma tarefa para seis funcionários."
+#| tbl-cap-location: top
+set.seed(7)
+pp <- sort(round(rnorm(6,mean=8180,sd=270),0))
+qq <- sort(round(rnorm(6,mean=7805,sd=225),0))
+dd <- t(data.frame(Funcionário=1:6,
+                 A=pp, B=qq))
+#dt <- as.data.frame(t(dd))
+dd %>% 
+  kable() %>% 
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
 
+```{r}
+set.seed(5)
+# Amostra da população Antes
+xa <- sort(round(rnorm(6,mean=8180,sd=270),0))
+# Amostra da população Depois
+xb <- sort(round(rnorm(6,mean=7705,sd=255),0))
+# Teste t bilateral
+t.test(xa,xb,paired = F, alternative = "two.side")
+# t calculado
+t.test(xa,xb,paired = F, alternative = "two.side")$statistic
+# Quantil
+qt(0.975,5)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
 
 
