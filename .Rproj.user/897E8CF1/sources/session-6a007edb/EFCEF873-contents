@@ -15,8 +15,16 @@ t.test(xa,xb,paired = T, alternative = "greater")$statistic
 qt(0.95,9)
 
 
+round(qf(0.95,9,11),2)
+round(qf(0.99,4,4),1)
 
+round(qf(0.975,4,4),1)
 
+round(qf(0.95,9,11),1)
+16*16
+2^10
+32^2
+2^16
 
 
 
