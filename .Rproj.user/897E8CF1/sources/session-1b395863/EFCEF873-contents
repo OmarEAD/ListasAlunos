@@ -33,7 +33,7 @@ dat <- penguins %>%
   select(species, flipper_length_mm)
 
 head(penguins)
-
+head(dat)
 
 
 
