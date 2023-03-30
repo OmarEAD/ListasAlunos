@@ -1,0 +1,22 @@
+---
+title: "Análise de variância (ANOVA)"
+output: html_document
+date: "2023-03-30"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r dados, echo=FALSE}
+dados <- data.frame()
+```
+
+
+# Um exemplo para a diferença entre $k$ médias
+
+
+
+
+
+

@@ -26,5 +26,14 @@ round(qf(0.95,9,11),1)
 32^2
 2^16
 
+# install.packages("palmerpenguins")
+library(palmerpenguins)
+library(tidyverse)
+dat <- penguins %>%
+  select(species, flipper_length_mm)
+
+head(penguins)
+
+
 
 
