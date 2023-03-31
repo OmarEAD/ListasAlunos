@@ -35,5 +35,21 @@ dat <- penguins %>%
 head(penguins)
 head(dat)
 
+dados <- data.frame(l1=c(42,37,41,39,43,41),
+                    l2=c(37,40,39,38,41,39),
+                    l3=c(32,28,34,32,30,33))
+dados
+sapply(dados, mean)
+sapply(dados, var)
+var(sapply(dados, mean))
+mean(sapply(dados, var))
+
+var(c(42,37,41,39,43,41,
+     37,40,39,38,41,39,
+     32,28,34,32,30,33))
+
+
+
+
 
 
