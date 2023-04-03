@@ -739,8 +739,58 @@ qt(0.975,5)
 
 ```
 
+# Regressão linear simples
+
+1.  **Tempo de caminhada** $\times$ **Gordura corporal**. Dados de tempo semanal de caminhada (horas) e a gordura corporal (%) de oito indivíduos do sexo masculino com idade acima de 60 anos são apresentados na @tbl-corr3.
+
+```{r corr4, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
+#| label: tbl-corr4
+#| tbl-cap-location: top
+#| tbl-cap: "Tempo de caminhada (horas) e gordura corporal (%) de oito indivíduos."
+set.seed(1)
+x <- c(6,12,4,2,5,7,14,10)
+y <- c(22,11,23,25,21,19,9,12)
+dd <- t(data.frame(Indivíduo=1:8, Tempo=x, Gordura =y))
+dd %>% 
+  kable() %>% 
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
 
 
+```{r}
+Tempo   <- c(6,12,4,2,5,7,14,10)
+Gordura <- c(22,11,23,25,21,19,9,12)
+dados5  <- data.frame(Ind=1:8,Tempo, Gordura)
+dados5
+```
+
+-   Faça um diagrama de dispersão (coloque o tempo no eixo horizontal).
+
+```{r fig-disp4, fig.cap="Diagrama de dispersão"}
+par(bg="white")
+par(mar=c(2.5,2.5,0.5,0.5), mgp=c(1.5,0.5,0))
+plot(Gordura~Tempo,data = dados5) 
+```
+
+
+-   Calcule a covariância da amostra.
+
+```{r}
+cov(dados5$Tempo,dados5$Gordura)
+```
+
+-   Calcule e interprete a correlação da amostra.
+
+```{r}
+cor(dados5$Tempo,dados5$Gordura)
+```
+
+
+- Estime os parâmetros da regressão. Calcule o coeficiente de determinação
+
+```{r}
+summary(lm(Gordura~Tempo,dados5))
+```
 
 
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -202,6 +202,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#não-pareado" id="toc-não-pareado" class="nav-link" data-scroll-target="#não-pareado">Não pareado</a></li>
   </ul></li>
   </ul></li>
+  <li><a href="#regressão-linear-simples" id="toc-regressão-linear-simples" class="nav-link" data-scroll-target="#regressão-linear-simples">Regressão linear simples</a></li>
   </ul>
 </nav>
     </div>
@@ -1514,10 +1515,138 @@ mean of x mean of y
 <pre><code>[1] 2.570582</code></pre>
 </div>
 </div>
-
-
 </section>
 </section>
+</section>
+<section id="regressão-linear-simples" class="level1">
+<h1>Regressão linear simples</h1>
+<ol type="1">
+<li><strong>Tempo de caminhada</strong> <span class="math inline">\(\times\)</span> <strong>Gordura corporal</strong>. Dados de tempo semanal de caminhada (horas) e a gordura corporal (%) de oito indivíduos do sexo masculino com idade acima de 60 anos são apresentados na <a href="#tbl-corr3">Table&nbsp;6</a>.</li>
+</ol>
+<div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-corr4_f29084a8e5262bcece4b9bf794434f2f">
+<div class="cell-output-display">
+<div id="tbl-corr4" class="anchored">
+
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;12:  Tempo de caminhada (horas) e gordura corporal (%) de oito indivíduos. </caption>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Indivíduo </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 8 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Tempo </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 12 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 14 </td>
+   <td style="text-align:right;"> 10 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Gordura </td>
+   <td style="text-align:right;"> 22 </td>
+   <td style="text-align:right;"> 11 </td>
+   <td style="text-align:right;"> 23 </td>
+   <td style="text-align:right;"> 25 </td>
+   <td style="text-align:right;"> 21 </td>
+   <td style="text-align:right;"> 19 </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 12 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-25_f7e731daa3cc259290e753977915a4b0">
+<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a>Tempo   <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">12</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">14</span>,<span class="dv">10</span>)</span>
+<span id="cb106-2"><a href="#cb106-2" aria-hidden="true" tabindex="-1"></a>Gordura <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">22</span>,<span class="dv">11</span>,<span class="dv">23</span>,<span class="dv">25</span>,<span class="dv">21</span>,<span class="dv">19</span>,<span class="dv">9</span>,<span class="dv">12</span>)</span>
+<span id="cb106-3"><a href="#cb106-3" aria-hidden="true" tabindex="-1"></a>dados5  <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Ind=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>,Tempo, Gordura)</span>
+<span id="cb106-4"><a href="#cb106-4" aria-hidden="true" tabindex="-1"></a>dados5</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Ind Tempo Gordura
+1   1     6      22
+2   2    12      11
+3   3     4      23
+4   4     2      25
+5   5     5      21
+6   6     7      19
+7   7    14       9
+8   8    10      12</code></pre>
+</div>
+</div>
+<ul>
+<li>Faça um diagrama de dispersão (coloque o tempo no eixo horizontal).</li>
+</ul>
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/fig-disp4_74acd2642f2f63d7085ff56e92b1fe33">
+<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg=</span><span class="st">"white"</span>)</span>
+<span id="cb108-2"><a href="#cb108-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">2.5</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">mgp=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">0.5</span>,<span class="dv">0</span>))</span>
+<span id="cb108-3"><a href="#cb108-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Gordura<span class="sc">~</span>Tempo,<span class="at">data =</span> dados5) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-disp4" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="lista_files/figure-html/fig-disp4-1.png" class="img-fluid figure-img" width="2400"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;9: Diagrama de dispersão</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>Calcule a covariância da amostra.</li>
+</ul>
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-26_9bc110abe5b2ea9ca686b3021a8b8c35">
+<div class="sourceCode cell-code" id="cb109"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cov</span>(dados5<span class="sc">$</span>Tempo,dados5<span class="sc">$</span>Gordura)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -25</code></pre>
+</div>
+</div>
+<ul>
+<li>Calcule e interprete a correlação da amostra.</li>
+</ul>
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-27_67d02c06fb7cf196756b55fd05150f75">
+<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(dados5<span class="sc">$</span>Tempo,dados5<span class="sc">$</span>Gordura)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.9804268</code></pre>
+</div>
+</div>
+<ul>
+<li>Estime os parâmetros da regressão. Calcule o coeficiente de determinação</li>
+</ul>
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-28_1e7057791f2a38bd88c09a24a076ea21">
+<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(Gordura<span class="sc">~</span>Tempo,dados5))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Gordura ~ Tempo, data = dados5)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.10417 -0.48958 -0.02083  0.57292  2.06250 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  28.6875     1.0092   28.43 1.25e-07 ***
+Tempo        -1.4583     0.1196  -12.20 1.85e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.31 on 6 degrees of freedom
+Multiple R-squared:  0.9612,    Adjusted R-squared:  0.9548 
+F-statistic: 148.8 on 1 and 6 DF,  p-value: 1.847e-05</code></pre>
+</div>
+</div>
+
+
 </section>
 
 
