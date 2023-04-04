@@ -56,7 +56,7 @@ f(x)= exp \{ ax^{2} + bx + c \}
 ,
 $$ {#eq-polinomio}
 
-em que $a$, $b$ e $c$ são constantes. Por exemplo, podemos representar graficamente a exponenciação desse polinômio para $a=-2$, $b=0$ e $c=1$, ou seja,
+em que $a$, $b$ e $c$ são constantes. Por exemplo, na @fig-gauss representamos graficamente a exponenciação desse polinômio com as constantes $a=-2$, $b=0$ e $c=1$. Esse gráfico não tem área sob a curva igual a um, mas tem o formado de sino, equivalente à curva normal.
 
 ```{r fig-gauss, echo=FALSE, fig.cap='Representação de uma curva em forma de sino (a área sob a curva não é igual a um). Essa curva é dada pela função $f(x)= e^{ax^{2} + bx + c}$, em que $a=-2$, $b=0$ e $c=1$.', tidy=FALSE}
 x <- seq(-2,2,0.01)
@@ -69,7 +69,7 @@ par(mar=c(2.5,2.5,0.5,0.5), mgp=c(1.5,0.5,0))
 plot(f, type='l', xlab = 'X', ylab = 'f(x)' )
 ```
 
-O gráfico apresentado na @fig-gauss não tem área sob a curva igual a um, mas tem o formado de sino equivalente à curva normal.
+
 
 Para que esta função tenha um máximo, faremos $a<0$. Assim $a=- \alpha$ com $\alpha > 0$. As constantes $b$, a qual move o pico central da distribuição ao longo de $x$, e $c$ são escolhidas a fim de que
 

@@ -3,7 +3,7 @@
     "path": "D:/SitesOmar/ListasAlunos/DistrNormal.Rmd",
     "project_path": "DistrNormal.Rmd",
     "type": "r_markdown",
-    "hash": "753518174",
+    "hash": "2613334515",
     "contents": "",
     "dirty": false,
     "created": 1680604864887.0,
@@ -12,7 +12,7 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "60,116",
+        "cursorPosition": "58,236",
         "scrollLine": "56",
         "rmdVisualMode": "false",
         "rmdVisualWrapConfigured": "true",
@@ -21,11 +21,11 @@
         "rmdVisualModeLocation": "2:0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1680605753,
+    "lastKnownWriteTime": 1680606078,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1680605753880,
+    "last_content_update": 1680606078745,
     "read_only": false,
     "read_only_alternatives": []
 }
