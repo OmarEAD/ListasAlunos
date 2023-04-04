@@ -28,9 +28,9 @@ knitr::opts_chunk$set(#collapse = TRUE,
                       dpi = 300)
 ```
 
-# O porquê estudar Estatística[^1]
+# O porquê estudar Estatística em uma imagem[^1]
 
-[^1]: Caso encontre erros, queira fazer comentários, ou trocar uma ideia sobre o artigo, por favor, me escreva: omarcnpereiraead@gmail.com
+[^1]: Esta é uma breve introdução sobre o assunto. Evidentemente, só estamos destacando a imagem no final da página. Caso encontre erros, queira fazer comentários, ou trocar uma ideia sobre o artigo, por favor, me escreva: omarcnpereiraead@gmail.com
 
 Este é um site com alguns exercícios e problemas de Estatística Básica. Para motivá-lo aos estudos, gostaria que olhasse a imagem abaixo. Na realidade vemos duas figura mostrando a mesma imagem, uma mais aproximada que a outra.
 
