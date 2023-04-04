@@ -58,7 +58,7 @@ $$ {#eq-polinomio}
 
 em que $a$, $b$ e $c$ são constantes. Por exemplo, podemos representar graficamente a exponenciação desse polinômio para $a=-2$, $b=0$ e $c=1$, ou seja,
 
-```{r fig-gauss, echo=FALSE, fig.cap='Representação de uma curva em forma de sino (a área sob a curva não é um).$a=-2$, $b=0$ e $c=1$', tidy=FALSE}
+```{r fig-gauss, echo=FALSE, fig.cap='Representação de uma curva em forma de sino (a área sob a curva não é um). A função é dada por $f(x)= e^(ax^{2} + bx + c)$, em que $a=-2$, $b=0$ e $c=1$', tidy=FALSE}
 x <- seq(-2,2,0.01)
 a <- -2
 b <- 0
