@@ -1055,8 +1055,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Seja X uma variável aleatória que segue um distribuição normal com média 110 e variância 100:</li>
 </ol>
 <ul>
-<li><p>qual <span class="math inline">\(P(100&lt;X&gt;120)\)</span>?</p></li>
-<li><p>se <span class="math inline">\(\overline{X}\)</span> for a média amostral de tamanho 9 dessa população, calcule <span class="math inline">\(P(100&lt;\overline{X}&gt;120)\)</span>.</p></li>
+<li><p>qual <span class="math inline">\(P(100&lt;X&lt;120)\)</span>?</p></li>
+<li><p>se <span class="math inline">\(\overline{X}\)</span> for a média amostral de tamanho 9 dessa população, calcule <span class="math inline">\(P(100&lt;\overline{X}&lt;120)\)</span>.</p></li>
 <li><p>faça um gráfico com as distribuições de <span class="math inline">\(X\)</span> e <span class="math inline">\(\overline{X}\)</span>.</p></li>
 </ul>
 <div class="cell" data-layout-align="center" data-label="fig-den1" data-hash="lista_cache/html/fig-den1_f95acf090a89250e37c59c3b4af807c7">
@@ -1078,7 +1078,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <ul>
-<li>qual o tamanho da amostra para que <span class="math inline">\(P(100&lt;\overline{X}&gt;120)=0.95\)</span>?</li>
+<li>qual o tamanho da amostra para que <span class="math inline">\(P(100&lt;\overline{X}&lt;120)=0.95\)</span>?</li>
 </ul>
 <ol start="2" type="1">
 <li>Para empacotar camaroes congelados você usa uma máquina em que a massa dos pacotes tem distribuição normal com média <span class="math inline">\(\mu\)</span> e desvio padrão 25g.</li>
@@ -1643,6 +1643,20 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 Residual standard error: 1.31 on 6 degrees of freedom
 Multiple R-squared:  0.9612,    Adjusted R-squared:  0.9548 
 F-statistic: 148.8 on 1 and 6 DF,  p-value: 1.847e-05</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="center" data-hash="lista_cache/html/fig-disp5_0533445cf3b6bc577abbe59f4c776210">
+<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg=</span><span class="st">"white"</span>)</span>
+<span id="cb115-2"><a href="#cb115-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">2.5</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">mgp=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">0.5</span>,<span class="dv">0</span>))</span>
+<span id="cb115-3"><a href="#cb115-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Gordura<span class="sc">~</span>Tempo,<span class="at">data =</span> dados5) </span>
+<span id="cb115-4"><a href="#cb115-4" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">lm</span>(Gordura<span class="sc">~</span>Tempo,dados5))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-disp5" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="lista_files/figure-html/fig-disp5-1.png" class="img-fluid figure-img" width="2400"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;10: Diagrama de dispersão com a regressão.</figcaption><p></p>
+</figure>
+</div>
 </div>
 </div>
 

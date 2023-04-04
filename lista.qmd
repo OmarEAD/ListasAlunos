@@ -486,9 +486,9 @@ cor(dados5$Tempo,dados5$Gordura)
 
 1. Seja X uma variável aleatória que segue um distribuição normal com média 110 e variância 100:
 
-- qual $P(100<X>120)$?
+- qual $P(100<X<120)$?
 
-- se $\overline{X}$ for a média amostral de tamanho 9 dessa população, calcule $P(100<\overline{X}>120)$.
+- se $\overline{X}$ for a média amostral de tamanho 9 dessa população, calcule $P(100<\overline{X}<120)$.
 
 - faça um gráfico com as distribuições de $X$ e $\overline{X}$.
 
@@ -507,7 +507,7 @@ legend("topright", legend=c("y1", "y2"), col=c("blue", "black"), lty=1)
 ```
 
 
-- qual o tamanho da amostra para que $P(100<\overline{X}>120)=0.95$?
+- qual o tamanho da amostra para que $P(100<\overline{X}<120)=0.95$?
 
 2. Para empacotar camaroes congelados você usa uma máquina em que a massa dos pacotes tem distribuição normal com média $\mu$ e desvio padrão 25g.
 
@@ -793,6 +793,12 @@ summary(lm(Gordura~Tempo,dados5))
 ```
 
 
+```{r fig-disp5, fig.cap="Diagrama de dispersão com a regressão."}
+par(bg="white")
+par(mar=c(2.5,2.5,0.5,0.5), mgp=c(1.5,0.5,0))
+plot(Gordura~Tempo,data = dados5) 
+abline(lm(Gordura~Tempo,dados5))
+```
 
 
 
