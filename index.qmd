@@ -28,7 +28,7 @@ knitr::opts_chunk$set(#collapse = TRUE,
                       dpi = 300)
 ```
 
-# Em uma imagem: "o porquê estudar Estatística"[^1]
+# Em uma imagem: o porquê estudar Estatística[^1]
 
 [^1]: Esta é uma breve introdução sobre o assunto. Evidentemente, só estamos destacando a imagem no final da página. Caso encontre erros, queira fazer comentários, ou trocar uma ideia sobre o artigo, por favor, me escreva: omarcnpereiraead@gmail.com
 
