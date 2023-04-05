@@ -77,6 +77,30 @@ qf(0.99,3,16)
 summary(aov(valor~trat,long3))
 #
 1-0.95^6
+#
+sapply(dados3, mean)
+sapply(dados3, var)
+var(sapply(dados3, mean))
+mean(sapply(dados3, var))
+sqrt(mean(sapply(dados3, var)))
+#
+qtukey(0.95,4,16)/sqrt(5)*sqrt(mean(sapply(dados3, var)))
+sapply(dados3, mean)
+dd <- as.data.frame(t(combn(sort(sapply(dados3, mean)),2)))
+dd$dif <- abs(apply(combn(sapply(dados3, mean),2),2,diff))
+dd
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
