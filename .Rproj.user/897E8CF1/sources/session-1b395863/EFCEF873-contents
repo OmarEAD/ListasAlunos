@@ -48,6 +48,12 @@ var(c(42,37,41,39,43,41,
      37,40,39,38,41,39,
      32,28,34,32,30,33))
 
+long <- gather(dados,key = "trat", value = "valor")
+sapply(long, class)
+long$trat <- factor(long$trat) 
+summary(aov(valor~trat,long))
+
+
 Tempo   <- c(6,12,4,2,5,7,14,10)
 Gordura <- c(22,11,23,25,21,19,9,12)
 dados5  <- data.frame(Ind=1:8,Tempo, Gordura)
