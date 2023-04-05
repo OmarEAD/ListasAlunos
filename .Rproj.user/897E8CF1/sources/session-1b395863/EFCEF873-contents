@@ -90,7 +90,33 @@ dd <- as.data.frame(t(combn(sort(sapply(dados3, mean)),2)))
 dd$dif <- abs(apply(combn(sapply(dados3, mean),2),2,diff))
 dd
 
+###################
+# Blocos
 
+dados4 <- data.frame(e1=c(87,70,92),
+                     e2=c(43,75,56),
+                     e3=c(70,66,50),
+                     e4=c(67,85,79))
+
+sapply(dados4, mean)
+sapply(dados4, class)
+long4 <- gather(dados4,key = "trat",value = "valor")
+qf(0.95,3,8)
+qf(0.99,3,8)
+summary(aov(valor~trat,long4))
+
+dados5 <- data.frame(e1=c(71,92,89),
+                     e2=c(44,51,85),
+                     e3=c(50,64,72),
+                     e4=c(67,81,86))
+
+sapply(dados5, mean)
+sapply(dados5, class)
+long5 <- gather(dados5,key = "trat",value = "valor")
+long5$nm <- rep(c('b','t','a'),4)
+qf(0.95,3,6)
+qf(0.95,2,6)
+summary(aov(valor~trat+nm,long5))
 
 
 
