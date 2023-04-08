@@ -134,6 +134,21 @@ long6$comb <- rep(rep(c('c1','c2','c3','c4'),each=2),3)
 aggregate(valor~trat+comb,long6,FUN = mean)
 summary(aov(valor~trat*comb,long6))
 
+#####################
+# quadrado latino
+dados7 <- data.frame(no=c(48,38,42,53),
+                     su=c(39,43,50,54),
+                     le=c(42,50,47,44),
+                     oe=c(46,48,46,52))
+dados7
+sapply(dados7, mean)
+sapply(dados7, class)
+long7 <- gather(dados7,key = "trat",value = "valor")
+long7$prom <- rep((c('des','sor','val','ven')),4)
+long7$emb <- c("a",'b','c','d','b','c','d','a',
+               'c','d','a','b','d','a','b','c')
+summary(aov(valor~trat+prom+emb,long7))
+
 
 
 
