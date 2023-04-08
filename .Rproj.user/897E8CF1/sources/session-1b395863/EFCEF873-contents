@@ -140,3 +140,7 @@ summary(aov(valor~trat+nm,long5))
 
 
 
+
+
+
+
