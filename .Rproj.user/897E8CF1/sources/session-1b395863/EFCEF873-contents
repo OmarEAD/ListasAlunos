@@ -118,6 +118,22 @@ qf(0.95,3,6)
 qf(0.95,2,6)
 summary(aov(valor~trat+nm,long5))
 
+#####################
+# interacao
+dados6 <- data.frame(l1=c(45.9,46.1,57.6,55.9,
+                          52.2,52.6,41.7,44.3),
+                     l2=c(46.0,46.3,51.0,52.1,
+                          50.1,51.4,38.8,39.6),
+                     l3=c(45.7,45.8,56.9,57.9,
+                          55.3,56.2,48.1,47.6))
+dados6
+sapply(dados6, mean)
+sapply(dados6, class)
+long6 <- gather(dados6,key = "trat",value = "valor")
+long6$comb <- rep(rep(c('c1','c2','c3','c4'),each=2),3)
+aggregate(valor~trat+comb,long6,FUN = mean)
+summary(aov(valor~trat*comb,long6))
+
 
 
 
