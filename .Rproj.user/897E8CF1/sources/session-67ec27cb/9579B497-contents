@@ -25,7 +25,7 @@
 \vspace{-2.3cm}
 \center{{\LARGE Universidade Estadual de Maringá - UEM}} \\ %\indent Agronomia - Disciplina: Estatística - Professor: Omar
 \vspace{0.3cm} 
-{\Large $3^{a}$ Avaliação de Estatística \hspace{1cm} 2022}  \\ \vspace{0.8cm} \hspace{0.5cm} Aluno: \hrulefill\  
+{\Large $3^{a}$ Avaliação de Estatística }  \\ \vspace{0.8cm} \hspace{0.5cm} Aluno: \hrulefill\  
 %{\Large Avaliação Final de Estatística \hspace{1cm} 2022}  \\ \vspace{0.8cm} \hspace{0.5cm} Aluno: \hrulefill\  
 \vspace{.2cm}
  
@@ -127,10 +127,10 @@ zcalc <- (p - p0)/(sqrt(p0*(1-p0)/n)); zcalc
   \item Valor de $z$ tabelado:
   \vspace{1cm}
   \item Valor(es) crítico(s) ou de $z$ calculado:
-  \vspace{1cm}
+  \vspace{2cm}
   \item Decisão:
     \begin{enumerate}
-    \item estatística: \vspace{0.5cm}
+    \item estatística: \vspace{1cm}
     \item em termos do problema estudado:
     \end{enumerate}
 \end{enumerate}
@@ -138,7 +138,7 @@ zcalc <- (p - p0)/(sqrt(p0*(1-p0)/n)); zcalc
 
 \end{enumerate}
 
-\vspace{0.5cm}
+\vspace{1cm}
 
 {\bf
 \begin{itemize}
