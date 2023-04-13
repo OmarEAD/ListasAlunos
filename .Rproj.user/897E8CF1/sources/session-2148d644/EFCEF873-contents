@@ -172,4 +172,3 @@ summary(aov(valor~trat+prom+emb,long7))
 
 
 
-
