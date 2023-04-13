@@ -800,7 +800,3 @@ abline(lm(Gordura~Tempo,dados5))
 
 
 
-
-
-
-
