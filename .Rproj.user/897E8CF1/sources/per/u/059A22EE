@@ -3,9 +3,9 @@
     "path": null,
     "project_path": null,
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "2258310336",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1680192795541.0,
     "source_on_save": false,
     "relative_order": 5,
@@ -27,7 +27,7 @@
     "encoding": "",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1680198583089,
+    "last_content_update": 1681405227194,
     "read_only": false,
     "read_only_alternatives": []
 }
