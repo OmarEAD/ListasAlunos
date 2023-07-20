@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -18,9 +18,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -47,43 +48,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -126,6 +97,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
@@ -142,33 +114,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <span class="navbar-title">Estatística Básica</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./lista.html" aria-current="page">
+    <a class="nav-link active" href="./lista.html" rel="" target="" aria-current="page">
  <span class="menu-text">Lista</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./tabs.html">
+    <a class="nav-link" href="./tabs.html" rel="" target="">
  <span class="menu-text">Tabelas</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./DistrNormal.html">
+    <a class="nav-link" href="./DistrNormal.html" rel="" target="">
  <span class="menu-text">Normal</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./benford.html">
+    <a class="nav-link" href="./benford.html" rel="" target="">
  <span class="menu-text">Benford</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -236,9 +210,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<div class="cell" data-layout-align="center" data-hash="lista_cache/html/library_6529e3553554d7f76c10dc5c564d281e">
-
-</div>
 <section id="introdução1" class="level1">
 <h1>Introdução<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h1>
 <blockquote class="blockquote">
@@ -258,52 +229,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-transp_834c776f581805ea775a84dca6097e91">
 <div class="cell-output-display">
 <div id="tbl-transp" class="anchored">
-
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;1:  Tempo gasto, em minutos, para 10 funcionários irem de casa até a empresa em que trabalham de duas maneiras, ou transporte coletivo (TC) ou automóvel próprio (AP). </caption>
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed table-sm small" data-quarto-postprocess="true">
+<caption>Table&nbsp;1: Tempo gasto, em minutos, para 10 funcionários irem de casa até a empresa em que trabalham de duas maneiras, ou transporte coletivo (TC) ou automóvel próprio (AP).</caption>
 <tbody>
-  <tr>
-   <td style="text-align:left;"> Funcionario </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 3 </td>
-   <td style="text-align:right;"> 4 </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 8 </td>
-   <td style="text-align:right;"> 9 </td>
-   <td style="text-align:right;"> 10 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> TC </td>
-   <td style="text-align:right;"> 41 </td>
-   <td style="text-align:right;"> 24 </td>
-   <td style="text-align:right;"> 27 </td>
-   <td style="text-align:right;"> 28 </td>
-   <td style="text-align:right;"> 25 </td>
-   <td style="text-align:right;"> 25 </td>
-   <td style="text-align:right;"> 34 </td>
-   <td style="text-align:right;"> 29 </td>
-   <td style="text-align:right;"> 31 </td>
-   <td style="text-align:right;"> 41 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> AP </td>
-   <td style="text-align:right;"> 22 </td>
-   <td style="text-align:right;"> 34 </td>
-   <td style="text-align:right;"> 31 </td>
-   <td style="text-align:right;"> 22 </td>
-   <td style="text-align:right;"> 29 </td>
-   <td style="text-align:right;"> 22 </td>
-   <td style="text-align:right;"> 16 </td>
-   <td style="text-align:right;"> 18 </td>
-   <td style="text-align:right;"> 20 </td>
-   <td style="text-align:right;"> 25 </td>
-  </tr>
+<tr class="odd">
+<td style="text-align: left;">Funcionario</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TC</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">41</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">AP</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">25</td>
+</tr>
 </tbody>
 </table>
-
 </div>
+</div>
+
+
 </div>
 </div>
 <div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-1_7548bb704ffab75b4b0ad38bb23cf6ef">
@@ -401,7 +375,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="fig-energia" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="lista_files/figure-html/fig-energia-1.png" class="img-fluid figure-img" width="2400"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1: Gráfico de barras para a energia produzida ao longo de 30 dias.</figcaption><p></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Gráfico de barras para a energia produzida ao longo de 30 dias.</figcaption>
 </figure>
 </div>
 </div>
@@ -470,49 +444,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-adoles_ea07a695de19237b1b9f5cf26cf21b2b">
 <div class="cell-output-display">
 <div id="tbl-adoles" class="anchored">
-
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;2:  Gastos mensais de 30 adolescentes para se alimentarem fora de casa. </caption>
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed table-sm small" data-quarto-postprocess="true">
+<caption>Table&nbsp;2: Gastos mensais de 30 adolescentes para se alimentarem fora de casa.</caption>
 <tbody>
-  <tr>
-   <td style="text-align:right;"> 309 </td>
-   <td style="text-align:right;"> 324 </td>
-   <td style="text-align:right;"> 305 </td>
-   <td style="text-align:right;"> 312 </td>
-   <td style="text-align:right;"> 281 </td>
-   <td style="text-align:right;"> 341 </td>
-   <td style="text-align:right;"> 355 </td>
-   <td style="text-align:right;"> 296 </td>
-   <td style="text-align:right;"> 342 </td>
-   <td style="text-align:right;"> 337 </td>
-  </tr>
-  <tr>
-   <td style="text-align:right;"> 334 </td>
-   <td style="text-align:right;"> 321 </td>
-   <td style="text-align:right;"> 322 </td>
-   <td style="text-align:right;"> 299 </td>
-   <td style="text-align:right;"> 335 </td>
-   <td style="text-align:right;"> 320 </td>
-   <td style="text-align:right;"> 338 </td>
-   <td style="text-align:right;"> 330 </td>
-   <td style="text-align:right;"> 323 </td>
-   <td style="text-align:right;"> 330 </td>
-  </tr>
-  <tr>
-   <td style="text-align:right;"> 332 </td>
-   <td style="text-align:right;"> 342 </td>
-   <td style="text-align:right;"> 346 </td>
-   <td style="text-align:right;"> 317 </td>
-   <td style="text-align:right;"> 326 </td>
-   <td style="text-align:right;"> 319 </td>
-   <td style="text-align:right;"> 333 </td>
-   <td style="text-align:right;"> 339 </td>
-   <td style="text-align:right;"> 311 </td>
-   <td style="text-align:right;"> 344 </td>
-  </tr>
+<tr class="odd">
+<td style="text-align: right;">309</td>
+<td style="text-align: right;">324</td>
+<td style="text-align: right;">305</td>
+<td style="text-align: right;">312</td>
+<td style="text-align: right;">281</td>
+<td style="text-align: right;">341</td>
+<td style="text-align: right;">355</td>
+<td style="text-align: right;">296</td>
+<td style="text-align: right;">342</td>
+<td style="text-align: right;">337</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">334</td>
+<td style="text-align: right;">321</td>
+<td style="text-align: right;">322</td>
+<td style="text-align: right;">299</td>
+<td style="text-align: right;">335</td>
+<td style="text-align: right;">320</td>
+<td style="text-align: right;">338</td>
+<td style="text-align: right;">330</td>
+<td style="text-align: right;">323</td>
+<td style="text-align: right;">330</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">332</td>
+<td style="text-align: right;">342</td>
+<td style="text-align: right;">346</td>
+<td style="text-align: right;">317</td>
+<td style="text-align: right;">326</td>
+<td style="text-align: right;">319</td>
+<td style="text-align: right;">333</td>
+<td style="text-align: right;">339</td>
+<td style="text-align: right;">311</td>
+<td style="text-align: right;">344</td>
+</tr>
 </tbody>
 </table>
-
 </div>
+</div>
+
+
 </div>
 </div>
 <div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-8_1334eef637ff04ab93f5ee348f8d69b9">
@@ -541,7 +518,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="fig-hist1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="lista_files/figure-html/fig-hist1-1.png" class="img-fluid figure-img" width="2400"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;2: Histograma da frequência absoluta dos gastos mensais de 30 adolescentes para se alimentarem.</figcaption><p></p>
+<figcaption class="figure-caption">Figure&nbsp;2: Histograma da frequência absoluta dos gastos mensais de 30 adolescentes para se alimentarem.</figcaption>
 </figure>
 </div>
 </div>
@@ -556,7 +533,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="fig-hist2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="lista_files/figure-html/fig-hist2-1.png" class="img-fluid figure-img" width="2400"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3: Histograma (densidade) dos gastos mensais de 30 adolescentes para se alimentarem.</figcaption><p></p>
+<figcaption class="figure-caption">Figure&nbsp;3: Histograma (densidade) dos gastos mensais de 30 adolescentes para se alimentarem.</figcaption>
 </figure>
 </div>
 </div>
@@ -586,7 +563,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="fig-box1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="lista_files/figure-html/fig-box1-1.png" class="img-fluid figure-img" width="2400"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;4: Boxplot dos gastos mensais de 30 adolescentes para se alimentarem.</figcaption><p></p>
+<figcaption class="figure-caption">Figure&nbsp;4: Boxplot dos gastos mensais de 30 adolescentes para se alimentarem.</figcaption>
 </figure>
 </div>
 </div>
@@ -656,31 +633,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-corr1_b8a48c033daddde3c37bb04685992783">
 <div class="cell-output-display">
 <div id="tbl-corr1" class="anchored">
-
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;4:  Seis observações das variáveis X e Y. </caption>
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed table-sm small" data-quarto-postprocess="true">
+<caption>Table&nbsp;4: Seis observações das variáveis X e Y.</caption>
 <tbody>
-  <tr>
-   <td style="text-align:left;"> X </td>
-   <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 11 </td>
-   <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 16 </td>
-   <td style="text-align:right;"> 11 </td>
-   <td style="text-align:right;"> 7 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Y </td>
-   <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 12 </td>
-   <td style="text-align:right;"> 8 </td>
-   <td style="text-align:right;"> 16 </td>
-   <td style="text-align:right;"> 13 </td>
-   <td style="text-align:right;"> 7 </td>
-  </tr>
+<tr class="odd">
+<td style="text-align: left;">X</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Y</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">7</td>
+</tr>
 </tbody>
 </table>
-
 </div>
+</div>
+
+
 </div>
 </div>
 <div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-12_95f8a5cd2509f0a797a8c62b533f44a9">
@@ -709,7 +689,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="fig-disp" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="lista_files/figure-html/fig-disp-1.png" class="img-fluid figure-img" width="2400"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;5: Diagrama de dispersão.</figcaption><p></p>
+<figcaption class="figure-caption">Figure&nbsp;5: Diagrama de dispersão.</figcaption>
 </figure>
 </div>
 </div>
@@ -743,40 +723,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-corr2_6a86def1f322c08a4c24e497cd12727a">
 <div class="cell-output-display">
 <div id="tbl-corr2" class="anchored">
-
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;5:  Seis observações das variáveis ME e SIM. </caption>
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed table-sm small" data-quarto-postprocess="true">
+<caption>Table&nbsp;5: Seis observações das variáveis ME e SIM.</caption>
 <tbody>
-  <tr>
-   <td style="text-align:left;"> Aluno </td>
-   <td style="text-align:right;"> 1.0 </td>
-   <td style="text-align:right;"> 2.0 </td>
-   <td style="text-align:right;"> 3.0 </td>
-   <td style="text-align:right;"> 4.0 </td>
-   <td style="text-align:right;"> 5.0 </td>
-   <td style="text-align:right;"> 6.0 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> ME </td>
-   <td style="text-align:right;"> 5.3 </td>
-   <td style="text-align:right;"> 6.2 </td>
-   <td style="text-align:right;"> 5.1 </td>
-   <td style="text-align:right;"> 7.8 </td>
-   <td style="text-align:right;"> 6.4 </td>
-   <td style="text-align:right;"> 5.1 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> SIM </td>
-   <td style="text-align:right;"> 5.5 </td>
-   <td style="text-align:right;"> 6.6 </td>
-   <td style="text-align:right;"> 5.4 </td>
-   <td style="text-align:right;"> 7.6 </td>
-   <td style="text-align:right;"> 7.2 </td>
-   <td style="text-align:right;"> 5.3 </td>
-  </tr>
+<tr class="odd">
+<td style="text-align: left;">Aluno</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">6.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ME</td>
+<td style="text-align: right;">5.3</td>
+<td style="text-align: right;">6.2</td>
+<td style="text-align: right;">5.1</td>
+<td style="text-align: right;">7.8</td>
+<td style="text-align: right;">6.4</td>
+<td style="text-align: right;">5.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SIM</td>
+<td style="text-align: right;">5.5</td>
+<td style="text-align: right;">6.6</td>
+<td style="text-align: right;">5.4</td>
+<td style="text-align: right;">7.6</td>
+<td style="text-align: right;">7.2</td>
+<td style="text-align: right;">5.3</td>
+</tr>
 </tbody>
 </table>
-
 </div>
+</div>
+
+
 </div>
 </div>
 <div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-15_8e8fb12f19bf0a61e84bb1c6ee53f856">
@@ -805,7 +788,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="fig-disp2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="lista_files/figure-html/fig-disp2-1.png" class="img-fluid figure-img" width="2400"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;6: Diagrama de dispersão.</figcaption><p></p>
+<figcaption class="figure-caption">Figure&nbsp;6: Diagrama de dispersão.</figcaption>
 </figure>
 </div>
 </div>
@@ -839,46 +822,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-corr3_f6dfeb2a8cd2604f33cf1fd727153ae4">
 <div class="cell-output-display">
 <div id="tbl-corr3" class="anchored">
-
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;6:  Tempo de caminhada (horas) e gordura corporal (%) de oito indivíduos. </caption>
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed table-sm small" data-quarto-postprocess="true">
+<caption>Table&nbsp;6: Tempo de caminhada (horas) e gordura corporal (%) de oito indivíduos.</caption>
 <tbody>
-  <tr>
-   <td style="text-align:left;"> Indivíduo </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 3 </td>
-   <td style="text-align:right;"> 4 </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 8 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Tempo </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 12 </td>
-   <td style="text-align:right;"> 4 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 14 </td>
-   <td style="text-align:right;"> 10 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Gordura </td>
-   <td style="text-align:right;"> 22 </td>
-   <td style="text-align:right;"> 11 </td>
-   <td style="text-align:right;"> 23 </td>
-   <td style="text-align:right;"> 25 </td>
-   <td style="text-align:right;"> 21 </td>
-   <td style="text-align:right;"> 19 </td>
-   <td style="text-align:right;"> 9 </td>
-   <td style="text-align:right;"> 12 </td>
-  </tr>
+<tr class="odd">
+<td style="text-align: left;">Indivíduo</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tempo</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gordura</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">12</td>
+</tr>
 </tbody>
 </table>
-
 </div>
+</div>
+
+
 </div>
 </div>
 <div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-18_ff5f4598d37b24a541909b13d06495bf">
@@ -909,7 +895,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="fig-disp3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="lista_files/figure-html/fig-disp3-1.png" class="img-fluid figure-img" width="2400"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;7: Diagrama de dispersão.</figcaption><p></p>
+<figcaption class="figure-caption">Figure&nbsp;7: Diagrama de dispersão.</figcaption>
 </figure>
 </div>
 </div>
@@ -1002,13 +988,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Agora suponha que 15% da população tem essa doença, qual o Valor Preditivo Positivo (VPP) e o Valor Preditivo Negativo (VPN)?</li>
 </ul>
 <ol start="6" type="1">
-<li>Suponha que você irá fazer um teste com quatro questões. Em cada questão há cinco alternativas, das quais apenas uma está correta. Qual a probabilidade de:</li>
+<li><p>Uma caixa contém 5 bolas azuis e 2 pretas. Suponha um experimento que consiste em retirar duas bolas sucessivamente sem reposição. Seja uma variável aleatória <span class="math inline">\(X\)</span>: “número de bolas azuis”. Construa a distribuição de probabilidades de <span class="math inline">\(X\)</span>.</p></li>
+<li><p>Suponha que você irá fazer um teste com quatro questões. Em cada questão há cinco alternativas, das quais apenas uma está correta. Qual a probabilidade de:</p></li>
 </ol>
 <ul>
 <li>acertar as quatro questões no “chute”?</li>
 <li>acertar três questões “Chutando”?</li>
 </ul>
-<ol start="7" type="1">
+<ol start="8" type="1">
 <li>A probabilidade de um atirador acertar um alvo é de 40%. Suponha que o atirador disparou quinze vezes. Qual a probabilidade de:</li>
 </ol>
 <ul>
@@ -1072,7 +1059,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="fig-den1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="lista_files/figure-html/fig-den1-1.png" class="img-fluid figure-img" width="2400"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;8: Distribuições da v.a. e das médias amostrais de X (comando básicos do R).</figcaption><p></p>
+<figcaption class="figure-caption">Figure&nbsp;8: Distribuições da v.a. e das médias amostrais de X (comando básicos do R).</figcaption>
 </figure>
 </div>
 </div>
@@ -1146,58 +1133,61 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-dieta1_9fea33066ac260686d9b6e25a4723c5e">
 <div class="cell-output-display">
 <div id="tbl-dieta1" class="anchored">
-
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;8:  Massa, em kg, para 12 pacientes, antes e depois de uma dieta proposta. </caption>
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed table-sm small" data-quarto-postprocess="true">
+<caption>Table&nbsp;8: Massa, em kg, para 12 pacientes, antes e depois de uma dieta proposta.</caption>
 <tbody>
-  <tr>
-   <td style="text-align:left;"> Paciente </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 3 </td>
-   <td style="text-align:right;"> 4 </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 8 </td>
-   <td style="text-align:right;"> 9 </td>
-   <td style="text-align:right;"> 10 </td>
-   <td style="text-align:right;"> 11 </td>
-   <td style="text-align:right;"> 12 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Antes </td>
-   <td style="text-align:right;"> 106 </td>
-   <td style="text-align:right;"> 89 </td>
-   <td style="text-align:right;"> 92 </td>
-   <td style="text-align:right;"> 93 </td>
-   <td style="text-align:right;"> 90 </td>
-   <td style="text-align:right;"> 90 </td>
-   <td style="text-align:right;"> 99 </td>
-   <td style="text-align:right;"> 94 </td>
-   <td style="text-align:right;"> 96 </td>
-   <td style="text-align:right;"> 106 </td>
-   <td style="text-align:right;"> 97 </td>
-   <td style="text-align:right;"> 109 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Depois </td>
-   <td style="text-align:right;"> 101 </td>
-   <td style="text-align:right;"> 92 </td>
-   <td style="text-align:right;"> 99 </td>
-   <td style="text-align:right;"> 92 </td>
-   <td style="text-align:right;"> 86 </td>
-   <td style="text-align:right;"> 88 </td>
-   <td style="text-align:right;"> 90 </td>
-   <td style="text-align:right;"> 95 </td>
-   <td style="text-align:right;"> 94 </td>
-   <td style="text-align:right;"> 94 </td>
-   <td style="text-align:right;"> 97 </td>
-   <td style="text-align:right;"> 83 </td>
-  </tr>
+<tr class="odd">
+<td style="text-align: left;">Paciente</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Antes</td>
+<td style="text-align: right;">106</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">99</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">106</td>
+<td style="text-align: right;">97</td>
+<td style="text-align: right;">109</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Depois</td>
+<td style="text-align: right;">101</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">99</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">97</td>
+<td style="text-align: right;">83</td>
+</tr>
 </tbody>
 </table>
-
 </div>
+</div>
+
+
 </div>
 </div>
 <div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-21_d12abce910d501764d1ffb1bae724a8a">
@@ -1251,52 +1241,55 @@ mean difference
 <div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-industria1_ecfc00566ee5675f1bbf8cbfe2ab58fe">
 <div class="cell-output-display">
 <div id="tbl-industria1" class="anchored">
-
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;9:  Perdas semanais (horas/funcionário) em 10 indústrias, antes e depois de um programa de segurança do trabalho. </caption>
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed table-sm small" data-quarto-postprocess="true">
+<caption>Table&nbsp;9: Perdas semanais (horas/funcionário) em 10 indústrias, antes e depois de um programa de segurança do trabalho.</caption>
 <tbody>
-  <tr>
-   <td style="text-align:left;"> Indústria </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 3 </td>
-   <td style="text-align:right;"> 4 </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 8 </td>
-   <td style="text-align:right;"> 9 </td>
-   <td style="text-align:right;"> 10 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Antes </td>
-   <td style="text-align:right;"> 65 </td>
-   <td style="text-align:right;"> 66 </td>
-   <td style="text-align:right;"> 66 </td>
-   <td style="text-align:right;"> 67 </td>
-   <td style="text-align:right;"> 68 </td>
-   <td style="text-align:right;"> 70 </td>
-   <td style="text-align:right;"> 71 </td>
-   <td style="text-align:right;"> 73 </td>
-   <td style="text-align:right;"> 79 </td>
-   <td style="text-align:right;"> 79 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Depois </td>
-   <td style="text-align:right;"> 61 </td>
-   <td style="text-align:right;"> 64 </td>
-   <td style="text-align:right;"> 65 </td>
-   <td style="text-align:right;"> 66 </td>
-   <td style="text-align:right;"> 66 </td>
-   <td style="text-align:right;"> 67 </td>
-   <td style="text-align:right;"> 69 </td>
-   <td style="text-align:right;"> 73 </td>
-   <td style="text-align:right;"> 74 </td>
-   <td style="text-align:right;"> 76 </td>
-  </tr>
+<tr class="odd">
+<td style="text-align: left;">Indústria</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Antes</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">79</td>
+<td style="text-align: right;">79</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Depois</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: right;">76</td>
+</tr>
 </tbody>
 </table>
-
 </div>
+</div>
+
+
 </div>
 </div>
 <div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-22_f3e1030dd984b37f3644ee34e276428d">
@@ -1350,40 +1343,43 @@ mean difference
 <div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-industria2_bd25bacbf422777a53696861d4dc2b13">
 <div class="cell-output-display">
 <div id="tbl-industria2" class="anchored">
-
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;10:  Tempo registrado, em minutos, para a realização de uma mesma tarefa para seis funcionários. </caption>
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed table-sm small" data-quarto-postprocess="true">
+<caption>Table&nbsp;10: Tempo registrado, em minutos, para a realização de uma mesma tarefa para seis funcionários.</caption>
 <tbody>
-  <tr>
-   <td style="text-align:left;"> Funcionário </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 3 </td>
-   <td style="text-align:right;"> 4 </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 6 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> A </td>
-   <td style="text-align:right;"> 76 </td>
-   <td style="text-align:right;"> 77 </td>
-   <td style="text-align:right;"> 77 </td>
-   <td style="text-align:right;"> 78 </td>
-   <td style="text-align:right;"> 79 </td>
-   <td style="text-align:right;"> 87 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> B </td>
-   <td style="text-align:right;"> 75 </td>
-   <td style="text-align:right;"> 75 </td>
-   <td style="text-align:right;"> 76 </td>
-   <td style="text-align:right;"> 77 </td>
-   <td style="text-align:right;"> 82 </td>
-   <td style="text-align:right;"> 83 </td>
-  </tr>
+<tr class="odd">
+<td style="text-align: left;">Funcionário</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">77</td>
+<td style="text-align: right;">77</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">79</td>
+<td style="text-align: right;">87</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">77</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">83</td>
+</tr>
 </tbody>
 </table>
-
 </div>
+</div>
+
+
 </div>
 </div>
 <div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-23_c5e1025839ad3e755d09f545e86051c0">
@@ -1440,40 +1436,43 @@ mean difference
 <div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-minas1_706fd2d4d337c842195a2d8cd69407d8">
 <div class="cell-output-display">
 <div id="tbl-minas1" class="anchored">
-
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;11:  Tempo registrado, em minutos, para a realização de uma mesma tarefa para seis funcionários. </caption>
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed table-sm small" data-quarto-postprocess="true">
+<caption>Table&nbsp;11: Tempo registrado, em minutos, para a realização de uma mesma tarefa para seis funcionários.</caption>
 <tbody>
-  <tr>
-   <td style="text-align:left;"> Funcionário </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 3 </td>
-   <td style="text-align:right;"> 4 </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 6 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> A </td>
-   <td style="text-align:right;"> 7857 </td>
-   <td style="text-align:right;"> 7918 </td>
-   <td style="text-align:right;"> 7924 </td>
-   <td style="text-align:right;"> 7993 </td>
-   <td style="text-align:right;"> 8069 </td>
-   <td style="text-align:right;"> 8798 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> B </td>
-   <td style="text-align:right;"> 7779 </td>
-   <td style="text-align:right;"> 7839 </td>
-   <td style="text-align:right;"> 7885 </td>
-   <td style="text-align:right;"> 7973 </td>
-   <td style="text-align:right;"> 8298 </td>
-   <td style="text-align:right;"> 8416 </td>
-  </tr>
+<tr class="odd">
+<td style="text-align: left;">Funcionário</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">7857</td>
+<td style="text-align: right;">7918</td>
+<td style="text-align: right;">7924</td>
+<td style="text-align: right;">7993</td>
+<td style="text-align: right;">8069</td>
+<td style="text-align: right;">8798</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">7779</td>
+<td style="text-align: right;">7839</td>
+<td style="text-align: right;">7885</td>
+<td style="text-align: right;">7973</td>
+<td style="text-align: right;">8298</td>
+<td style="text-align: right;">8416</td>
+</tr>
 </tbody>
 </table>
-
 </div>
+</div>
+
+
 </div>
 </div>
 <div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-24_2180478402e7747be7bd20d87cac3f15">
@@ -1520,46 +1519,49 @@ mean of x mean of y
 <div class="cell tbl-cap-location-top" data-layout-align="center" data-hash="lista_cache/html/tbl-corr4_f29084a8e5262bcece4b9bf794434f2f">
 <div class="cell-output-display">
 <div id="tbl-corr4" class="anchored">
-
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;12:  Tempo de caminhada (horas) e gordura corporal (%) de oito indivíduos. </caption>
+<div class="table-responsive">
+<table class="table table-striped table-hover table-condensed table-sm small" data-quarto-postprocess="true">
+<caption>Table&nbsp;12: Tempo de caminhada (horas) e gordura corporal (%) de oito indivíduos.</caption>
 <tbody>
-  <tr>
-   <td style="text-align:left;"> Indivíduo </td>
-   <td style="text-align:right;"> 1 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 3 </td>
-   <td style="text-align:right;"> 4 </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 8 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Tempo </td>
-   <td style="text-align:right;"> 6 </td>
-   <td style="text-align:right;"> 12 </td>
-   <td style="text-align:right;"> 4 </td>
-   <td style="text-align:right;"> 2 </td>
-   <td style="text-align:right;"> 5 </td>
-   <td style="text-align:right;"> 7 </td>
-   <td style="text-align:right;"> 14 </td>
-   <td style="text-align:right;"> 10 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Gordura </td>
-   <td style="text-align:right;"> 22 </td>
-   <td style="text-align:right;"> 11 </td>
-   <td style="text-align:right;"> 23 </td>
-   <td style="text-align:right;"> 25 </td>
-   <td style="text-align:right;"> 21 </td>
-   <td style="text-align:right;"> 19 </td>
-   <td style="text-align:right;"> 9 </td>
-   <td style="text-align:right;"> 12 </td>
-  </tr>
+<tr class="odd">
+<td style="text-align: left;">Indivíduo</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tempo</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gordura</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">12</td>
+</tr>
 </tbody>
 </table>
-
 </div>
+</div>
+
+
 </div>
 </div>
 <div class="cell" data-layout-align="center" data-hash="lista_cache/html/unnamed-chunk-25_f7e731daa3cc259290e753977915a4b0">
@@ -1590,7 +1592,7 @@ mean of x mean of y
 <div id="fig-disp4" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="lista_files/figure-html/fig-disp4-1.png" class="img-fluid figure-img" width="2400"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;9: Diagrama de dispersão.</figcaption><p></p>
+<figcaption class="figure-caption">Figure&nbsp;9: Diagrama de dispersão.</figcaption>
 </figure>
 </div>
 </div>
@@ -1648,7 +1650,7 @@ F-statistic: 148.8 on 1 and 6 DF,  p-value: 1.847e-05</code></pre>
 <div id="fig-disp5" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="lista_files/figure-html/fig-disp5-1.png" class="img-fluid figure-img" width="2400"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;10: Diagrama de dispersão com a regressão.</figcaption><p></p>
+<figcaption class="figure-caption">Figure&nbsp;10: Diagrama de dispersão com a regressão.</figcaption>
 </figure>
 </div>
 </div>
@@ -1691,9 +1693,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1758,6 +1774,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
