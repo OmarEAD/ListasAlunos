@@ -1,0 +1,54 @@
+---
+title: "Análise Exploratória dos dados"
+author: "Omar C N Pereira"
+#date: 2022-01-01
+categories: ["R","Ciências Sociais"]
+tags: ["Ciências Sociais", 
+"Estatística descritiva", "Ciências Sociais"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(#collapse = TRUE,
+                      echo = TRUE, 
+                      size = "footnotesize",
+                      comment = NA,
+                      warning = FALSE,
+                      message = FALSE,
+                      #out.width = "1\\linewidth",
+                      fig.align = "center",
+                      fig.width = 8, 
+                      fig.height = 4, 
+                      fig.show = "hold",
+                      #fig.path = "Figuras1/",
+                      fig.pos = "!htb",
+                      fig.cap = TRUE,
+                      background = "#E6E6FA",
+                      #background = "black",
+                      dev = c("png",'pdf'),
+                      res=300,
+                      dpi = 300)
+```
+
+```{r library, echo=FALSE,results='hide'}
+#library(tidyverse)
+#library(tinytex)
+library(knitr)
+library(kableExtra)
+library(xtable)
+library(ggplot2)
+library(dplyr)
+```
+
+# Distribuição de Frequência - Variáveis Categóricas
+
+
+
+Seja o conjunto de dados com 10 valores abaixo:
+
+```{r}
+set.seed(1)
+x <- rnorm(10,500,200)
+x
+```
+
+Os primeiros dígitos desses valores são 3, 5, 3, 8, 5, 3, 5, 6, 6 e 4, e a frequência com que eles apareceram no conjunto de dados foi:
