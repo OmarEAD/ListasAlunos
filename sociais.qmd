@@ -139,7 +139,7 @@ legend("topright",
 ```
 
 
-## Variável Categórica Ordinal
+## Variável Categórica Ordinal R
 
 Variáveis categóricas ordinais possuem categorias que seguem uma ordem lógica.  
 No exemplo abaixo, temos uma pesquisa sobre o **grau de satisfação** de clientes em relação a um serviço.  
