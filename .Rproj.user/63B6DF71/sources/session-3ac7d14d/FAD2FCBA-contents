@@ -114,7 +114,7 @@ barplot(frequencias,
         xlab = "Região",
         ylab = "Número de Pessoas")
 
-     
+#
 ```
 
 ## Gráfico de setores
@@ -135,6 +135,7 @@ legend("topright",
        legend = paste(regioes, "-", frequencias, "pessoas"),
        fill = c("skyblue", "lightgreen", "orange", "purple", "pink"),
        cex = 0.8)
+#
 ```
 
 
