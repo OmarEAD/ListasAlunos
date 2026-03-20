@@ -1,5 +1,5 @@
 ---
-title: "Análise Exploratória dos dados"
+title: "AED"
 author: "Omar C N Pereira"
 #date: 2022-01-01
 categories: ["R","Ciências Sociais"]
@@ -39,16 +39,261 @@ library(ggplot2)
 library(dplyr)
 ```
 
-# Distribuição de Frequência - Variáveis Categóricas
+
+# Distribuição de Frequência - Variável Qualitativa
+
+## Variável Categórica Nominal
 
 
+A distribuição de frequência organiza dados categóricos, mostrando quantas vezes cada categoria aparece em um conjunto de observações. Isso facilita a análise de padrões e preferências.  
+No exemplo abaixo, temos uma pesquisa com 100 pessoas sobre **frutas favoritas**. A tabela apresenta a frequência absoluta, a proporção (em forma decimal) e o percentual de cada categoria.
 
-Seja o conjunto de dados com 10 valores abaixo:
+| Categoria   | Frequência | Proporção | Percentual |
+|-------------|------------|-----------|------------|
+| Maçã        | 25         | 0.25      | 25%        |
+| Banana      | 30         | 0.30      | 30%        |
+| Laranja     | 20         | 0.20      | 20%        |
+| Uva         | 15         | 0.15      | 15%        |
+| Manga       | 10         | 0.10      | 10%        |
+| **Total**   | **100**    | **1.00**  | **100%**   |
+
+
+### Como Calcular a Proporção em Variáveis Categóricas
+
+Observe a Tabela abaixo, sobre a região de residência de 200 entrevistados que visitaram a universidade durante a primeira semana do semestre. Vamos mostrar como calcular a proporção na mesma tabela:
+
+1. **Identifique a frequência absoluta** da categoria  
+   - Exemplo: 40 pessoas moram na região Norte.
+
+2. **Calcule o total de observações** somando todas as frequências  
+   - Exemplo: 200 pessoas no total.
+
+3. **Divida a frequência da categoria pelo total**  
+   - Fórmula:  
+     $$
+     \text{Proporção} = \frac{\text{Frequência da categoria}}{\text{Total de observações}}
+     $$
+
+4. **Interprete o resultado**  
+   - O valor estará entre 0 e 1.  
+   - Exemplo:  
+     $$
+     \frac{40}{200} = 0.20
+     $$
+
+5. **Opcional: converter em percentual**  
+   - Multiplique a proporção por 100.  
+   - Exemplo:  
+     $$
+     0.20 \times 100 = 20\%
+     $$
+
+
+| Região       | Frequência | Proporção | Percentual |
+|--------------|------------|-----------|------------|
+| Norte        | 40         | 0.20      | 20%        |
+| Nordeste     | 60         | 0.30      | 30%        |
+| Centro-Oeste | 30         | 0.15      | 15%        |
+| Sudeste      | 50         | 0.25      | 25%        |
+| Sul          | 20         | 0.10      | 10%        |
+| **Total**    | **200**    | **1.00**  | **100%**   |
+
+## Gráfico de Barras
 
 ```{r}
-set.seed(1)
-x <- rnorm(10,500,200)
-x
+
+# Dados da pesquisa
+regioes <- c("Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul")
+frequencias <- c(40, 60, 30, 50, 20)
+
+# Criar gráfico de barras
+barplot(frequencias,
+        names.arg = regioes,
+        col = c("skyblue", "lightgreen", "orange", "purple", "pink"),
+        main = "Distribuição de Frequência - Região de Residência",
+        xlab = "Região",
+        ylab = "Número de Pessoas")
+
+     
 ```
 
-Os primeiros dígitos desses valores são 3, 5, 3, 8, 5, 3, 5, 6, 6 e 4, e a frequência com que eles apareceram no conjunto de dados foi:
+## Gráfico de setores
+
+```{r}
+# Dados da pesquisa
+regioes <- c("Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul")
+frequencias <- c(40, 60, 30, 50, 20)
+
+# Criar gráfico de setores
+pie(frequencias,
+    labels = regioes,
+    col = c("skyblue", "lightgreen", "orange", "purple", "pink"),
+    main = "Distribuição de Frequência - Região de Residência")
+
+# Adicionar legenda com valores
+legend("topright",
+       legend = paste(regioes, "-", frequencias, "pessoas"),
+       fill = c("skyblue", "lightgreen", "orange", "purple", "pink"),
+       cex = 0.8)
+```
+
+
+## Variável Categórica Ordinal
+
+Variáveis categóricas ordinais possuem categorias que seguem uma ordem lógica.  
+No exemplo abaixo, temos uma pesquisa sobre o **grau de satisfação** de clientes em relação a um serviço.  
+A tabela mostra a frequência absoluta, a proporção e o percentual de cada nível.
+
+
+| Grau de Satisfação | Frequência | Proporção | Percentual |
+|--------------------|------------|-----------|------------|
+| Muito insatisfeito | 10         | 0.083     | 8.3%       |
+| Insatisfeito       | 20         | 0.167     | 16.7%      |
+| Neutro             | 30         | 0.250     | 25.0%      |
+| Satisfeito         | 40         | 0.333     | 33.3%      |
+| Muito satisfeito   | 20         | 0.167     | 16.7%      |
+| **Total**          | **120**    | **1.00**  | **100%**   |
+
+Neste exemplo, a ordem foi invertida para destacar primeiro os níveis mais altos de satisfação. Essa escolha é mais interessante porque, conforme a tabela abaixo, observamos que na linha correspondente ao grau de satisfação **Satisfeito** aparece o valor de 50%. Isso significa que metade das pessoas entrevistadas está **ao menos satisfeita ou mais** com o serviço oferecido, o que fornece uma leitura direta e prática sobre o nível de satisfação dos clientes.
+
+| Grau de Satisfação | Frequência | Freq. Acumulada | Percentual Acumulado |
+|--------------------|------------|-----------------|----------------------|
+| Muito satisfeito   | 20         | 20              | 16.7%                |
+| Satisfeito         | 40         | 60              | 50.0%                |
+| Neutro             | 30         | 90              | 75.0%                |
+| Insatisfeito       | 20         | 110             | 91.7%                |
+| Muito insatisfeito | 10         | 120             | 100%                 |
+| **Total**          | **120**    | **120**         | **100%**             |
+
+
+
+### Atividade: Distribuição de Frequência - Escolaridade
+
+Em uma determinada região, foi realizada uma pesquisa com 7.000 pessoas sobre o nível de ensino.  
+Os resultados foram os seguintes:
+- 1.000 pessoas possuem **Ensino Fundamental I**  
+- 2.000 pessoas possuem **Ensino Fundamental II**  
+- 2.500 pessoas possuem **Ensino Médio**  
+- 1.500 pessoas possuem **Ensino Superior**  
+- 500 pessoas possuem **Pós-graduação**
+
+Construa uma tabela de distribuição de frequência que contenha:
+- Frequência absoluta  
+- Proporção  
+- Porcentagem  
+- Frequência acumulada em porcentagem  
+
+Explique os resultados obtidos:
+- O que significa cada proporção e porcentagem?  
+- Qual a interpretação da frequência acumulada em porcentagem?  
+- Por exemplo: ao observar a linha do **Ensino Médio**, vemos que 64,3% das pessoas possuem **Ensino Médio ou níveis superiores**.  
+
+
+::: {.callout-tip collapse="true"}
+## 💡 Clique aqui para ver a tabela
+
+
+| Nível de Ensino       | Frequência | Proporção | Porcentagem | Freq. Acumulada (%) |
+|-----------------------|------------|-----------|-------------|---------------------|
+| Pós-graduação         | 500        | 0.071     | 7.1%        | 7.1%                |
+| Ensino Superior       | 1500       | 0.214     | 21.4%       | 28.6%               |
+| Ensino Médio          | 2500       | 0.357     | 35.7%       | 64.3%               |
+| Ensino Fundamental II | 2000       | 0.286     | 28.6%       | 92.9%               |
+| Ensino Fundamental I  | 1000       | 0.143     | 14.3%       | 100%                |
+| **Total**             | **7000**   | **1.00**  | **100%**    | **100%** 
+
+:::
+
+
+## Variável Numérica
+
+Foi realizada uma pesquisa sobre a idade de 100 pessoas em uma região.  
+Os dados foram agrupados em intervalos de 10 anos, usando a notação $\vdash$ para indicar o limite inferior incluído e o superior excluído.
+
+
+- A **frequência absoluta** mostra quantas pessoas estão em cada intervalo de idade.  
+- A **proporção** e a **porcentagem** indicam o peso relativo de cada intervalo em relação ao total.  
+- A **frequência acumulada (%)** mostra a porcentagem de pessoas até determinado intervalo.  
+  - Exemplo: até 39 anos, temos 53% das pessoas.  
+
+| Intervalo de Idade | Frequência | Proporção | Porcentagem | Freq. Acumulada (%) |
+|--------------------|------------|-----------|-------------|---------------------|
+| 10 $\vdash$ 20          | 8          | 0.08      | 8%          | 8%                  |
+| 20 $\vdash$ 30          | 20         | 0.20      | 20%         | 28%                 |
+| 30 $\vdash$ 40          | 25         | 0.25      | 25%         | 53%                 |
+| 40 $\vdash$ 50          | 22         | 0.22      | 22%         | 75%                 |
+| 50 $\vdash$ 60          | 15         | 0.15      | 15%         | 90%                 |
+| 60 $\vdash$ 70          | 10         | 0.10      | 10%         | 100%                |
+| **Total**          | **100**    | **1.00**  | **100%**    | **100%**            |
+
+- A notação $a \vdash b$ significa que o intervalo inclui **a** e vai até **b**, sem incluir **b**.  
+- Exemplo: $20 \vdash 30$ representa idades de 20 até 29 anos.  
+- A frequência acumulada mostra a porcentagem de pessoas até determinado intervalo.  
+
+
+### Atividade: Distribuição de Frequência - Tempo de deslocamento
+
+Foi realizada uma pesquisa com 60 pessoas sobre o **tempo (em minutos)** que cada uma delas gasta diariamente em deslocamento para o trabalho.  
+Os tempos variam entre **5 e 65 minutos**.
+
+1. Construa uma **tabela de distribuição de frequência** agrupando os dados em **classes de 10 minutos**.  
+   - Use a notação `a $\vdash$ b` para indicar os intervalos (limite inferior incluído, limite superior excluído).  
+   - Exemplo: `10 $\vdash$ 20` significa de 10 até 19 minutos.  
+
+2. Na tabela, inclua:
+   - Frequência absoluta  
+   - Proporção  
+   - Porcentagem  
+   - Frequência acumulada (%)  
+
+3. Após construir a tabela, **explique os resultados**:
+   - Qual intervalo concentra mais pessoas?  
+   - Qual a porcentagem de pessoas que gastam até 30 minutos no deslocamento?  
+   - Qual a porcentagem de pessoas que gastam mais de 50 minutos?  
+   - O que a frequência acumulada revela sobre o perfil dos deslocamentos?  
+
+
+| Intervalo de Tempo | Frequência | Proporção | Porcentagem | Freq. Acumulada (%) |
+|--------------------|------------|-----------|-------------|---------------------|
+|  0 $\vdash$ 10     | 5         | ...       | ...         | ...                 |
+| 10 $\vdash$ 20     | 12        | ...       | ...         | ...                 |
+| 20 $\vdash$ 30     | 15        | ...       | ...         | ...                 |
+| 30 $\vdash$ 40     | 10        | ...       | ...         | ...                 |
+| 40 $\vdash$ 50     | 8         | ...       | ...         | ...                 |
+| 50 $\vdash$ 60     | 6         | ...       | ...         | ...                 |
+| 60 $\vdash$ 70     | 4         | ...       | ...         | ...                 |
+| **Total**          | **60**     | **1.00**  | **100%**    | **100%**            |
+
+
+::: {.callout-tip collapse="true"}
+## 💡 Clique aqui para ver a resposta
+
+
+
+| Intervalo de Tempo | Frequência | Proporção | Porcentagem | Freq. Acumulada (%) |
+|--------------------|------------|-----------|-------------|---------------------|
+|  0 $\vdash$ 10     | 5          | 0.083     | 8.3%        | 8.3%                |
+| 10 $\vdash$ 20     | 12         | 0.200     | 20.0%       | 28.3%               |
+| 20 $\vdash$ 30     | 15         | 0.250     | 25.0%       | 53.3%               |
+| 30 $\vdash$ 40     | 10         | 0.167     | 16.7%       | 70.0%               |
+| 40 $\vdash$ 50     | 8          | 0.133     | 13.3%       | 83.3%               |
+| 50 $\vdash$ 60     | 6          | 0.100     | 10.0%       | 93.3%               |
+| 60 $\vdash$ 70     | 4          | 0.067     | 6.7%        | 100%                |
+| **Total**          | **60**     | **1.00**  | **100%**    | **100%**            |
+
+## Análise dos Resultados
+
+- O intervalo **20 $\vdash$ 30** concentra o maior número de pessoas (25%), mostrando que a maioria leva cerca de 20 a 29 minutos para chegar ao trabalho.  
+- Até 30 minutos de deslocamento, temos **53,3%** das pessoas, ou seja, mais da metade da amostra gasta pouco tempo no trajeto.  
+- Mais de 50 minutos de deslocamento corresponde a **16,7%** das pessoas (10% entre 50–60 e 6,7% entre 60–70).  
+- A frequência acumulada revela que **70%** das pessoas gastam até 40 minutos, indicando que longos deslocamentos são menos comuns.  
+
+## Conclusão
+A análise mostra que a maior parte da população pesquisada tem deslocamentos relativamente curtos (até 30 minutos), enquanto apenas uma minoria enfrenta trajetos longos (mais de 50 minutos). Isso pode indicar boa infraestrutura de transporte ou proximidade entre residência e trabalho na região estudada.
+
+:::
+
+
+
+
+
