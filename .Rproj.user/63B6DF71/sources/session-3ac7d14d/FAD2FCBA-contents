@@ -119,7 +119,7 @@ barplot(frequencias,
 
 ## Gráfico de setores
 
-```{r}
+```{r, results='hide'}
 # Dados da pesquisa
 regioes <- c("Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul")
 frequencias <- c(40, 60, 30, 50, 20)
@@ -135,7 +135,7 @@ legend("topright",
        legend = paste(regioes, "-", frequencias, "pessoas"),
        fill = c("skyblue", "lightgreen", "orange", "purple", "pink"),
        cex = 0.8)
-#
+
 ```
 
 
