@@ -100,9 +100,9 @@ Observe a Tabela abaixo, sobre a região de residência de 200 entrevistados que
 
 ## Gráfico de Barras
 
-Veja abaixo os comando no R e o resultado final:
+Veja os comando no R:
 
-::: {.codeblock style="background-color:#e6f7ff; padding:10px;"}
+::: {.codeblock style="background-color:#E6E6FA; padding:10px;"}
 
 ```
 # Dados da pesquisa
@@ -118,6 +118,9 @@ barplot(frequencias,
         ylab = "Número de Pessoas")
 ```
 :::
+
+
+O resultado é esse: 
 
 ```{r echo=FALSE, results='hide'}
 
@@ -138,7 +141,28 @@ barplot(frequencias,
 
 ## Gráfico de setores
 
-```{r}
+::: {.codeblock style="background-color:#E6E6FA; padding:10px;"}
+```
+# Dados da pesquisa
+regioes <- c("Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul")
+frequencias <- c(40, 60, 30, 50, 20)
+
+# Criar gráfico de setores
+pie(frequencias,
+    labels = regioes,
+    col = c("skyblue", "lightgreen", "orange", "purple", "pink"),
+    main = "Distribuição de Frequência - Região de Residência")
+
+# Adicionar legenda com valores
+legend("topright",
+       legend = paste(regioes, "-", frequencias, "pessoas"),
+       fill = c("skyblue", "lightgreen", "orange", "purple", "pink"),
+       cex = 0.8)
+
+```
+:::
+
+```{r echo=FALSE, results='hide'}
 # Dados da pesquisa
 regioes <- c("Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul")
 frequencias <- c(40, 60, 30, 50, 20)
