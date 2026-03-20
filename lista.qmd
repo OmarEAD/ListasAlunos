@@ -78,7 +78,7 @@ dados <- data.frame(Funcionario=1:10,TC,AP)
 dados
 ```
 
-- Calcule o tempo médio e o desvio padrão de cada tipo de locomoção.
+-   Calcule o tempo médio e o desvio padrão de cada tipo de locomoção.
 
 ```{r}
 # Média e desvio padrão de TC
@@ -138,14 +138,12 @@ b.  Usando o resultado anterior, ou seja, a média dos 26 primeiros dias do mês
 
 c.  Separe os valores diários de produção de energia em dois grupos, um com os valores iguais ou menores que a média e outro com os valores maiores que a média. Quais as médias desses grupos? Qual a média destes dois valores médios?
 
-```{=html}
 <!-- -->
-```
+
 4.  Seja uma população constituída pelos valores 7, 9 e 15 (N=3). Suponha que todas as possíveis amostras de tamanho dois ($n=2$), com reposição, foram selecionadas dessa população.
 
-```{=html}
 <!-- -->
-```
+
 a.  Encontre a variância $\sigma^2$ da população.
 
 b.  Liste as diferentes possíveis amostras de tamanho dois com reposição e encontre a variância amostral $s^2$ para cada uma delas. Encontre a média das variâncias amostrais.
@@ -215,7 +213,6 @@ hist(dados, labels = T, main = "",
      ylim =c(0,8))
 ```
 
-
 ```{r fig-hist2, fig.cap="Histograma (densidade) dos gastos mensais de 30 adolescentes para se alimentarem."}
 par(bg="white")
 par(mar=c(2.5,2.5,0.5,0.5), mgp=c(1.5,0.5,0))
@@ -283,7 +280,6 @@ dd %>%
   kable() %>% 
   kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed", "responsive")) 
 ```
-
 
 ```{r}
 x <- c(7,11,7,16,11,7)
@@ -374,7 +370,6 @@ dd %>%
   kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 ```
 
-
 ```{r}
 Tempo   <- c(6,12,4,2,5,7,14,10)
 Gordura <- c(22,11,23,25,21,19,9,12)
@@ -390,7 +385,6 @@ par(mar=c(2.5,2.5,0.5,0.5), mgp=c(1.5,0.5,0))
 plot(Gordura~Tempo,data = dados5) 
 ```
 
-
 -   Calcule a covariância da amostra.
 
 ```{r}
@@ -402,7 +396,6 @@ cov(dados5$Tempo,dados5$Gordura)
 ```{r}
 cor(dados5$Tempo,dados5$Gordura)
 ```
-
 
 # Noções de Probabilidades
 
@@ -442,7 +435,7 @@ cor(dados5$Tempo,dados5$Gordura)
 -   Supondo que essa doença atinge 0.5% da população, qual o Valor Preditivo Positivo (VPP) e o Valor Preditivo Negativo (VPN)?
 -   Agora suponha que 15% da população tem essa doença, qual o Valor Preditivo Positivo (VPP) e o Valor Preditivo Negativo (VPN)?
 
-6. Uma caixa contém 5 bolas azuis e 2 pretas. Suponha um experimento que consiste em retirar duas bolas sucessivamente sem reposição. Seja uma variável aleatória $X$: "número de bolas azuis extraídas no experimento". Construa a distribuição de probabilidades de $X$. Calcule $E(X)$ e $Var(X)$.
+6.  Uma caixa contém 5 bolas azuis e 2 pretas. Suponha um experimento que consiste em retirar duas bolas sucessivamente sem reposição. Seja uma variável aleatória $X$: "número de bolas azuis extraídas no experimento". Construa a distribuição de probabilidades de $X$. Calcule $E(X)$ e $Var(X)$.
 
 7.  Suponha que você irá fazer um teste com quatro questões. Em cada questão há cinco alternativas, das quais apenas uma está correta. Qual a probabilidade de:
 
@@ -456,43 +449,43 @@ cor(dados5$Tempo,dados5$Gordura)
 
 ## Distribuição Normal
 
-1. Suponha que, numa dada população, o QI (Quociente de Inteligência) siga uma distribuição Normal com média 105 e variância 49. Calcule:
+1.  Suponha que, numa dada população, o QI (Quociente de Inteligência) siga uma distribuição Normal com média 105 e variância 49. Calcule:
 
-- a probabilidade de encontrarmos nessa população indivíduos com QI acima de 115.
+-   a probabilidade de encontrarmos nessa população indivíduos com QI acima de 115.
 
-- a quantidade de indivíduos que tem QI entre 90 e 100, dado que esta população é composta por 10000 sujeitos. 
+-   a quantidade de indivíduos que tem QI entre 90 e 100, dado que esta população é composta por 10000 sujeitos.
 
-- o valor mínimo de QI para que um indivíduo seja considerado super inteligente (considere que apenas 1\% da população seja super inteligente).
+-   o valor mínimo de QI para que um indivíduo seja considerado super inteligente (considere que apenas 1% da população seja super inteligente).
 
-2. As notas finais da disciplina de Estatística se distribuiem normalmente com méia 6.75 e variância 9. Se o valor para a aprovação é 6.00, responda:
+2.  As notas finais da disciplina de Estatística se distribuiem normalmente com méia 6.75 e variância 9. Se o valor para a aprovação é 6.00, responda:
 
-- qual a probabilidade de um aluno ser aprovado na disciplina?
+-   qual a probabilidade de um aluno ser aprovado na disciplina?
 
-- se a sala tem 40 alunos, quantos estarão aprovados?
+-   se a sala tem 40 alunos, quantos estarão aprovados?
 
-- qual a probabilidade de um aluno ser aprovado com média final maior que 8.00?
+-   qual a probabilidade de um aluno ser aprovado com média final maior que 8.00?
 
-3. Se uma dada espécie de peixe vive em média 550 dias (desvio padrão de 80 dias) em um aquário, responda:
+3.  Se uma dada espécie de peixe vive em média 550 dias (desvio padrão de 80 dias) em um aquário, responda:
 
-- qual a probabilidade de um peixe viver mais que 700 dias?
+-   qual a probabilidade de um peixe viver mais que 700 dias?
 
-- sabendo que 25\% dos peixes dessa população morrem antes de atingirem a fase reprodutiva, qual o tempo de vida de um peixe para atingir essa fase?
+-   sabendo que 25% dos peixes dessa população morrem antes de atingirem a fase reprodutiva, qual o tempo de vida de um peixe para atingir essa fase?
 
-4. Numa certa região há 6 mil empresas ligadas ao varejo. Suponha que o faturamento anual deste setor siga uma distribuição normal com média igual a 1.8 milhão de reais e desvio padrão de 0.7 milhão.
+4.  Numa certa região há 6 mil empresas ligadas ao varejo. Suponha que o faturamento anual deste setor siga uma distribuição normal com média igual a 1.8 milhão de reais e desvio padrão de 0.7 milhão.
 
-- qual a quantidade de empresas, nesta região, que faturam mais de 0.5 milhão de reais ao ano?
+-   qual a quantidade de empresas, nesta região, que faturam mais de 0.5 milhão de reais ao ano?
 
-- sabe-se que 3\% das empresas da região são consideradas grandes. Qual o valor mínimo faturado para que uma empresa seja considerada de grande porte?
+-   sabe-se que 3% das empresas da região são consideradas grandes. Qual o valor mínimo faturado para que uma empresa seja considerada de grande porte?
 
 # Distribuição amostral da média
 
-1. Seja X uma variável aleatória que segue um distribuição normal com média 110 e variância 100:
+1.  Seja X uma variável aleatória que segue um distribuição normal com média 110 e variância 100:
 
-- qual $P(100<X<120)$?
+-   qual $P(100<X<120)$?
 
-- se $\overline{X}$ for a média amostral de tamanho 9 dessa população, calcule $P(100<\overline{X}<120)$.
+-   se $\overline{X}$ for a média amostral de tamanho 9 dessa população, calcule $P(100<\overline{X}<120)$.
 
-- faça um gráfico com as distribuições de $X$ e $\overline{X}$.
+-   faça um gráfico com as distribuições de $X$ e $\overline{X}$.
 
 ```{r fig-den1, fig.cap=""}
 #| Label: fig-den1
@@ -508,22 +501,21 @@ legend("topright", legend=c("y1", "y2"), col=c("blue", "black"), lty=1)
 
 ```
 
+-   qual o tamanho da amostra para que $P(100<\overline{X}<120)=0.95$?
 
-- qual o tamanho da amostra para que $P(100<\overline{X}<120)=0.95$?
+2.  Para empacotar camaroes congelados você usa uma máquina em que a massa dos pacotes tem distribuição normal com média $\mu$ e desvio padrão 25g.
 
-2. Para empacotar camaroes congelados você usa uma máquina em que a massa dos pacotes tem distribuição normal com média $\mu$ e desvio padrão 25g.
+-   qual o valor da média ($\mu$) que você deve regular a máquina para que somente 5% dos pacotes tenham massa menor que 1000g?
 
-- qual o valor da média ($\mu$) que você deve regular a máquina para que somente 5\% dos pacotes tenham massa menor que 1000g?
+-   depois de regulada, você retira uma amostra de 5 pacotes. Qual a probabilidade da médias da amostra ser menor que 1000g?
 
-- depois de regulada, você retira uma amostra de 5 pacotes. Qual a probabilidade da médias da amostra ser menor que 1000g?
+3.  Como vendedor, interessa colocar valores mínimo e máximo para a massa dos pacotes oriundos da sua máquina, vista no exercício anterior. Você propõe que amostras de tamanho 5 não possam ter média menor que 990g, pois fere o código do consumidor, e nem maior que 1040g pois o seu negócio teria prejuizo. Caso o proposto não ocorra, você para a produção para regular novamente a máquina.
 
-3. Como vendedor, interessa colocar valores mínimo e máximo para a massa dos pacotes oriundos da sua máquina, vista no exercício anterior. Você propõe que amostras de tamanho 5 não possam ter média menor que 990g, pois fere o código do consumidor, e nem maior que 1040g pois o seu negócio teria prejuizo. Caso o proposto não ocorra, você para a produção para regular novamente a máquina.
+-   qual a probabilidade da produção ser parada?
 
-- qual a probabilidade da produção ser parada?
+-   se a máquina desregulou e a massa média dos pacotes agora é 1000g, qual a probabilidade da produção não ser interrompida?
 
-- se a máquina desregulou e a massa média dos pacotes agora é 1000g, qual a probabilidade da produção não ser interrompida?
-
-4. A massa dos usuários de um elevador com capacidade máxima de 600kg, segue uma distribuição normal com média de 72kg e variância 100. Qual a probabilidade desse elevador ter 8 pessoas e ultrapassar o seu limite?
+4.  A massa dos usuários de um elevador com capacidade máxima de 600kg, segue uma distribuição normal com média de 72kg e variância 100. Qual a probabilidade desse elevador ter 8 pessoas e ultrapassar o seu limite?
 
 # Intervalo de confiança
 
@@ -581,13 +573,13 @@ legend("topright", legend=c("y1", "y2"), col=c("blue", "black"), lty=1)
 
 13. Um agricultor produz soja em seis lotes. Neste ano produziu 1110, 812, 482, 2191, 2005 e 2338 sacas respectivamente em áreas de 30, 22, 12, 55, 50 e 62 ha. Considerando que a produtividade de soja segue uma distribuição normal, veja se a produtividade deste ano, para este agricultor, foi maior ou não que a média da região, ou seja, 36.8 sacas/ha ($\alpha=0.05$).
 
-14. Você trabalha numa empresa que produz tinta para calçadas, entre outras coisas. Como engenheiro, você está desenvolvendo uma nova formulação com o objetivo de reduzir o tempo de secagem que hoje é de 20 minutos. Essa nova formulação foi aplicada em 40 áreas e observou-se que o tempo médio para secagem foi de 17 minutos com desvio padrão igual a 3 minutos. Neste caso, você diria que a nova formulação foi mais eficaz ou não para o processo de secagem ($\alpha=0.05$)? 
+14. Você trabalha numa empresa que produz tinta para calçadas, entre outras coisas. Como engenheiro, você está desenvolvendo uma nova formulação com o objetivo de reduzir o tempo de secagem que hoje é de 20 minutos. Essa nova formulação foi aplicada em 40 áreas e observou-se que o tempo médio para secagem foi de 17 minutos com desvio padrão igual a 3 minutos. Neste caso, você diria que a nova formulação foi mais eficaz ou não para o processo de secagem ($\alpha=0.05$)?
 
 ## Para duas amostras
 
 ### Pareado
 
-1. Como nutricionista, você submete uma dieta ao longo de 15 dias para um grupo de 12 pessoas. Os dados amostrais antes e depois da dieta estão apresentados na @tbl-dieta1. Supondo normalidade (distribuição amostral da diferença entre médias), ao nivel de 5\%, podemos dizer que essa dieta diminuiu a massa média da população?
+1.  Como nutricionista, você submete uma dieta ao longo de 15 dias para um grupo de 12 pessoas. Os dados amostrais antes e depois da dieta estão apresentados na @tbl-dieta1. Supondo normalidade (distribuição amostral da diferença entre médias), ao nivel de 5%, podemos dizer que essa dieta diminuiu a massa média da população?
 
 ```{r tbl-dieta1, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
 #| label: tbl-dieta1
@@ -625,8 +617,7 @@ qt(0.95,11)
 
 ```
 
-
-2. Você, como engenheiro, quer verificar se um programa de segurança no trabalho será responsável pela diminuição das perdas semanais (horas/funcionário) devido à acidentes de trabalho em dez indústrias da sua região. Os dados das perda semanais (horas/funcionário), antes e depois do programa de segurança para as dez industrias estão apresentados na @tbl-industria1. Supondo normalidade, teste se o programa de segurança foi eficaz ou não ($\alpha=0.05$).
+2.  Você, como engenheiro, quer verificar se um programa de segurança no trabalho será responsável pela diminuição das perdas semanais (horas/funcionário) devido à acidentes de trabalho em dez indústrias da sua região. Os dados das perda semanais (horas/funcionário), antes e depois do programa de segurança para as dez industrias estão apresentados na @tbl-industria1. Supondo normalidade, teste se o programa de segurança foi eficaz ou não ($\alpha=0.05$).
 
 ```{r tbl-industria1, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
 #| label: tbl-industria1
@@ -664,8 +655,7 @@ qt(0.95,9)
 
 ```
 
-
-3. Duas marcas A e B de máquinas industriais são testadas por seis funcionários. O tempo para realizar a mesma operação estão apresentados na @tbl-industria2. Ao nível de significância de 5\%, podemos dizer que a máquina B é mais rápida ou não?
+3.  Duas marcas A e B de máquinas industriais são testadas por seis funcionários. O tempo para realizar a mesma operação estão apresentados na @tbl-industria2. Ao nível de significância de 5%, podemos dizer que a máquina B é mais rápida ou não?
 
 ```{r tbl-industria2, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
 #| label: tbl-industria2
@@ -703,10 +693,9 @@ qt(0.95,5)
 
 ```
 
-
 ### Não pareado
 
-1. Duas minas de carvão, A e B, são amostradas para se conhecer a capacidade de gerar calor do material proveniente delas. Essa capacidade em milhões de calorias por tonelada estão apresentadas na @tbl-minas1. Ao nível de significância de 5\% e supondo que os dados amostrais foram extraídos de populações normais, teste se há diferença entre as minas?
+1.  Duas minas de carvão, A e B, são amostradas para se conhecer a capacidade de gerar calor do material proveniente delas. Essa capacidade em milhões de calorias por tonelada estão apresentadas na @tbl-minas1. Ao nível de significância de 5% e supondo que os dados amostrais foram extraídos de populações normais, teste se há diferença entre as minas?
 
 ```{r tbl-minas1, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
 #| label: tbl-minas1
@@ -755,7 +744,6 @@ dd %>%
   kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 ```
 
-
 ```{r}
 Tempo   <- c(6,12,4,2,5,7,14,10)
 Gordura <- c(22,11,23,25,21,19,9,12)
@@ -771,7 +759,6 @@ par(mar=c(2.5,2.5,0.5,0.5), mgp=c(1.5,0.5,0))
 plot(Gordura~Tempo,data = dados5) 
 ```
 
-
 -   Calcule a covariância da amostra.
 
 ```{r}
@@ -784,13 +771,11 @@ cov(dados5$Tempo,dados5$Gordura)
 cor(dados5$Tempo,dados5$Gordura)
 ```
 
-
-- Estime os parâmetros da regressão. Calcule o coeficiente de determinação
+-   Estime os parâmetros da regressão. Calcule o coeficiente de determinação
 
 ```{r}
 summary(lm(Gordura~Tempo,dados5))
 ```
-
 
 ```{r fig-disp5, fig.cap="Diagrama de dispersão com a regressão."}
 par(bg="white")
@@ -798,7 +783,3 @@ par(mar=c(2.5,2.5,0.5,0.5), mgp=c(1.5,0.5,0))
 plot(Gordura~Tempo,data = dados5) 
 abline(lm(Gordura~Tempo,dados5))
 ```
-
-
-
-
