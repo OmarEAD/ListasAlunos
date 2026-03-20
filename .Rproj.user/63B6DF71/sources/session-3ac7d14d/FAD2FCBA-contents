@@ -122,7 +122,7 @@ barplot(frequencias,
 
 O resultado é esse: 
 
-```{r echo=FALSE, results='hide'}
+```{r fig-bar1, echo=FALSE, results='hide', fig.cap="Gráfico de barras."}
 
 # Dados da pesquisa
 regioes <- c("Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul")
@@ -162,7 +162,9 @@ legend("topright",
 ```
 :::
 
-```{r echo=FALSE, results='hide'}
+```{r fig-bar2, echo=FALSE, results='hide', fig.cap="Gráfico de setores."}
+
+
 # Dados da pesquisa
 regioes <- c("Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul")
 frequencias <- c(40, 60, 30, 50, 20)
