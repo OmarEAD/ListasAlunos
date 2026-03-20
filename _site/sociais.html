@@ -204,8 +204,11 @@ window.Quarto = {
   <li><a href="#como-calcular-a-proporção-em-variáveis-categóricas" id="toc-como-calcular-a-proporção-em-variáveis-categóricas" class="nav-link" data-scroll-target="#como-calcular-a-proporção-em-variáveis-categóricas">Como Calcular a Proporção em Variáveis Categóricas</a></li>
   </ul></li>
   <li><a href="#gráfico-de-barras" id="toc-gráfico-de-barras" class="nav-link" data-scroll-target="#gráfico-de-barras">Gráfico de Barras</a></li>
+  </ul></li>
+  <li><a href="#criar-gráfico-de-barras" id="toc-criar-gráfico-de-barras" class="nav-link" data-scroll-target="#criar-gráfico-de-barras">Criar gráfico de barras</a>
+  <ul class="collapse">
   <li><a href="#gráfico-de-setores" id="toc-gráfico-de-setores" class="nav-link" data-scroll-target="#gráfico-de-setores">Gráfico de setores</a></li>
-  <li><a href="#variável-categórica-ordinal-r" id="toc-variável-categórica-ordinal-r" class="nav-link" data-scroll-target="#variável-categórica-ordinal-r">Variável Categórica Ordinal R</a>
+  <li><a href="#variável-categórica-ordinal" id="toc-variável-categórica-ordinal" class="nav-link" data-scroll-target="#variável-categórica-ordinal">Variável Categórica Ordinal</a>
   <ul class="collapse">
   <li><a href="#atividade-distribuição-de-frequência---escolaridade" id="toc-atividade-distribuição-de-frequência---escolaridade" class="nav-link" data-scroll-target="#atividade-distribuição-de-frequência---escolaridade">Atividade: Distribuição de Frequência - Escolaridade</a></li>
   </ul></li>
@@ -393,6 +396,12 @@ No exemplo abaixo, temos uma pesquisa com 100 pessoas sobre <strong>frutas favor
 </section>
 <section id="gráfico-de-barras" class="level2">
 <h2 class="anchored" data-anchor-id="gráfico-de-barras">Gráfico de Barras</h2>
+<p>` regioes &lt;- c(“Norte”, “Nordeste”, “Centro-Oeste”, “Sudeste”, “Sul”) frequencias &lt;- c(40, 60, 30, 50, 20)</p>
+</section>
+</section>
+<section id="criar-gráfico-de-barras" class="level1">
+<h1>Criar gráfico de barras</h1>
+<p>barplot(frequencias, names.arg = regioes, col = c(“skyblue”, “lightgreen”, “orange”, “purple”, “pink”), main = “Distribuição de Frequência - Região de Residência”, xlab = “Região”, ylab = “Número de Pessoas”) `</p>
 <div class="cell" data-layout-align="center">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dados da pesquisa</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>regioes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Norte"</span>, <span class="st">"Nordeste"</span>, <span class="st">"Centro-Oeste"</span>, <span class="st">"Sudeste"</span>, <span class="st">"Sul"</span>)</span>
@@ -404,9 +413,7 @@ No exemplo abaixo, temos uma pesquisa com 100 pessoas sobre <strong>frutas favor
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"skyblue"</span>, <span class="st">"lightgreen"</span>, <span class="st">"orange"</span>, <span class="st">"purple"</span>, <span class="st">"pink"</span>),</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Distribuição de Frequência - Região de Residência"</span>,</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">"Região"</span>,</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Número de Pessoas"</span>)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Número de Pessoas"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -416,7 +423,6 @@ No exemplo abaixo, temos uma pesquisa com 100 pessoas sobre <strong>frutas favor
 </div>
 </div>
 </div>
-</section>
 <section id="gráfico-de-setores" class="level2">
 <h2 class="anchored" data-anchor-id="gráfico-de-setores">Gráfico de setores</h2>
 <div class="cell" data-layout-align="center">
@@ -445,8 +451,8 @@ No exemplo abaixo, temos uma pesquisa com 100 pessoas sobre <strong>frutas favor
 </div>
 </div>
 </section>
-<section id="variável-categórica-ordinal-r" class="level2">
-<h2 class="anchored" data-anchor-id="variável-categórica-ordinal-r">Variável Categórica Ordinal R</h2>
+<section id="variável-categórica-ordinal" class="level2">
+<h2 class="anchored" data-anchor-id="variável-categórica-ordinal">Variável Categórica Ordinal</h2>
 <p>Variáveis categóricas ordinais possuem categorias que seguem uma ordem lógica.<br>
 No exemplo abaixo, temos uma pesquisa sobre o <strong>grau de satisfação</strong> de clientes em relação a um serviço.<br>
 A tabela mostra a frequência absoluta, a proporção e o percentual de cada nível.</p>

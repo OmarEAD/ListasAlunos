@@ -100,6 +100,18 @@ Observe a Tabela abaixo, sobre a região de residência de 200 entrevistados que
 
 ## Gráfico de Barras
 
+` regioes <- c("Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul")
+frequencias <- c(40, 60, 30, 50, 20)
+
+# Criar gráfico de barras
+barplot(frequencias,
+        names.arg = regioes,
+        col = c("skyblue", "lightgreen", "orange", "purple", "pink"),
+        main = "Distribuição de Frequência - Região de Residência",
+        xlab = "Região",
+        ylab = "Número de Pessoas")
+ `
+
 ```{r}
 
 # Dados da pesquisa
@@ -114,12 +126,11 @@ barplot(frequencias,
         xlab = "Região",
         ylab = "Número de Pessoas")
 
-#
 ```
 
 ## Gráfico de setores
 
-```{r, results='hide'}
+```{r}
 # Dados da pesquisa
 regioes <- c("Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul")
 frequencias <- c(40, 60, 30, 50, 20)
@@ -139,7 +150,7 @@ legend("topright",
 ```
 
 
-## Variável Categórica Ordinal R
+## Variável Categórica Ordinal 
 
 Variáveis categóricas ordinais possuem categorias que seguem uma ordem lógica.  
 No exemplo abaixo, temos uma pesquisa sobre o **grau de satisfação** de clientes em relação a um serviço.  
