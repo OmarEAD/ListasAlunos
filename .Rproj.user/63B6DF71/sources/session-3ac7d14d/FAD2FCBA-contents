@@ -100,7 +100,7 @@ Observe a Tabela abaixo, sobre a região de residência de 200 entrevistados que
 
 ## Gráfico de Barras
 
-Veja abaixo os comando no R:
+Veja abaixo os comando no R e o resultado final:
 
 ```
 # Dados da pesquisa
@@ -129,6 +129,7 @@ barplot(frequencias,
         main = "Distribuição de Frequência - Região de Residência",
         xlab = "Região",
         ylab = "Número de Pessoas")
+# 
 
 ```
 
