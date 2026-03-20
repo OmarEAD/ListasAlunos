@@ -2,9 +2,9 @@
 title: "AED"
 author: "Omar C N Pereira"
 #date: 2022-01-01
-categories: ["R","Ciências Sociais"]
+categories: ["R","Análise descritiva"]
 tags: ["Ciências Sociais", 
-"Estatística descritiva", "Ciências Sociais"]
+"Estatística descritiva"]
 ---
 
 ```{r setup, include=FALSE}
@@ -237,8 +237,8 @@ Foi realizada uma pesquisa com 60 pessoas sobre o **tempo (em minutos)** que cad
 Os tempos variam entre **5 e 65 minutos**.
 
 1. Construa uma **tabela de distribuição de frequência** agrupando os dados em **classes de 10 minutos**.  
-   - Use a notação `a $\vdash$ b` para indicar os intervalos (limite inferior incluído, limite superior excluído).  
-   - Exemplo: `10 $\vdash$ 20` significa de 10 até 19 minutos.  
+   - Use a notação $a \vdash b$ para indicar os intervalos (limite inferior incluído, limite superior excluído).  
+   - Exemplo: $10 \vdash 20$ significa de 10 até 19 minutos.  
 
 2. Na tabela, inclua:
    - Frequência absoluta  
