@@ -100,6 +100,8 @@ Observe a Tabela abaixo, sobre a região de residência de 200 entrevistados que
 
 ## Gráfico de Barras
 
+Veja abaixo os comando no R:
+
 ```
 # Dados da pesquisa
 regioes <- c("Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul")
@@ -114,7 +116,7 @@ barplot(frequencias,
         ylab = "Número de Pessoas")
 ```
 
-```{r}
+```{r echo=FALSE}
 
 # Dados da pesquisa
 regioes <- c("Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul")
