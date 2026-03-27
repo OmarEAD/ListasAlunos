@@ -273,7 +273,7 @@ window.Quarto = {
 <li><p>Alguns funcionários de uma empresa decidiram participar de uma pesquisa para avaliar o tempo gasto para irem de casa ao trabalho usando o transporte coletivo e o automóvel próprio. Se você fosse o responsável por essa pesquisa, como a realizaria? De forma concisa descreva detalhes da coleta de dados e possíveis problemas que poderiam ocorrer.</p></li>
 <li><p>Considere o problema anterior. Suponha que você tenha coletado uma amostra do tempo (minutos) de translado de casa ao trabalho de 10 funcionários, ora indo de transporte coletivo, ora de carro próprio (<a href="#tbl-transp" class="quarto-xref">Table&nbsp;1</a>). Esse tipo de dados tem estrutura pareada (em breve estudaremos isto com detalhes).</p></li>
 </ol>
-<div id="tbl-transp" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-layout-align="center" data-tbl-cap-location="top">
+<div id="tbl-transp" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-tbl-cap-location="top" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-transp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1: Tempo gasto, em minutos, para 10 funcionários irem de casa até a empresa em que trabalham de duas maneiras, ou transporte coletivo (TC) ou automóvel próprio (AP).
@@ -434,7 +434,7 @@ Table&nbsp;1: Tempo gasto, em minutos, para 10 funcionários irem de casa até a
 <span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Dias do mês"</span>,</span>
 <span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">y=</span><span class="st">"Energia Produzida (kWh)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fig-energia" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-pos="!htb">
+<div id="fig-energia" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="!htb" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-energia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="lista_files/figure-html/fig-energia-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-pos="!htb" width="2400">
@@ -507,7 +507,7 @@ Figure&nbsp;1: Gráfico de barras para a energia produzida ao longo de 30 dias.
 <ol start="5" type="1">
 <li>Uma pesquisa mostrou que o brasileiro gasta em média R$234,19 por mês se alimentando fora de casa (dados fictícios). Os gastos mensais para se alimentar fora de casa referentes a uma amostra de 30 adolescentes estão apresentados na Tabela <a href="#tbl-adoles" class="quarto-xref">Table&nbsp;2</a>.</li>
 </ol>
-<div id="tbl-adoles" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-layout-align="center" data-tbl-cap-location="top">
+<div id="tbl-adoles" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-tbl-cap-location="top" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-adoles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;2: Gastos mensais de 30 adolescentes para se alimentarem fora de casa.
@@ -578,10 +578,10 @@ Table&nbsp;2: Gastos mensais de 30 adolescentes para se alimentarem fora de casa
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>           <span class="dv">342</span>,<span class="dv">337</span>,<span class="dv">334</span>,<span class="dv">321</span>,<span class="dv">322</span>,<span class="dv">299</span>,<span class="dv">335</span>,<span class="dv">320</span>,</span>
 <span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>           <span class="dv">338</span>,<span class="dv">330</span>,<span class="dv">323</span>,<span class="dv">330</span>,<span class="dv">332</span>,<span class="dv">342</span>,<span class="dv">346</span>,<span class="dv">317</span>,</span>
 <span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>           <span class="dv">326</span>,<span class="dv">319</span>,<span class="dv">333</span>,<span class="dv">339</span>,<span class="dv">311</span>,<span class="dv">344</span>)</span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>dados</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(dados)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 309 324 305 312 281 341 355 296 342 337 334 321 322 299 335 320 338 330 323
-[20] 330 332 342 346 317 326 319 333 339 311 344</code></pre>
+<pre><code> [1] 281 296 299 305 309 311 312 317 319 320 321 322 323 324 326 330 330 332 333
+[20] 334 335 337 338 339 341 342 342 344 346 355</code></pre>
 </div>
 </div>
 <ul>
@@ -595,7 +595,7 @@ Table&nbsp;2: Gastos mensais de 30 adolescentes para se alimentarem fora de casa
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Gasto (R$)'</span>, <span class="at">ylab =</span> <span class="st">'Frequência'</span>,</span>
 <span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylim =</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">8</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fig-hist1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-pos="!htb">
+<div id="fig-hist1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="!htb" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hist1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="lista_files/figure-html/fig-hist1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-pos="!htb" width="2400">
@@ -614,7 +614,7 @@ Figure&nbsp;2: Histograma da frequência absoluta dos gastos mensais de 30 adole
 <span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">'Gasto (R$)'</span>, <span class="at">ylab =</span> <span class="st">'Densidade'</span>,</span>
 <span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">probability =</span> T, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.025</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fig-hist2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-pos="!htb">
+<div id="fig-hist2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="!htb" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hist2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="lista_files/figure-html/fig-hist2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-pos="!htb" width="2400">
@@ -648,7 +648,7 @@ Figure&nbsp;3: Histograma (densidade) dos gastos mensais de 30 adolescentes para
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">2.5</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">mgp=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">0.5</span>,<span class="dv">0</span>))</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(dados, <span class="at">ylab =</span> <span class="st">"Gastos (R$)"</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fig-box1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-pos="!htb">
+<div id="fig-box1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="!htb" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-box1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="lista_files/figure-html/fig-box1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-pos="!htb" width="2400">
@@ -728,7 +728,7 @@ Table&nbsp;3: Receita das concecionárias A e B.
 <ol type="1">
 <li>Na <a href="#tbl-corr1" class="quarto-xref">Table&nbsp;4</a> é apresentado seis observações das variáveis <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>.</li>
 </ol>
-<div id="tbl-corr1" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-layout-align="center" data-tbl-cap-location="top">
+<div id="tbl-corr1" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-tbl-cap-location="top" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-corr1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;4: Seis observações das variáveis X e Y.
@@ -795,7 +795,7 @@ Table&nbsp;4: Seis observações das variáveis X e Y.
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">2.5</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">mgp=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">0.5</span>,<span class="dv">0</span>))</span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Y<span class="sc">~</span>X, dados3) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fig-disp" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-pos="!htb">
+<div id="fig-disp" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="!htb" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-disp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="lista_files/figure-html/fig-disp-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-pos="!htb" width="2400">
@@ -833,7 +833,7 @@ Figure&nbsp;5: Diagrama de dispersão.
 <ol start="2" type="1">
 <li>O diretor de uma escola quer saber se há associação entre a média escolar (<span class="math inline">\(ME\)</span>) e o desempenho em um simulado (<span class="math inline">\(SIM\)</span>). Na <a href="#tbl-corr2" class="quarto-xref">Table&nbsp;5</a> é apresentado uma amostra de seis alunos.</li>
 </ol>
-<div id="tbl-corr2" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-layout-align="center" data-tbl-cap-location="top">
+<div id="tbl-corr2" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-tbl-cap-location="top" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-corr2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;5: Seis observações das variáveis ME e SIM.
@@ -909,7 +909,7 @@ Table&nbsp;5: Seis observações das variáveis ME e SIM.
 <span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">2.5</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">mgp=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">0.5</span>,<span class="dv">0</span>))</span>
 <span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(SIM<span class="sc">~</span>ME,<span class="at">data =</span> dados4) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fig-disp2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-pos="!htb">
+<div id="fig-disp2" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="!htb" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-disp2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="lista_files/figure-html/fig-disp2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-pos="!htb" width="2400">
@@ -947,7 +947,7 @@ Figure&nbsp;6: Diagrama de dispersão.
 <ol start="3" type="1">
 <li><strong>Tempo de caminhada</strong> <span class="math inline">\(\times\)</span> <strong>Gordura corporal</strong>. Dados de tempo semanal de caminhada (horas) e a gordura corporal (%) de oito indivíduos do sexo masculino com idade acima de 60 anos são apresentados na <a href="#tbl-corr3" class="quarto-xref">Table&nbsp;6</a>.</li>
 </ol>
-<div id="tbl-corr3" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-layout-align="center" data-tbl-cap-location="top">
+<div id="tbl-corr3" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-tbl-cap-location="top" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-corr3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;6: Tempo de caminhada (horas) e gordura corporal (%) de oito indivíduos.
@@ -1033,7 +1033,7 @@ Table&nbsp;6: Tempo de caminhada (horas) e gordura corporal (%) de oito indivíd
 <span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">2.5</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">mgp=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">0.5</span>,<span class="dv">0</span>))</span>
 <span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Gordura<span class="sc">~</span>Tempo,<span class="at">data =</span> dados5) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fig-disp3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-pos="!htb">
+<div id="fig-disp3" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="!htb" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-disp3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="lista_files/figure-html/fig-disp3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-pos="!htb" width="2400">
@@ -1207,7 +1207,7 @@ Table&nbsp;7: Padrão-ouro para a sensibilidade e especificidade do teste diagn�
 <span id="cb69-7"><a href="#cb69-7" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(y2<span class="sc">~</span>x,<span class="at">type=</span><span class="st">"l"</span>,<span class="at">col=</span><span class="st">"black"</span>)</span>
 <span id="cb69-8"><a href="#cb69-8" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"y1"</span>, <span class="st">"y2"</span>), <span class="at">col=</span><span class="fu">c</span>(<span class="st">"blue"</span>, <span class="st">"black"</span>), <span class="at">lty=</span><span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fig-den1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-pos="!htb">
+<div id="fig-den1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="!htb" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-den1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="lista_files/figure-html/fig-den1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-pos="!htb" width="2400">
@@ -1285,7 +1285,7 @@ Figure&nbsp;8: Distribuições da v.a. e das médias amostrais de X (comando bá
 <ol type="1">
 <li>Como nutricionista, você submete uma dieta ao longo de 15 dias para um grupo de 12 pessoas. Os dados amostrais antes e depois da dieta estão apresentados na <a href="#tbl-dieta1" class="quarto-xref">Table&nbsp;8</a>. Supondo normalidade (distribuição amostral da diferença entre médias), ao nivel de 5%, podemos dizer que essa dieta diminuiu a massa média da população?</li>
 </ol>
-<div id="tbl-dieta1" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-layout-align="center" data-tbl-cap-location="top">
+<div id="tbl-dieta1" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-tbl-cap-location="top" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dieta1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;8: Massa, em kg, para 12 pacientes, antes e depois de uma dieta proposta.
@@ -1410,7 +1410,7 @@ mean difference
 <ol start="2" type="1">
 <li>Você, como engenheiro, quer verificar se um programa de segurança no trabalho será responsável pela diminuição das perdas semanais (horas/funcionário) devido à acidentes de trabalho em dez indústrias da sua região. Os dados das perda semanais (horas/funcionário), antes e depois do programa de segurança para as dez industrias estão apresentados na <a href="#tbl-industria1" class="quarto-xref">Table&nbsp;9</a>. Supondo normalidade, teste se o programa de segurança foi eficaz ou não (<span class="math inline">\(\alpha=0.05\)</span>).</li>
 </ol>
-<div id="tbl-industria1" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-layout-align="center" data-tbl-cap-location="top">
+<div id="tbl-industria1" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-tbl-cap-location="top" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-industria1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;9: Perdas semanais (horas/funcionário) em 10 indústrias, antes e depois de um programa de segurança do trabalho.
@@ -1527,7 +1527,7 @@ mean difference
 <ol start="3" type="1">
 <li>Duas marcas A e B de máquinas industriais são testadas por seis funcionários. O tempo para realizar a mesma operação estão apresentados na <a href="#tbl-industria2" class="quarto-xref">Table&nbsp;10</a>. Ao nível de significância de 5%, podemos dizer que a máquina B é mais rápida ou não?</li>
 </ol>
-<div id="tbl-industria2" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-layout-align="center" data-tbl-cap-location="top">
+<div id="tbl-industria2" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-tbl-cap-location="top" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-industria2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;10: Tempo registrado, em minutos, para a realização de uma mesma tarefa para seis funcionários.
@@ -1631,7 +1631,7 @@ mean difference
 <ol type="1">
 <li>Duas minas de carvão, A e B, são amostradas para se conhecer a capacidade de gerar calor do material proveniente delas. Essa capacidade em milhões de calorias por tonelada estão apresentadas na <a href="#tbl-minas1" class="quarto-xref">Table&nbsp;11</a>. Ao nível de significância de 5% e supondo que os dados amostrais foram extraídos de populações normais, teste se há diferença entre as minas?</li>
 </ol>
-<div id="tbl-minas1" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-layout-align="center" data-tbl-cap-location="top">
+<div id="tbl-minas1" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-tbl-cap-location="top" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-minas1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;11: Tempo registrado, em minutos, para a realização de uma mesma tarefa para seis funcionários.
@@ -1725,7 +1725,7 @@ mean of x mean of y
 <ol type="1">
 <li><strong>Tempo de caminhada</strong> <span class="math inline">\(\times\)</span> <strong>Gordura corporal</strong>. Dados de tempo semanal de caminhada (horas) e a gordura corporal (%) de oito indivíduos do sexo masculino com idade acima de 60 anos são apresentados na <a href="#tbl-corr3" class="quarto-xref">Table&nbsp;6</a>.</li>
 </ol>
-<div id="tbl-corr4" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-layout-align="center" data-tbl-cap-location="top">
+<div id="tbl-corr4" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-tbl-cap-location="top" data-layout-align="center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-corr4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;12: Tempo de caminhada (horas) e gordura corporal (%) de oito indivíduos.
@@ -1811,7 +1811,7 @@ Table&nbsp;12: Tempo de caminhada (horas) e gordura corporal (%) de oito indiví
 <span id="cb108-2"><a href="#cb108-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>,<span class="fl">2.5</span>,<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="at">mgp=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">0.5</span>,<span class="dv">0</span>))</span>
 <span id="cb108-3"><a href="#cb108-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Gordura<span class="sc">~</span>Tempo,<span class="at">data =</span> dados5) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fig-disp4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-pos="!htb">
+<div id="fig-disp4" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="!htb" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-disp4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="lista_files/figure-html/fig-disp4-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-pos="!htb" width="2400">
@@ -1873,7 +1873,7 @@ F-statistic: 148.8 on 1 and 6 DF,  p-value: 1.847e-05</code></pre>
 <span id="cb115-3"><a href="#cb115-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Gordura<span class="sc">~</span>Tempo,<span class="at">data =</span> dados5) </span>
 <span id="cb115-4"><a href="#cb115-4" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">lm</span>(Gordura<span class="sc">~</span>Tempo,dados5))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fig-disp5" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-pos="!htb">
+<div id="fig-disp5" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="!htb" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-disp5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="lista_files/figure-html/fig-disp5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" data-fig-pos="!htb" width="2400">

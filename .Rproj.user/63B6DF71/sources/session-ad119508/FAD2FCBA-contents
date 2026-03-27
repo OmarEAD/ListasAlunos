@@ -98,31 +98,50 @@ Observe a Tabela abaixo, sobre a região de residência de 200 entrevistados que
 | Sul          | 20         | 0.10      | 10%        |
 | **Total**    | **200**    | **1.00**  | **100%**   |
 
+
+
+
+
+
+```{r tbl-adoles, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
+#| label: tbl-regioes
+#| tbl-cap: "Distribuição por região."
+#| tbl-cap-location: top
+
+# Criando os dados
+regioes <- c("Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul", "Total")
+frequencia <- c(40, 60, 30, 50, 20, 200)
+proporcao <- c(0.20, 0.30, 0.15, 0.25, 0.10, 1.00)
+percentual <- c("20%", "30%", "15%", "25%", "10%", "100%")
+
+tabela <- data.frame(
+  Região = regioes,
+  Frequência = frequencia,
+  Proporção = proporcao,
+  Percentual = percentual
+)
+
+# Gerando a tabela
+kable(tabela, align = "c") %>%
+  kable_styling(full_width = FALSE,
+                bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  row_spec(6, bold = TRUE)  # deixa a linha do Total em negrito
+
+
+```
+
+
+
+
+
 ## Gráfico de Barras
 
 Veja os comando no R:
 
-::: {.codeblock style="background-color:#E6E6FA; padding:10px;"}
-
-```
-# Dados da pesquisa
-regioes <- c("Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul")
-frequencias <- c(40, 60, 30, 50, 20)
-
-# Criar gráfico de barras
-barplot(frequencias,
-        names.arg = regioes,
-        col = c("skyblue", "lightgreen", "orange", "purple", "pink"),
-        main = "Distribuição de Frequência - Região de Residência",
-        xlab = "Região",
-        ylab = "Número de Pessoas")
-```
-:::
-
 
 O resultado é esse: 
 
-```{r fig-bar1, echo=FALSE, results='hide', fig.cap="Gráfico de barras."}
+```{r fig-bar1, echo=TRUE, results='hide', fig.cap="Gráfico de barras."}
 
 # Dados da pesquisa
 regioes <- c("Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul")
@@ -141,28 +160,8 @@ barplot(frequencias,
 
 ## Gráfico de setores
 
-::: {.codeblock style="background-color:#E6E6FA; padding:10px;"}
-```
-# Dados da pesquisa
-regioes <- c("Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul")
-frequencias <- c(40, 60, 30, 50, 20)
 
-# Criar gráfico de setores
-pie(frequencias,
-    labels = regioes,
-    col = c("skyblue", "lightgreen", "orange", "purple", "pink"),
-    main = "Distribuição de Frequência - Região de Residência")
-
-# Adicionar legenda com valores
-legend("topright",
-       legend = paste(regioes, "-", frequencias, "pessoas"),
-       fill = c("skyblue", "lightgreen", "orange", "purple", "pink"),
-       cex = 0.8)
-
-```
-:::
-
-```{r fig-bar2, echo=FALSE, results='hide', fig.cap="Gráfico de setores."}
+```{r fig-bar2, echo=TRUE, results='hide', fig.cap="Gráfico de setores."}
 
 
 # Dados da pesquisa

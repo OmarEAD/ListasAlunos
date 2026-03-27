@@ -197,7 +197,7 @@ dados <- c(309,324,305,312,281,341,355,296,
            342,337,334,321,322,299,335,320,
            338,330,323,330,332,342,346,317,
            326,319,333,339,311,344)
-dados
+sort(dados)
 ```
 
 -   Faça uma tabela de distribuição de frequências (use o bom senso).
