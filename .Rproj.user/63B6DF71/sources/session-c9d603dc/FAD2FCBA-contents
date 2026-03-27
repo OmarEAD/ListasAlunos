@@ -689,7 +689,7 @@ hist(dados, probability=T)
 
 ## Atividade 
 
-Considere os seguintes dados, que representam o tempo de estudo diário (em minutos) de um grupo de 25 estudantes:
+Considere os seguintes dados, que representam o tempo de estudos diário (em minutos) de um grupo de 25 estudantes:
 
 ```{r}
 dados <- c(12, 18, 25, 30, 22,
@@ -697,11 +697,12 @@ dados <- c(12, 18, 25, 30, 22,
            18, 25, 27, 32, 16,
            22, 24, 19, 21, 29,
            33, 26, 17, 23, 31)
+sort(dados)
 ```
 
 ### Parte 1 — Distribuição de Frequência
 
-1. Organize os dados em intervalos de classe de amplitude 5 (por exemplo: 10 $\dashv$ 15, 15 $\dashv$ 20, 20 $\dashv$ 25, etc.).
+1. Organize os dados em intervalos de classe de amplitude 6 (por exemplo: 10 $\dashv$ 15, 15 $\dashv$ 20, 20 $\dashv$ 25, etc.).
 2. Construa a tabela de distribuição de frequências, contendo:
 - Intervalo de tempo
 - Frequência absoluta
@@ -718,6 +719,55 @@ dados <- c(12, 18, 25, 30, 22,
 
 ::: {.callout-tip collapse="true"}
 ## 💡 Clique aqui para ver a resposta
+
+
+```{r tbl-histFA, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
+#| label: tbl-histFA
+#| tbl-cap: "Distribuição de Frequências."
+#| tbl-cap-location: top
+# Dados
+dados <- c(12, 18, 25, 30, 22,
+           15, 28, 35, 40, 20,
+           18, 25, 27, 32, 16,
+           22, 24, 19, 21, 29,
+           33, 26, 17, 23, 31)
+
+# Intervalos com LaTeX
+intervalos <- c(
+  "\\(10 \\dashv 15\\)",
+  "\\(15 \\dashv 20\\)",
+  "\\(20 \\dashv 25\\)",
+  "\\(25 \\dashv 30\\)",
+  "\\(30 \\dashv 35\\)",
+  "\\(35 \\dashv 40\\)"
+)
+
+# Frequências corretas
+frequencia <- c(2, 6, 7, 5, 4, 1)
+
+# Total
+total <- sum(frequencia)
+
+# Proporção e porcentagem
+prop <- frequencia / total
+perc <- paste0(round(prop * 100, 1), "%")
+
+# Montando tabela com linha de Total
+tabela_tempo <- data.frame(
+  "Intervalo de Tempo" = c(intervalos, "Total"),
+  "Frequência" = c(frequencia, total),
+  "Proporção" = c(round(prop, 3), 1.000),
+  "Porcentagem" = c(perc, "100%"),
+  check.names = FALSE
+)
+
+# Gerando a tabela
+kable(tabela_tempo, align = "c", escape = FALSE) %>%
+  kable_styling(full_width = FALSE,
+                bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  row_spec(nrow(tabela_tempo), bold = TRUE)
+
+```
 
 ```{r fig-histFA, fig.cap="Histograma - Frequência Absoluta."}
 hist(dados,
