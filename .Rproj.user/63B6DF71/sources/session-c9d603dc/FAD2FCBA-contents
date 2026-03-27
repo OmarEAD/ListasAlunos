@@ -446,10 +446,11 @@ kable(tabela_idade, align = "c", escape = FALSE) %>%   # escape=FALSE para rende
 
 ```
 
+- A notação $a\vdash b$ indica que o intervalo **inclui o valor inicial** $a$ e se estende até $b$, sem incluir $b$.
+- Já a notação $a\dashv b$ significa que o intervalo **exclui o valor inicial** $a$, mas inclui o valor final $b$.
+- A escolha entre $a\vdash b$ e $a\dashv b$ é uma convenção. No entanto, a segunda forma ($a\dashv b$) é a utilizada por padrão (*default*) pelo *software* **R**.
+- A **frequência acumulada** mostra o total (ou porcentagem) de observações até determinado intervalo, permitindo visualizar a progressão dos dados ao longo das classes.
 
-- A notação $a \vdash b$ significa que o intervalo inclui **a** e vai até **b**, sem incluir **b**.  
-- Exemplo: $20 \vdash 30$ representa idades de 20 até 29 anos.  
-- A frequência acumulada mostra a porcentagem de pessoas até determinado intervalo.  
 
 A definição do número de classes em uma distribuição de frequências não é totalmente rígida: depende da natureza dos dados e da experiência do pesquisador. No entanto, algumas orientações ajudam a evitar distorções. Se o número de classes for muito pequeno, a síntese dos dados se torna excessiva e informações importantes podem se perder. Por outro lado, se houver muitas classes, o objetivo de simplificar e resumir os dados fica comprometido.
 Por isso, recomenda-se adotar um número intermediário de classes, geralmente entre 5 e 15, com amplitudes iguais, de modo a equilibrar clareza e precisão na análise.
