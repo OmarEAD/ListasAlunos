@@ -683,7 +683,7 @@ hist(dados)
 Também podemos representar os mesmos dados em termos de densidade, ou seja, ajustando as alturas das barras de modo que a área total do histograma seja igual a 1. Nesse caso, o eixo vertical mostra a densidade em vez da contagem absoluta:
 
 
-```{r}
+```{r fig-hist2, echo=TRUE, results='hide', fig.cap="Histograma"}
 hist(dados, probability=T)
 ```
 
