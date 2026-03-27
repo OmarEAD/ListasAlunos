@@ -741,7 +741,6 @@ hist(dados,
 lines(density(dados), col = "red", lwd = 2)
 ```
 
-
 :::
 
 
