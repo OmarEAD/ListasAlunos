@@ -106,6 +106,10 @@ Observe a Tabela abaixo, sobre a região de residência de 200 entrevistados que
      $$
      \text{Proporção} = \frac{\text{Frequência da categoria}}{\text{Total de observações}}
      $$
+     
+$$
+\scriptsize \text{Proporção} = \frac{\text{Frequência da categoria}}{\text{Total de observações}}
+$$
 
 4. **Interprete o resultado**  
    - O valor estará entre 0 e 1.  
