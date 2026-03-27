@@ -48,14 +48,47 @@ library(dplyr)
 A distribuição de frequência organiza dados categóricos, mostrando quantas vezes cada categoria aparece em um conjunto de observações. Isso facilita a análise de padrões e preferências.  
 No exemplo abaixo, temos uma pesquisa com 100 pessoas sobre **frutas favoritas**. A tabela apresenta a frequência absoluta, a proporção (em forma decimal) e o percentual de cada categoria.
 
-| Categoria   | Frequência | Proporção | Percentual |
-|-------------|------------|-----------|------------|
-| Maçã        | 25         | 0.25      | 25%        |
-| Banana      | 30         | 0.30      | 30%        |
-| Laranja     | 20         | 0.20      | 20%        |
-| Uva         | 15         | 0.15      | 15%        |
-| Manga       | 10         | 0.10      | 10%        |
-| **Total**   | **100**    | **1.00**  | **100%**   |
+
+```{r tbl-frutas, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
+#| label: tbl-frutas
+#| tbl-cap: "Distribuição por categoria de frutas."
+#| tbl-cap-location: top
+
+# Dados das categorias
+categorias <- c("Maçã", "Banana", "Laranja", "Uva", "Manga")
+frequencia <- c(25, 30, 20, 15, 10)
+
+# Cálculo do total
+total <- sum(frequencia)
+
+# Proporção e percentual
+prop <- frequencia / total
+perc <- paste0(round(prop * 100, 2), "%")
+
+# Montando a tabela com linha de Total
+tabela_frutas <- rbind(
+  data.frame(
+    Categoria = categorias,
+    Frequência = frequencia,
+    Proporção = round(prop, 2),
+    Percentual = perc
+  ),
+  data.frame(
+    Categoria = "Total",
+    Frequência = total,
+    Proporção = 1.00,
+    Percentual = "100%"
+  )
+)
+
+# Gerando a tabela
+kable(tabela_frutas, align = "c") %>%
+  kable_styling(full_width = FALSE,
+                bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  row_spec(nrow(tabela_frutas), bold = TRUE)  # destaca a última linha
+
+
+```
 
 
 ### Como Calcular a Proporção em Variáveis Categóricas
@@ -89,21 +122,8 @@ Observe a Tabela abaixo, sobre a região de residência de 200 entrevistados que
      $$
 
 
-| Região       | Frequência | Proporção | Percentual |
-|--------------|------------|-----------|------------|
-| Norte        | 40         | 0.20      | 20%        |
-| Nordeste     | 60         | 0.30      | 30%        |
-| Centro-Oeste | 30         | 0.15      | 15%        |
-| Sudeste      | 50         | 0.25      | 25%        |
-| Sul          | 20         | 0.10      | 10%        |
-| **Total**    | **200**    | **1.00**  | **100%**   |
 
-
-
-
-
-
-```{r tbl-adoles, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
+```{r tbl-regioes, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
 #| label: tbl-regioes
 #| tbl-cap: "Distribuição por região."
 #| tbl-cap-location: top
@@ -131,15 +151,8 @@ kable(tabela, align = "c") %>%
 ```
 
 
-
-
-
 ## Gráfico de Barras
 
-Veja os comando no R:
-
-
-O resultado é esse: 
 
 ```{r fig-bar1, echo=TRUE, results='hide', fig.cap="Gráfico de barras."}
 
@@ -190,26 +203,96 @@ No exemplo abaixo, temos uma pesquisa sobre o **grau de satisfação** de client
 A tabela mostra a frequência absoluta, a proporção e o percentual de cada nível.
 
 
-| Grau de Satisfação | Frequência | Proporção | Percentual |
-|--------------------|------------|-----------|------------|
-| Muito insatisfeito | 10         | 0.083     | 8.3%       |
-| Insatisfeito       | 20         | 0.167     | 16.7%      |
-| Neutro             | 30         | 0.250     | 25.0%      |
-| Satisfeito         | 40         | 0.333     | 33.3%      |
-| Muito satisfeito   | 20         | 0.167     | 16.7%      |
-| **Total**          | **120**    | **1.00**  | **100%**   |
+```{r tbl-satisfacao, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
+#| label: tbl-satisfacao
+#| tbl-cap: "Distribuição por grau de satisfação."
+#| tbl-cap-location: top
+# Dados
+categorias <- c("Muito insatisfeito", "Insatisfeito", "Neutro", "Satisfeito", "Muito satisfeito")
+frequencia <- c(10, 20, 30, 40, 20)
+
+# Total
+total <- sum(frequencia)
+
+# Proporção e percentual
+prop <- frequencia / total
+perc <- paste0(round(prop * 100, 1), "%")
+
+# Montando tabela com linha de Total
+tabela_satisfacao <- rbind(
+  data.frame(
+    "Grau de Satisfação" = categorias,
+    "Frequência" = frequencia,
+    "Proporção" = round(prop, 3),
+    "Percentual" = perc,
+    check.names = FALSE
+  ),
+  data.frame(
+    "Grau de Satisfação" = "Total",
+    "Frequência" = total,
+    "Proporção" = 1.00,
+    "Percentual" = "100%",
+    check.names = FALSE
+  )
+)
+
+# Gerando a tabela
+kable(tabela_satisfacao, align = "c") %>%
+  kable_styling(full_width = FALSE,
+                bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  row_spec(nrow(tabela_satisfacao), bold = TRUE)  # destaca a linha do Total
+
+
+```
+
+
 
 Neste exemplo, a ordem foi invertida para destacar primeiro os níveis mais altos de satisfação. Essa escolha é mais interessante porque, conforme a tabela abaixo, observamos que na linha correspondente ao grau de satisfação **Satisfeito** aparece o valor de 50%. Isso significa que metade das pessoas entrevistadas está **ao menos satisfeita ou mais** com o serviço oferecido, o que fornece uma leitura direta e prática sobre o nível de satisfação dos clientes.
 
-| Grau de Satisfação | Frequência | Freq. Acumulada | Percentual Acumulado |
-|--------------------|------------|-----------------|----------------------|
-| Muito satisfeito   | 20         | 20              | 16.7%                |
-| Satisfeito         | 40         | 60              | 50.0%                |
-| Neutro             | 30         | 90              | 75.0%                |
-| Insatisfeito       | 20         | 110             | 91.7%                |
-| Muito insatisfeito | 10         | 120             | 100%                 |
-| **Total**          | **120**    | **120**         | **100%**             |
 
+```{r tbl-satisfacaoacumulada, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
+#| label: tbl-satisfacaoacumulada
+#| tbl-cap: "Distribuição acumulada por grau de satisfação."
+#| tbl-cap-location: top
+# Dados
+categorias <- c("Muito satisfeito", "Satisfeito", "Neutro", "Insatisfeito", "Muito insatisfeito")
+frequencia <- c(20, 40, 30, 20, 10)
+
+# Total
+total <- sum(frequencia)
+
+# Frequência acumulada
+freq_acum <- cumsum(frequencia)
+
+# Percentual acumulado
+perc_acum <- paste0(round(freq_acum / total * 100, 1), "%")
+
+# Montando tabela com linha de Total
+tabela_satisfacao_acum <- rbind(
+  data.frame(
+    "Grau de Satisfação" = categorias,
+    "Frequência" = frequencia,
+    "Freq. Acumulada" = freq_acum,
+    "Percentual Acumulado" = perc_acum,
+    check.names = FALSE
+  ),
+  data.frame(
+    "Grau de Satisfação" = "Total",
+    "Frequência" = total,
+    "Freq. Acumulada" = total,
+    "Percentual Acumulado" = "100%",
+    check.names = FALSE
+  )
+)
+
+# Gerando a tabela
+kable(tabela_satisfacao_acum, align = "c") %>%
+  kable_styling(full_width = FALSE,
+                bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  row_spec(nrow(tabela_satisfacao_acum), bold = TRUE)  # destaca a linha do Total
+
+
+```
 
 
 ### Atividade: Distribuição de Frequência - Escolaridade
@@ -234,20 +317,63 @@ Explique os resultados obtidos:
 - Por exemplo: ao observar a linha do **Ensino Médio**, vemos que 64,3% das pessoas possuem **Ensino Médio ou níveis superiores**.  
 
 
+
+
 ::: {.callout-tip collapse="true"}
 ## 💡 Clique aqui para ver a tabela
 
 
-| Nível de Ensino       | Frequência | Proporção | Porcentagem | Freq. Acumulada (%) |
-|-----------------------|------------|-----------|-------------|---------------------|
-| Pós-graduação         | 500        | 0.071     | 7.1%        | 7.1%                |
-| Ensino Superior       | 1500       | 0.214     | 21.4%       | 28.6%               |
-| Ensino Médio          | 2500       | 0.357     | 35.7%       | 64.3%               |
-| Ensino Fundamental II | 2000       | 0.286     | 28.6%       | 92.9%               |
-| Ensino Fundamental I  | 1000       | 0.143     | 14.3%       | 100%                |
-| **Total**             | **7000**   | **1.00**  | **100%**    | **100%** 
+```{r tbl-ensino, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
+#| label: tbl-ensino
+#| tbl-cap: "Distribuição por nível de ensino."
+#| tbl-cap-location: top
+# Dados
+categorias <- c("Pós-graduação", "Ensino Superior", "Ensino Médio",
+                "Ensino Fundamental II", "Ensino Fundamental I")
+frequencia <- c(500, 1500, 2500, 2000, 1000)
+
+# Total
+total <- sum(frequencia)
+
+# Proporção e porcentagem
+prop <- frequencia / total
+perc <- paste0(round(prop * 100, 1), "%")
+
+# Frequência acumulada e percentual acumulado
+freq_acum <- cumsum(frequencia)
+perc_acum <- paste0(round(freq_acum / total * 100, 1), "%")
+
+# Montando tabela com linha de Total
+tabela_ensino <- rbind(
+  data.frame(
+    "Nível de Ensino" = categorias,
+    "Frequência" = frequencia,
+    "Proporção" = round(prop, 3),
+    "Porcentagem" = perc,
+    "Freq. Acumulada (%)" = perc_acum,
+    check.names = FALSE
+  ),
+  data.frame(
+    "Nível de Ensino" = "Total",
+    "Frequência" = total,
+    "Proporção" = 1.00,
+    "Porcentagem" = "100%",
+    "Freq. Acumulada (%)" = "100%",
+    check.names = FALSE
+  )
+)
+
+# Gerando a tabela
+kable(tabela_ensino, align = "c") %>%
+  kable_styling(full_width = FALSE,
+                bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  row_spec(nrow(tabela_ensino), bold = TRUE)  # destaca a linha do Total
+
+```
+
 
 :::
+
 
 
 ## Variável Numérica
@@ -260,16 +386,64 @@ Os dados foram agrupados em intervalos de 10 anos, usando a notação $\vdash$ p
 - A **proporção** e a **porcentagem** indicam o peso relativo de cada intervalo em relação ao total.  
 - A **frequência acumulada (%)** mostra a porcentagem de pessoas até determinado intervalo.  
   - Exemplo: até 39 anos, temos 53% das pessoas.  
+  
 
-| Intervalo de Idade | Frequência | Proporção | Porcentagem | Freq. Acumulada (%) |
-|--------------------|------------|-----------|-------------|---------------------|
-| 10 $\vdash$ 20          | 8          | 0.08      | 8%          | 8%                  |
-| 20 $\vdash$ 30          | 20         | 0.20      | 20%         | 28%                 |
-| 30 $\vdash$ 40          | 25         | 0.25      | 25%         | 53%                 |
-| 40 $\vdash$ 50          | 22         | 0.22      | 22%         | 75%                 |
-| 50 $\vdash$ 60          | 15         | 0.15      | 15%         | 90%                 |
-| 60 $\vdash$ 70          | 10         | 0.10      | 10%         | 100%                |
-| **Total**          | **100**    | **1.00**  | **100%**    | **100%**            |
+
+```{r tbl-idade, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
+#| label: tbl-idade
+#| tbl-cap: "Distribuição por intervalo de idade."
+#| tbl-cap-location: top
+# Dados
+intervalos <- c(
+  "\\(10 \\vdash 20\\)",
+  "\\(20 \\vdash 30\\)",
+  "\\(30 \\vdash 40\\)",
+  "\\(40 \\vdash 50\\)",
+  "\\(50 \\vdash 60\\)",
+  "\\(60 \\vdash 70\\)"
+)
+frequencia <- c(8, 20, 25, 22, 15, 10)
+
+# Total
+total <- sum(frequencia)
+
+# Proporção e porcentagem
+prop <- frequencia / total
+perc <- paste0(round(prop * 100, 1), "%")
+
+# Frequência acumulada e percentual acumulado
+freq_acum <- cumsum(frequencia)
+perc_acum <- paste0(round(freq_acum / total * 100, 1), "%")
+
+# Montando tabela com linha de Total
+tabela_idade <- rbind(
+  data.frame(
+    "Intervalo de Idade" = intervalos,
+    "Frequência" = frequencia,
+    "Proporção" = round(prop, 2),
+    "Porcentagem" = perc,
+    "Freq. Acumulada (%)" = perc_acum,
+    check.names = FALSE
+  ),
+  data.frame(
+    "Intervalo de Idade" = "Total",
+    "Frequência" = total,
+    "Proporção" = 1.00,
+    "Porcentagem" = "100%",
+    "Freq. Acumulada (%)" = "100%",
+    check.names = FALSE
+  )
+)
+
+# Gerando a tabela
+kable(tabela_idade, align = "c", escape = FALSE) %>%   # escape=FALSE para renderizar LaTeX ($\vdash$)
+  kable_styling(full_width = FALSE,
+                bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  row_spec(nrow(tabela_idade), bold = TRUE)  # destaca a linha do Total
+
+
+```
+
 
 - A notação $a \vdash b$ significa que o intervalo inclui **a** e vai até **b**, sem incluir **b**.  
 - Exemplo: $20 \vdash 30$ representa idades de 20 até 29 anos.  
@@ -298,33 +472,114 @@ Os tempos variam entre **5 e 65 minutos**.
    - O que a frequência acumulada revela sobre o perfil dos deslocamentos?  
 
 
-| Intervalo de Tempo | Frequência | Proporção | Porcentagem | Freq. Acumulada (%) |
-|--------------------|------------|-----------|-------------|---------------------|
-|  0 $\vdash$ 10     | 5         | ...       | ...         | ...                 |
-| 10 $\vdash$ 20     | 12        | ...       | ...         | ...                 |
-| 20 $\vdash$ 30     | 15        | ...       | ...         | ...                 |
-| 30 $\vdash$ 40     | 10        | ...       | ...         | ...                 |
-| 40 $\vdash$ 50     | 8         | ...       | ...         | ...                 |
-| 50 $\vdash$ 60     | 6         | ...       | ...         | ...                 |
-| 60 $\vdash$ 70     | 4         | ...       | ...         | ...                 |
-| **Total**          | **60**     | **1.00**  | **100%**    | **100%**            |
+```{r tbl-tempo, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
+#| label: tbl-tempo
+#| tbl-cap: "Distribuição por intervalo de tempo."
+#| tbl-cap-location: top
+# Dados
+intervalos <- c(
+  "\\(0 \\vdash 10\\)",
+  "\\(10 \\vdash 20\\)",
+  "\\(20 \\vdash 30\\)",
+  "\\(30 \\vdash 40\\)",
+  "\\(40 \\vdash 50\\)",
+  "\\(50 \\vdash 60\\)",
+  "\\(60 \\vdash 70\\)"
+)
+frequencia <- c(5, 12, 15, 10, 8, 6, 4)
+# Montando tabela com colunas incompletas
+tabela_exercicio <- rbind(
+  data.frame(
+    "Intervalo de Tempo" = intervalos,
+    "Frequência" = frequencia,
+    "Proporção" = "...",
+    "Porcentagem" = "...",
+    "Freq. Acumulada (%)" = "...",
+    check.names = FALSE
+  ),
+  data.frame(
+    "Intervalo de Tempo" = "Total",
+    "Frequência" = sum(frequencia),
+    "Proporção" = "1.00",
+    "Porcentagem" = "100%",
+    "Freq. Acumulada (%)" = "100%",
+    check.names = FALSE
+  )
+)
+
+# Gerando a tabela
+kable(tabela_exercicio, align = "c", escape = FALSE) %>%
+  kable_styling(full_width = FALSE,
+                bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  row_spec(nrow(tabela_exercicio), bold = TRUE)  # destaca a linha do Total
+
+
+```
 
 
 ::: {.callout-tip collapse="true"}
 ## 💡 Clique aqui para ver a resposta
 
 
+```{r tbl-tempocompleto, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
+#| label: tbl-tempocompleto
+#| tbl-cap: "Distribuição por intervalo de tempo."
+#| tbl-cap-location: top
+# Intervalos com LaTeX
+intervalos <- c(
+  "\\(0 \\vdash 10\\)",
+  "\\(10 \\vdash 20\\)",
+  "\\(20 \\vdash 30\\)",
+  "\\(30 \\vdash 40\\)",
+  "\\(40 \\vdash 50\\)",
+  "\\(50 \\vdash 60\\)",
+  "\\(60 \\vdash 70\\)"
+)
 
-| Intervalo de Tempo | Frequência | Proporção | Porcentagem | Freq. Acumulada (%) |
-|--------------------|------------|-----------|-------------|---------------------|
-|  0 $\vdash$ 10     | 5          | 0.083     | 8.3%        | 8.3%                |
-| 10 $\vdash$ 20     | 12         | 0.200     | 20.0%       | 28.3%               |
-| 20 $\vdash$ 30     | 15         | 0.250     | 25.0%       | 53.3%               |
-| 30 $\vdash$ 40     | 10         | 0.167     | 16.7%       | 70.0%               |
-| 40 $\vdash$ 50     | 8          | 0.133     | 13.3%       | 83.3%               |
-| 50 $\vdash$ 60     | 6          | 0.100     | 10.0%       | 93.3%               |
-| 60 $\vdash$ 70     | 4          | 0.067     | 6.7%        | 100%                |
-| **Total**          | **60**     | **1.00**  | **100%**    | **100%**            |
+# Frequências
+frequencia <- c(5, 12, 15, 10, 8, 6, 4)
+
+# Total
+total <- sum(frequencia)
+
+# Proporção e porcentagem
+prop <- frequencia / total
+perc <- paste0(round(prop * 100, 1), "%")
+
+# Frequência acumulada e percentual acumulado
+freq_acum <- cumsum(frequencia)
+perc_acum <- paste0(round(freq_acum / total * 100, 1), "%")
+
+# Montando tabela com linha de Total
+tabela_tempo <- rbind(
+  data.frame(
+    "Intervalo de Tempo" = intervalos,
+    "Frequência" = frequencia,
+    "Proporção" = round(prop, 3),
+    "Porcentagem" = perc,
+    "Freq. Acumulada (%)" = perc_acum,
+    check.names = FALSE
+  ),
+  data.frame(
+    "Intervalo de Tempo" = "Total",
+    "Frequência" = total,
+    "Proporção" = 1.00,
+    "Porcentagem" = "100%",
+    "Freq. Acumulada (%)" = "100%",
+    check.names = FALSE
+  )
+)
+
+# Gerando a tabela
+kable(tabela_tempo, align = "c", escape = FALSE) %>%
+  kable_styling(full_width = FALSE,
+                bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  row_spec(nrow(tabela_tempo), bold = TRUE)  # destaca a linha do Total
+
+
+```
+
+
 
 #### Análise dos Resultados
 
