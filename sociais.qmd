@@ -451,6 +451,9 @@ kable(tabela_idade, align = "c", escape = FALSE) %>%   # escape=FALSE para rende
 - Exemplo: $20 \vdash 30$ representa idades de 20 até 29 anos.  
 - A frequência acumulada mostra a porcentagem de pessoas até determinado intervalo.  
 
+A definição do número de classes em uma distribuição de frequências não é totalmente rígida: depende da natureza dos dados e da experiência do pesquisador. No entanto, algumas orientações ajudam a evitar distorções. Se o número de classes for muito pequeno, a síntese dos dados se torna excessiva e informações importantes podem se perder. Por outro lado, se houver muitas classes, o objetivo de simplificar e resumir os dados fica comprometido.
+Por isso, recomenda-se adotar um número intermediário de classes, geralmente entre 5 e 15, com amplitudes iguais, de modo a equilibrar clareza e precisão na análise.
+
 
 ### Atividade: Distribuição de Frequência - Tempo de deslocamento
 
