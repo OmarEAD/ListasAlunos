@@ -598,6 +598,102 @@ A análise mostra que a maior parte da população pesquisada tem deslocamentos 
 
 :::
 
+# Histograma
+
+O histograma é um tipo de gráfico de barras justapostas que permite visualizar a distribuição de um conjunto de dados. Cada barra representa uma classe (intervalo), e sua altura corresponde à frequência de observações naquele intervalo.
+Aqui, vamos construir o histograma a partir dos dados referentes ao tempo de deslocamento de casa para o trabalho em uma amostra de 20 pessoas:
+
+
+```{r}
+# Dados
+dados <- c(11, 33, 25, 14, 22,
+           23, 28, 18, 17, 29,
+           30, 26, 26, 23, 14,
+           17, 22, 19, 25, 15)
+sort(dados)
+```
+
+Em seguida, elaboraremos a tabela de distribuição de frequências, utilizando o símbolo matemático $\dashv$  para indicar os limites dos intervalos, em vez de $\vdash$. Essa tabela servirá de base para a construção do histograma.
+
+
+```{r tbl-transito, echo=FALSE, fig.pos="!H",out.extra = "", results='asis', fig.cap=""}
+#| label: tbl-transito
+#| tbl-cap: "Distribuição de frequência do tempo de deslocamento."
+#| tbl-cap-location: top
+# Dados
+dados <- c(11, 33, 25, 14, 22,
+           23, 28, 18, 17, 29,
+           30, 26, 26, 23, 14,
+           17, 22, 19, 25, 15)
+
+# Intervalos com LaTeX
+intervalos <- c(
+  "\\(10 \\dashv 15\\)",
+  "\\(15 \\dashv 20\\)",
+  "\\(20 \\dashv 25\\)",
+  "\\(25 \\dashv 30\\)",
+  "\\(30 \\dashv 35\\)"
+)
+
+# Frequências corretas
+frequencia <- c(4, 4, 6, 5, 1)
+
+# Total
+total <- sum(frequencia)
+
+# Proporção e porcentagem
+prop <- frequencia / total
+perc <- paste0(round(prop * 100, 1), "%")
+
+# Montando tabela com linha de Total
+tabela_tempo <- data.frame(
+  "Intervalo de Tempo" = c(intervalos, "Total"),
+  "Frequência" = c(frequencia, total),
+  "Proporção" = c(round(prop, 3), 1.000),
+  "Porcentagem" = c(perc, "100%"),
+  check.names = FALSE
+)
+
+# Gerando a tabela
+kable(tabela_tempo, align = "c", escape = FALSE) %>%
+  kable_styling(full_width = FALSE,
+                bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  row_spec(nrow(tabela_tempo), bold = TRUE)
+
+
+```
+
+
+Façamos agora um histograma com a frequência absoluta.
+
+
+```{r fig-hist1, echo=TRUE, results='hide', fig.cap="Histograma"}
+# Dados
+dados <- c(11, 33, 25, 14, 22,
+           23, 28, 18, 17, 29,
+           30, 26, 26, 23, 14,
+           17, 22, 19, 25, 15)
+hist(dados)
+
+```
+
+
+Ou podemos fazê-lo usando a densidade:
+
+```{r}
+hist(dados, probability=T)
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
