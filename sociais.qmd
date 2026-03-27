@@ -701,7 +701,7 @@ dados <- c(12, 18, 25, 30, 22,
 
 ### Parte 1 — Distribuição de Frequência
 
-1. Organize os dados em intervalos de classe de amplitude 5 (por exemplo: 10,15), 15,20), 20,25), etc.).
+1. Organize os dados em intervalos de classe de amplitude 5 (por exemplo: 10 $\dashv$ 15, 15 $\dashv$ 20, 20 $\dashv$ 25, etc.).
 2. Construa a tabela de distribuição de frequências, contendo:
 - Intervalo de tempo
 - Frequência absoluta
@@ -723,7 +723,7 @@ dados <- c(12, 18, 25, 30, 22,
 hist(dados,
      breaks = seq(10, 45, by = 5),
      main = "Histograma (Frequência Absoluta)",
-     xlab = "Tempo de estudo (minutos)",
+     xlab = "Tempo de estudos (minutos)",
      ylab = "Frequência",
      col = "lightblue")
 ```
@@ -733,7 +733,7 @@ hist(dados,
      breaks = seq(10, 45, by = 5),
      freq = FALSE,   # eixo y = densidade
      main = "Histograma (Densidade)",
-     xlab = "Tempo de estudo (minutos)",
+     xlab = "Tempo de estudos (minutos)",
      ylab = "Densidade",
      col = "lightgreen")
 
