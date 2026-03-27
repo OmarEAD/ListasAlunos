@@ -687,12 +687,62 @@ Também podemos representar os mesmos dados em termos de densidade, ou seja, aju
 hist(dados, probability=T)
 ```
 
+## Atividade 
+
+Considere os seguintes dados, que representam o tempo de estudo diário (em minutos) de um grupo de 25 estudantes:
+
+```{r}
+dados <- c(12, 18, 25, 30, 22,
+           15, 28, 35, 40, 20,
+           18, 25, 27, 32, 16,
+           22, 24, 19, 21, 29,
+           33, 26, 17, 23, 31)
+```
+
+### Parte 1 — Distribuição de Frequência
+
+1. Organize os dados em intervalos de classe de amplitude 5 (por exemplo: 10,15), 15,20), 20,25), etc.).
+2. Construa a tabela de distribuição de frequências, contendo:
+- Intervalo de tempo
+- Frequência absoluta
+- Proporção
+- Porcentagem
+- Total
+
+### Parte 2 — Histograma
+1. Usando a tabela construída, faça o histograma com frequência absoluta:
+2. Em seguida, represente os mesmos dados em termos de densidade (área total = 1):
 
 
 
 
+::: {.callout-tip collapse="true"}
+## 💡 Clique aqui para ver a resposta
+
+```{r}
+hist(dados,
+     breaks = seq(10, 45, by = 5),
+     main = "Histograma (Frequência Absoluta)",
+     xlab = "Tempo de estudo (minutos)",
+     ylab = "Frequência",
+     col = "lightblue")
+```
+
+```{r}
+hist(dados,
+     breaks = seq(10, 45, by = 5),
+     freq = FALSE,   # eixo y = densidade
+     main = "Histograma (Densidade)",
+     xlab = "Tempo de estudo (minutos)",
+     ylab = "Densidade",
+     col = "lightgreen")
+
+# Adicionando curva de densidade suavizada
+lines(density(dados), col = "red", lwd = 2)
+```
 
 
+:::
 
 
 

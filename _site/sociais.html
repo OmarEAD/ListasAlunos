@@ -218,7 +218,14 @@ window.Quarto = {
   <li><a href="#atividade-distribuição-de-frequência---tempo-de-deslocamento" id="toc-atividade-distribuição-de-frequência---tempo-de-deslocamento" class="nav-link" data-scroll-target="#atividade-distribuição-de-frequência---tempo-de-deslocamento">Atividade: Distribuição de Frequência - Tempo de deslocamento</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#histograma" id="toc-histograma" class="nav-link" data-scroll-target="#histograma">Histograma</a></li>
+  <li><a href="#histograma" id="toc-histograma" class="nav-link" data-scroll-target="#histograma">Histograma</a>
+  <ul class="collapse">
+  <li><a href="#atividade" id="toc-atividade" class="nav-link" data-scroll-target="#atividade">Atividade</a>
+  <ul class="collapse">
+  <li><a href="#parte-1-distribuição-de-frequência" id="toc-parte-1-distribuição-de-frequência" class="nav-link" data-scroll-target="#parte-1-distribuição-de-frequência">Parte 1 — Distribuição de Frequência</a></li>
+  <li><a href="#parte-2-histograma" id="toc-parte-2-histograma" class="nav-link" data-scroll-target="#parte-2-histograma">Parte 2 — Histograma</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -1136,8 +1143,91 @@ Figure&nbsp;4: Histograma
 </div>
 </div>
 </div>
+<section id="atividade" class="level2">
+<h2 class="anchored" data-anchor-id="atividade">Atividade</h2>
+<p>Considere os seguintes dados, que representam o tempo de estudo diário (em minutos) de um grupo de 25 estudantes:</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">12</span>, <span class="dv">18</span>, <span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">22</span>,</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>           <span class="dv">15</span>, <span class="dv">28</span>, <span class="dv">35</span>, <span class="dv">40</span>, <span class="dv">20</span>,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>           <span class="dv">18</span>, <span class="dv">25</span>, <span class="dv">27</span>, <span class="dv">32</span>, <span class="dv">16</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>           <span class="dv">22</span>, <span class="dv">24</span>, <span class="dv">19</span>, <span class="dv">21</span>, <span class="dv">29</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>           <span class="dv">33</span>, <span class="dv">26</span>, <span class="dv">17</span>, <span class="dv">23</span>, <span class="dv">31</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="parte-1-distribuição-de-frequência" class="level3">
+<h3 class="anchored" data-anchor-id="parte-1-distribuição-de-frequência">Parte 1 — Distribuição de Frequência</h3>
+<ol type="1">
+<li>Organize os dados em intervalos de classe de amplitude 5 (por exemplo: 10,15), 15,20), 20,25), etc.).</li>
+<li>Construa a tabela de distribuição de frequências, contendo:</li>
+</ol>
+<ul>
+<li>Intervalo de tempo</li>
+<li>Frequência absoluta</li>
+<li>Proporção</li>
+<li>Porcentagem</li>
+<li>Total</li>
+</ul>
+</section>
+<section id="parte-2-histograma" class="level3">
+<h3 class="anchored" data-anchor-id="parte-2-histograma">Parte 2 — Histograma</h3>
+<ol type="1">
+<li>Usando a tabela construída, faça o histograma com frequência absoluta:</li>
+<li>Em seguida, represente os mesmos dados em termos de densidade (área total = 1):</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>💡 Clique aqui para ver a resposta
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(dados,</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">10</span>, <span class="dv">45</span>, <span class="at">by =</span> <span class="dv">5</span>),</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Histograma (Frequência Absoluta)"</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Tempo de estudo (minutos)"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Frequência"</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"lightblue"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="sociais_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="2400"></p>
+<figcaption>TRUE</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(dados,</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">10</span>, <span class="dv">45</span>, <span class="at">by =</span> <span class="dv">5</span>),</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">freq =</span> <span class="cn">FALSE</span>,   <span class="co"># eixo y = densidade</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Histograma (Densidade)"</span>,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Tempo de estudo (minutos)"</span>,</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Densidade"</span>,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"lightgreen"</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Adicionando curva de densidade suavizada</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">density</span>(dados), <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="sociais_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="2400"></p>
+<figcaption>TRUE</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
