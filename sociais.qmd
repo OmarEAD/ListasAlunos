@@ -664,7 +664,9 @@ kable(tabela_tempo, align = "c", escape = FALSE) %>%
 ```
 
 
-Façamos agora um histograma com a frequência absoluta.
+Como dissemos, o  histograma é uma forma gráfica de representar a distribuição dos dados em intervalos de classe. Cada barra mostra quantas observações caem dentro de determinado intervalo.
+
+Primeiro, vamos construir um histograma usando a frequência absoluta dos dados:
 
 
 ```{r fig-hist1, echo=TRUE, results='hide', fig.cap="Histograma"}
@@ -678,7 +680,8 @@ hist(dados)
 ```
 
 
-Ou podemos fazê-lo usando a densidade:
+Também podemos representar os mesmos dados em termos de densidade, ou seja, ajustando as alturas das barras de modo que a área total do histograma seja igual a 1. Nesse caso, o eixo vertical mostra a densidade em vez da contagem absoluta:
+
 
 ```{r}
 hist(dados, probability=T)
