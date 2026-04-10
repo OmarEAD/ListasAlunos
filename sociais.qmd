@@ -297,10 +297,11 @@ kable(tabela_satisfacao_acum, align = "c") %>%
 ```
 
 
-### Atividade: Distribuição de Frequência - Escolaridade
+## Atividade: Distribuição de Frequência - Escolaridade
 
-Em uma determinada região, foi realizada uma pesquisa com 7.000 pessoas sobre o nível de ensino.  
+Em uma determinada região, foi realizada uma pesquisa com 7.500 pessoas sobre o nível de ensino.  
 Os resultados foram os seguintes:
+
 - 1.000 pessoas possuem **Ensino Fundamental I**  
 - 2.000 pessoas possuem **Ensino Fundamental II**  
 - 2.500 pessoas possuem **Ensino Médio**  
@@ -308,12 +309,14 @@ Os resultados foram os seguintes:
 - 500 pessoas possuem **Pós-graduação**
 
 Construa uma tabela de distribuição de frequência que contenha:
+
 - Frequência absoluta  
 - Proporção  
 - Porcentagem  
 - Frequência acumulada em porcentagem  
 
 Explique os resultados obtidos:
+
 - O que significa cada proporção e porcentagem?  
 - Qual a interpretação da frequência acumulada em porcentagem?  
 - Por exemplo: ao observar a linha do **Ensino Médio**, vemos que 64,3% das pessoas possuem **Ensino Médio ou níveis superiores**.  
@@ -456,7 +459,7 @@ A definição do número de classes em uma distribuição de frequências não �
 Por isso, recomenda-se adotar um número intermediário de classes, geralmente entre 5 e 15, com amplitudes iguais, de modo a equilibrar clareza e precisão na análise.
 
 
-### Atividade: Distribuição de Frequência - Tempo de deslocamento
+## Atividade: Distribuição de Frequência - Tempo de deslocamento
 
 Foi realizada uma pesquisa com 60 pessoas sobre o **tempo (em minutos)** que cada uma delas gasta diariamente em deslocamento para o trabalho.  
 Os tempos variam entre **5 e 65 minutos**.
@@ -703,8 +706,10 @@ sort(dados)
 
 ### Parte 1 — Distribuição de Frequência
 
-1. Organize os dados em intervalos de classe de amplitude 6 (por exemplo: 10 $\dashv$ 15, 15 $\dashv$ 20, 20 $\dashv$ 25, etc.).
+1. Organize os dados em intervalos de classe de amplitude 5 (por exemplo: 10 $\dashv$ 15, 15 $\dashv$ 20, 20 $\dashv$ 25, etc.).
+
 2. Construa a tabela de distribuição de frequências, contendo:
+
 - Intervalo de tempo
 - Frequência absoluta
 - Proporção
@@ -794,6 +799,40 @@ lines(density(dados), col = "red", lwd = 2)
 
 :::
 
+# Média, mediana e moda
+
+Na estatística descritiva, três medidas de tendência central são amplamente utilizadas para resumir conjuntos de dados: **média**, **mediana** e **moda**.
+
+- **Média**: é o valor obtido pela soma de todos os dados dividida pelo número de observações.  
+- **Mediana**: é o valor central dos dados quando estão ordenados. Se houver número par de observações, é a média dos dois valores centrais.  
+- **Moda**: é o valor que ocorre com maior frequência no conjunto de dados.
+
+Essas medidas ajudam a compreender o comportamento geral dos dados e são úteis em diferentes contextos.
+
+
+## Atividade
+
+Suponha que uma disciplina do curso de graduação utilize como sistema de avaliação três provas escritas.  
+A primeira prova tem peso **1**, a segunda tem peso **2** e a terceira tem peso **3**.  
+
+Considere as notas dos dois alunos:
+
+| Aluno | Prova 1 | Prova 2 | Prova 3 |
+|-------|---------|---------|---------|
+| A     | 7,0     | 8,0     | 6,0     |
+| B     | 5,0     | 6,0     | 9,0     |
+
+**Questão:** Calcule a **média final** de cada aluno, considerando os respectivos pesos das provas. 
+
+
+::: {.callout-tip collapse="true"}
+## 💡 Clique aqui para ver a resposta
+
+$$ \bar{x}_A = \frac{7+8+8+6+6+6}{6} =  \frac{41}{6} = 6.83  $$
+
+$$ \bar{x}_B = \frac{5+6+6+9+9+9}{6} =  \frac{44}{6} = 7.33  $$
+
+:::
 
 
 
